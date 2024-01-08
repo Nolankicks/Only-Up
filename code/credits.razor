@@ -13,11 +13,11 @@
 {
 
 	[Property] public SceneFile sceneFile {get; set;}
-	[Property] public SoundEvent soundEvent {get; set;}
-	[Property] public bool playSound {get; set;}
+	[Property] public SoundEvent buttonSound {get; set;}
+	[Property] public bool playbuttonSound {get; set;}
 	[Property] public string string1 {get; set;}
-	[Property] public string string2 {get; set;}
-	[Property] public string string3 {get; set;}
+	
+
 
 	void backToMenu()
 	{
@@ -25,16 +25,10 @@
 	}
 
 
-	void music()
-	{
-		if (playSound = true)
-		{
-			Sound.Play(soundEvent);
-		}
-	}
 
 
-	protected override int BuildHash() => System.HashCode.Combine( sceneFile, string1, string2, string3 );
+
+	protected override int BuildHash() => System.HashCode.Combine( sceneFile, string1, string2, buttonSound, playbuttonSound );
 
 
 }
