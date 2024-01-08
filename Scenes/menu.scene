@@ -34,10 +34,10 @@
               "__type": "mainmenu",
               "__enabled": true,
               "buttonClickSound": "sounds/kenney/ui/ui.button.press.sound",
-              "byText": "",
+              "byText": "A game by Nolan",
               "creditsScene": "scenes/credits.scene",
               "levelSelector": "scenes/levelselctor.scene",
-              "menuTitle": "",
+              "menuTitle": "Only\u0026Up",
               "playSound": true,
               "startGame": "scenes/platformer.scene"
             }
@@ -303,6 +303,7 @@
           "__enabled": true,
           "Burst": 1000,
           "Delay": 0,
+          "DestroyOnEnd": false,
           "Duration": 3.7,
           "Loop": true,
           "OnEdge": false,

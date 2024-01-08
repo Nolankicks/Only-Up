@@ -288,6 +288,8 @@
             {
               "__type": "credits",
               "__enabled": true,
+              "buttonSound": "sounds/kenney/ui/ui.button.press.sound",
+              "playbuttonSound": true,
               "sceneFile": "scenes/menu.scene",
               "string1": "Music by Carson",
               "string2": "Footstep component by DrakeFruit"
