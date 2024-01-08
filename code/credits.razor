@@ -17,6 +17,7 @@
 	[Property] public bool playSound {get; set;}
 	[Property] public string string1 {get; set;}
 	[Property] public string string2 {get; set;}
+	[Property] public string string3 {get; set;}
 
 	void backToMenu()
 	{
@@ -33,7 +34,7 @@
 	}
 
 
-	protected override int BuildHash() => System.HashCode.Combine( sceneFile, string1, string2 );
+	protected override int BuildHash() => System.HashCode.Combine( sceneFile, string1, string2, string3 );
 
 
 }
