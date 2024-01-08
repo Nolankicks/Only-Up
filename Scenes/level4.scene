@@ -1,0 +1,270 @@
+{
+  "Id": "503bcaf7-0358-49ee-aac7-aa42c68ffcc1",
+  "GameObjects": [
+    {
+      "Id": "258c3e22-c5cd-484e-b0a6-ccca94e7719e",
+      "Name": "Plane",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100,0.1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "94ce5114-4a18-4695-b19c-1e3bd36734b7",
+      "Name": "Sun",
+      "Position": "64.88876,5.797003,2.503265",
+      "Rotation": "-0.00000001905082,0.3196197,-0.000000000000001090859,0.947547",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "cfbcfa59-e921-4cb8-9c48-588140e753f0",
+      "Name": "Player",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "23cf7a2e-149c-44e6-a53c-053179816a82",
+          "Body": "23cf7a2e-149c-44e6-a53c-053179816a82",
+          "Eye": "5836f6ac-6f0e-4191-9bd2-a183c4afc5fd",
+          "FirstPerson": false,
+          "Gravity": "0,0,800",
+          "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
+        },
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "player,trigger",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "FootStepSound",
+          "__enabled": true,
+          "Source": "23cf7a2e-149c-44e6-a53c-053179816a82",
+          "Volume": 2
+        }
+      ],
+      "Children": [
+        {
+          "Id": "23cf7a2e-149c-44e6-a53c-053179816a82",
+          "Name": "Body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551275,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": "5836f6ac-6f0e-4191-9bd2-a183c4afc5fd",
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "23cf7a2e-149c-44e6-a53c-053179816a82"
+            }
+          ]
+        },
+        {
+          "Id": "5836f6ac-6f0e-4191-9bd2-a183c4afc5fd",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        },
+        {
+          "Id": "d29a0208-48a1-4472-a717-325f87bd9673",
+          "Name": "Collider",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SphereCollider",
+              "__enabled": true,
+              "Center": "0,0,26",
+              "IsTrigger": false,
+              "Radius": 25,
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "cc605beb-2fe5-40ac-9280-5ff976bbe9b0",
+          "Name": "Camera",
+          "Position": "-128,0,60.45296",
+          "Tags": "maincamera,player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "__enabled": true,
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ]
+        },
+        {
+          "Id": "144db24e-d91a-4ca2-8e1b-938b88180a4b",
+          "Name": "Cloths",
+          "Position": "-191.3845,107.1738,-20.79099",
+          "Tags": "player",
+          "Enabled": true,
+          "Children": [
+            {
+              "Id": "6441c150-fd30-457d-962c-5e75f3b07e5a",
+              "Name": "Outfit",
+              "Position": "-191.3845,107.1738,-20.79099",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "23cf7a2e-149c-44e6-a53c-053179816a82",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/full_outfit/scifi_trooper_armour/models/scifi_trooper_armour.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "Id": "76f766b1-e170-4aac-8449-b75593033c51",
+              "Name": "Helmit",
+              "Position": "-252.2131,6.084468,40.80904",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "23cf7a2e-149c-44e6-a53c-053179816a82",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/hat/scifi_trooper_helmet/models/scifi_trooper_helmet.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "b7950edf-731c-4f3a-af64-4ddd296f4e7b",
+      "Name": "Death Collider",
+      "Position": "-98.67683,20.38156,-128",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "5000,5000,0.1",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Trigger",
+          "__enabled": true,
+          "sceneFile": "scenes/level4.scene",
+          "soundEvent": "sounds/player_use_fail.sound"
+        }
+      ]
+    },
+    {
+      "Id": "fda53a05-9fcb-4b15-8ab5-83cf74054bed",
+      "Name": "Back To menu",
+      "Position": "-127.7737,108.7592,31.03312",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ReturnToMenu",
+          "__enabled": true,
+          "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "level4",
+  "Description": "",
+  "__references": []
+}

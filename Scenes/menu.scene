@@ -1,0 +1,365 @@
+{
+  "Id": "2ff5ac64-4764-48f0-9add-d6212c08f09b",
+  "GameObjects": [
+    {
+      "Id": "1e4295bd-ce92-40b7-ab8b-0a0f1019cb6d",
+      "Name": "Particles",
+      "Position": "187.3011,145.5461,-251.5178",
+      "Rotation": "-0.2954823,0.6491448,-0.2926977,0.6368896",
+      "Enabled": true
+    },
+    {
+      "Id": "7c543f57-354d-4a5a-bba2-e612220e4bdc",
+      "Name": "Screen",
+      "Position": "110.4286,123.1817,-219.9637",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ],
+      "Children": [
+        {
+          "Id": "ac7f50db-387b-4bd7-9072-795e584a40c2",
+          "Name": "menu",
+          "Position": "-70.92149,1061.031,673.4747",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "mainmenu",
+              "__enabled": true,
+              "buttonClickSound": "sounds/kenney/ui/ui.button.press.sound",
+              "byText": "",
+              "creditsScene": "scenes/credits.scene",
+              "levelSelector": "scenes/levelselctor.scene",
+              "menuTitle": "",
+              "playSound": true,
+              "startGame": "scenes/platformer.scene"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "7da7169f-0b98-404b-a149-410e90092bca",
+      "Name": "Camera",
+      "Position": "60.66156,68.03207,-120.8859",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "13596d19-c502-445e-80b4-9cbd6a8de0a0",
+      "Name": "Sun",
+      "Position": "25.03647,153.1552,-99.52997",
+      "Rotation": "0,0.707107,0,0.7071065",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "0cfefc4e-7c1d-467a-8869-071777852da2",
+      "Name": "Emitter (2)",
+      "Position": "704,128,96",
+      "Rotation": "0,0.707107,0,0.7071065",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ParticleEffect",
+          "__enabled": true,
+          "Alpha": {
+            "Type": "Curve",
+            "CurveA": [
+              {
+                "y": 1
+              },
+              {
+                "x": 0.3866995,
+                "y": 1,
+                "in": -0.064516194,
+                "out": 0.064516194
+              },
+              {
+                "x": 1,
+                "in": 2.782609,
+                "out": -2.782609
+              }
+            ],
+            "Constants": "1,0,0,0"
+          },
+          "ApplyColor": true,
+          "ApplyRotation": false,
+          "ApplyShape": true,
+          "Bounce": {
+            "Type": "Range",
+            "Evaluation": "Particle",
+            "Constants": "0.1,0.5,0,0"
+          },
+          "Brightness": {
+            "CurveA": {
+              "rangey": "0,10",
+              "frames": [
+                {
+                  "y": 0.7821429,
+                  "in": 0.041666638,
+                  "out": -0.041666638
+                },
+                {
+                  "x": 0.050738923,
+                  "y": 0.1
+                }
+              ]
+            },
+            "Constants": "600,0,0,0"
+          },
+          "Bumpiness": {
+            "Evaluation": "Particle",
+            "Constants": "0.2,0.1,0,0"
+          },
+          "Collision": true,
+          "CollisionIgnore": "player",
+          "CollisionRadius": 1,
+          "Damping": {
+            "Evaluation": "Particle",
+            "Constants": "1,0.3,0,0"
+          },
+          "DieOnCollisionChance": {},
+          "Force": true,
+          "ForceDirection": "0,0,-1",
+          "ForceScale": {
+            "Constants": "300,-400,0,0"
+          },
+          "Friction": {
+            "Constants": "0.05,0,0,0"
+          },
+          "Gradient": {
+            "Evaluation": "Particle",
+            "GradientA": {
+              "color": [
+                {
+                  "t": 0.5,
+                  "c": "1,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "GradientB": {
+              "color": [
+                {
+                  "t": 0.5,
+                  "c": "1,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "ConstantA": "1,0.3003,0.05446,1",
+            "ConstantB": "1,0.71891,0.17327,1"
+          },
+          "Lifetime": {
+            "Type": "Range",
+            "Evaluation": "Particle",
+            "Constants": "2,3,0,0"
+          },
+          "MaxParticles": 10000,
+          "PerParticleTimeScale": {
+            "Constants": "1,0,0,0"
+          },
+          "PreWarm": 0,
+          "PushStrength": {},
+          "Roll": {},
+          "Scale": {
+            "Type": "Range",
+            "CurveA": [
+              {},
+              {
+                "x": 0.06280788,
+                "y": 1
+              },
+              {
+                "x": 0.15640394,
+                "y": 0.067664884
+              },
+              {
+                "x": 0.24507388,
+                "y": 0.80151117
+              },
+              {
+                "x": 0.3004926,
+                "y": 0.10999663
+              },
+              {
+                "x": 0.3817734,
+                "y": 0.6617586
+              },
+              {
+                "x": 0.4359606,
+                "y": 0.08971601
+              },
+              {
+                "x": 0.51600987,
+                "y": 0.5303103
+              },
+              {
+                "x": 0.57758623,
+                "y": 0.10129062
+              },
+              {
+                "x": 0.6514778,
+                "y": 0.39363855
+              },
+              {
+                "x": 0.7093596,
+                "y": 0.08596241
+              },
+              {
+                "x": 0.77093595,
+                "y": 0.81999165
+              },
+              {
+                "x": 0.82389164,
+                "y": 0.13258635
+              },
+              {
+                "x": 0.8940887,
+                "y": 0.3859684
+              },
+              {
+                "x": 1
+              }
+            ],
+            "Constants": "3,0,0,0"
+          },
+          "SequenceId": {},
+          "SequenceSpeed": {
+            "Constants": "1,0,0,0"
+          },
+          "SequenceTime": {
+            "Constants": "1,0,0,0"
+          },
+          "SheetSequence": false,
+          "Space": "World",
+          "StartVelocity": {
+            "Type": "Range",
+            "Evaluation": "Particle",
+            "Constants": "2000,-800,0,0"
+          },
+          "Stretch": {
+            "Evaluation": "Particle"
+          },
+          "TimeScale": 0.97,
+          "Tint": "0.9505,0.12234,0.12234,1"
+        },
+        {
+          "__type": "ParticleSpriteRenderer",
+          "__enabled": true,
+          "Additive": true,
+          "BlurAmount": 1,
+          "BlurOpacity": 0.49,
+          "BlurSpacing": 0.51,
+          "DepthFeather": 0,
+          "FaceVelocity": false,
+          "FogStrength": 1,
+          "LeadingTrail": true,
+          "MotionBlur": true,
+          "Opaque": false,
+          "RotationOffset": 0,
+          "Scale": 2,
+          "Shadows": false,
+          "SortMode": "ByDistance",
+          "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
+        },
+        {
+          "__type": "ParticleSphereEmitter",
+          "__enabled": true,
+          "Burst": 1000,
+          "Delay": 0,
+          "Duration": 3.7,
+          "Loop": true,
+          "OnEdge": false,
+          "Radius": 6.16,
+          "Rate": 20,
+          "Velocity": 0
+        }
+      ]
+    },
+    {
+      "Id": "bf47b827-8ba8-4810-98d1-249659ccca0f",
+      "Name": "2D Skybox",
+      "Position": "166.6065,-25.35442,-58.648",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
+          "Tint": "0.06667,0.06275,0.06275,1"
+        }
+      ]
+    },
+    {
+      "Id": "dfc21217-080b-42bf-b581-4a9917fb3497",
+      "Name": "Sound",
+      "Position": "60.662,68.032,-120.886",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SoundBoxComponent",
+          "__enabled": true,
+          "Force2d": true,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "Repeat": true,
+          "Scale": "1000,1000,1000",
+          "SoundEvent": "sounds/tetros_music_main_menu (1).sound",
+          "SoundOverride": true,
+          "StopOnNew": false,
+          "Volume": 1
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "menu",
+  "Description": "",
+  "__references": []
+}

@@ -1,0 +1,34 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "sandboxmap",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "sandboxmap",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.floor_grass_dirt_weed_blend_a#18756",
+        "facepunch.metal_trim_01#43480",
+        "facepunch.wood_trim_burnt_blend_02#43514",
+        "mdlresrc.rtx_digitaskull#12121",
+        "sillypusa.cuphedplush#33242",
+        "way.red_brick_road_wet#18545",
+        "facepunch.iron_trim_rust_blend#43479",
+        "facepunch.rust_trim#43489"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/sandboxmap.vmap"
+      }
+    }
+  }
+}

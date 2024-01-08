@@ -1,0 +1,39 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="middletext1">@string1</div>
+	<div class="middletext2">@string2</div>
+	<exitbutton @onclick=@backToMenu>Back to menu</exitbutton>
+
+</root>
+
+@code
+{
+
+	[Property] public SceneFile sceneFile {get; set;}
+	[Property] public SoundEvent soundEvent {get; set;}
+	[Property] public bool playSound {get; set;}
+	[Property] public string string1 {get; set;}
+	[Property] public string string2 {get; set;}
+
+	void backToMenu()
+	{
+		GameManager.ActiveScene.Load(sceneFile);
+	}
+
+
+	void music()
+	{
+		if (playSound = true)
+		{
+			Sound.Play(soundEvent);
+		}
+	}
+
+
+	protected override int BuildHash() => System.HashCode.Combine( sceneFile, string1, string2 );
+
+
+}

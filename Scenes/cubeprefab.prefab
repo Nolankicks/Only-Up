@@ -1,0 +1,43 @@
+{
+  "RootObject": {
+    "Id": "a7f38c5c-aad0-4ca4-8399-bcefec80c816",
+    "Name": "Cube",
+    "Position": "0,-200.2936,136",
+    "Scale": "0.5,0.5,0.5",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": null,
+        "RenderType": "On",
+        "Tint": "0.90099,0.37913,0.37913,1"
+      },
+      {
+        "__type": "BoxCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "50,50,50",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "Rigidbody",
+        "__enabled": true,
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
