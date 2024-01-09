@@ -354,14 +354,21 @@
           "Id": "d0f41c45-05d4-43b1-a50a-21af9736f701",
           "Name": "back to menu",
           "Position": "149.9949,149.995,-212.125",
-          "Enabled": true
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ReturnToMenu",
+              "__enabled": true,
+              "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+            }
+          ]
         }
       ]
     },
     {
-      "Id": "b85f12e6-6e44-4700-8c77-3d22e063cf70",
-      "Name": "restart trigger (1)",
-      "Position": "128,1440,-32",
+      "Id": "bd02b1d8-5037-4635-bf32-2ba9bf6f451e",
+      "Name": "restart trigger (2)",
+      "Position": "128,1440,-274.9615",
       "Scale": "1,1,0.1",
       "Tags": "trigger",
       "Enabled": true,
@@ -374,13 +381,19 @@
           "Scale": "5000,5000,50",
           "Static": false,
           "Surface": null
+        },
+        {
+          "__type": "Trigger",
+          "__enabled": true,
+          "sceneFile": "scenes/level3.scene",
+          "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
         }
       ]
     },
     {
       "Id": "d351316a-aa7e-4417-8d2e-47ef9e5bf84f",
       "Name": "2D Skybox",
-      "Position": "-94.13532,172.2583,88.57794",
+      "Position": "-94.13532,172.2583,-161",
       "Enabled": true,
       "Components": [
         {
