@@ -1,21 +1,19 @@
 {
   "RootObject": {
-    "Id": "01067083-3f9b-4075-bdd8-733b7b6c4b70",
-    "Name": "cubeprefab",
-    "Scale": "0.5,0.5,0.5",
+    "Id": "ec25af85-5260-41d5-95ef-8495008efb4b",
+    "Name": "Cube",
+    "Position": "-52.112,-63.9637,112.6558",
     "Enabled": true,
     "Components": [
       {
-        "__type": "SkinnedModelRenderer",
+        "__type": "ModelRenderer",
         "__enabled": true,
         "BodyGroups": 18446744073709551615,
-        "BoneMergeTarget": null,
-        "CreateBoneObjects": false,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": null,
+        "Model": "models/dev/box.vmdl",
         "RenderType": "On",
-        "Tint": "0.90099,0.37913,0.37913,1"
+        "Tint": "1,1,1,1"
       },
       {
         "__type": "BoxCollider",

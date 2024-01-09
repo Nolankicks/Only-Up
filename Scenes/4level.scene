@@ -1,0 +1,330 @@
+{
+  "Id": "69beae97-5ce7-4cf5-a751-38b53951a323",
+  "GameObjects": [
+    {
+      "Id": "afacd4b9-1968-455e-9c07-1672ebeac68c",
+      "Name": "Plane",
+      "Scale": "5,5,0.1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100,0.1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "2925c504-ea70-409a-884e-f0418156c318",
+      "Name": "Sun",
+      "Position": "149.9949,149.995,-212.125",
+      "Rotation": "-0.00000002142723,0.3594892,0.0000000000000001706386,0.9331498",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
+      "Name": "player",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "trigger,collider,ignore",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
+          "Body": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+          "Eye": "7a1fc81b-d25c-4e7c-8b57-344da6c08e49",
+          "FirstPerson": false,
+          "Gravity": "0,0,800",
+          "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
+        },
+        {
+          "__type": "CitizenAnimationHelper",
+          "__enabled": true,
+          "BodyWeight": 1,
+          "EyeSource": "7a1fc81b-d25c-4e7c-8b57-344da6c08e49",
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "Height": 1,
+          "IkLeftFoot": null,
+          "IkLeftHand": null,
+          "IkRightFoot": null,
+          "IkRightHand": null,
+          "LookAt": null,
+          "LookAtEnabled": false,
+          "Target": "3bcb2fdc-a4cb-4946-9c62-097432db4c42"
+        },
+        {
+          "__type": "PlayerSpawnLevel4",
+          "__enabled": true,
+          "Attack1": "c9de00f0-85c0-4e7e-9e1d-70063606a7b3",
+          "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+          "Name": "body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 321,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "7a1fc81b-d25c-4e7c-8b57-344da6c08e49",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        },
+        {
+          "Id": "a924cad2-607e-4a4b-bad5-7436a93a7267",
+          "Name": "Collider",
+          "Position": "0,0,26",
+          "Tags": "collider,player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SphereCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 25,
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "f442eb75-7a8b-498c-8b33-1f2bef806d22",
+          "Name": "Outfit",
+          "Position": "31.93922,74.3558,32.36524",
+          "Tags": "player",
+          "Enabled": true,
+          "Children": [
+            {
+              "Id": "766fd434-19da-4c28-9b57-5c07bc5f6a7a",
+              "Name": "Jumpsuit",
+              "Position": "31.93922,74.3558,32.36524",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/shirt/jumpsuit/models/blue_jumpsuit.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "Id": "1f4035ee-a9a6-4732-8941-6c3773b1c008",
+              "Name": "hair",
+              "Position": "-198.8018,-37.83206,18.15666",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy_black.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "Id": "855f7d1f-768d-41c5-ab1e-965cfdbf0622",
+              "Name": "eyebrows",
+              "Position": "-220.3054,-131.6116,56.61692",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/hair/eyebrows/models/eyebrows.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "Id": "c8484972-046c-4b4f-9fae-be73687fe695",
+              "Name": "beard",
+              "Position": "-242.4854,-22.71204,40.74399",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/hair/goatee/models/goatee_black.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "1fa5c6fa-10ff-460a-a08c-d5bfbbbd7dc7",
+      "Name": "Camera",
+      "Position": "70.2108,2.014908,11.77882",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "c9de00f0-85c0-4e7e-9e1d-70063606a7b3",
+      "Name": "Cube",
+      "Position": "-160,2.014908,48",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "Id": "d6703238-e4c8-45cf-8bee-c201011dfa04",
+      "Name": "Collider",
+      "Position": "95.88948,57.45874,-16",
+      "Tags": "ignore",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "2000,2000,0.1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "4level",
+  "Description": "",
+  "__references": []
+}
