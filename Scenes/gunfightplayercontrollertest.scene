@@ -74,6 +74,16 @@
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "HighlightOutline",
+              "__enabled": true,
+              "Color": "1,1,1,1",
+              "InsideColor": "0,0,0,0",
+              "InsideObscuredColor": "0,0,0,0",
+              "Material": null,
+              "ObscuredColor": "0,0,0,0.4",
+              "Width": 0.25
             }
           ]
         },
@@ -496,6 +506,7 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         },
         {
@@ -543,6 +554,7 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ]
@@ -800,6 +812,7 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         },
         {
@@ -842,7 +855,10 @@
             },
             {
               "__type": "lefttext",
-              "__enabled": true
+              "__enabled": true,
+              "string1": "Press Left Click to spawn a light show",
+              "string2": "Press Right Click to spawn a light show",
+              "string3": "Press R to reload the scene"
             }
           ]
         }

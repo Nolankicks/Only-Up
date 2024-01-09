@@ -89,7 +89,7 @@
         {
           "__type": "PlayerSpawnLevel4",
           "__enabled": true,
-          "Attack1": "c9de00f0-85c0-4e7e-9e1d-70063606a7b3",
+          "Attack1": "scenes/2cube.prefab",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
         }
       ],
@@ -261,42 +261,6 @@
       ]
     },
     {
-      "Id": "c9de00f0-85c0-4e7e-9e1d-70063606a7b3",
-      "Name": "Cube",
-      "Position": "-160,2.014908,48",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Rigidbody",
-          "__enabled": true,
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
       "Id": "d6703238-e4c8-45cf-8bee-c201011dfa04",
       "Name": "Collider",
       "Position": "95.88948,57.45874,-16",
@@ -308,9 +272,66 @@
           "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": false,
-          "Scale": "2000,2000,0.1",
+          "Scale": "5000,5000,0.1",
           "Static": false,
           "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "5d0a93d8-a38b-471e-9c44-17e1bbc3a84d",
+      "Name": "Death Collider",
+      "Position": "36.35936,238.3401,-79.4064",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "10000,10000,0.1",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Trigger",
+          "__enabled": true,
+          "sceneFile": "scenes/4level.scene",
+          "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+        }
+      ]
+    },
+    {
+      "Id": "fbaac307-fad9-44a4-bc3d-2cd283605bdb",
+      "Name": "Screen",
+      "Position": "-42.89264,92.37106,52.31047",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ],
+      "Children": [
+        {
+          "Id": "096c035d-78d3-4434-b35d-7d727e77a90f",
+          "Name": "Ui",
+          "Position": "-42.89264,92.37106,52.31047",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "lefttext",
+              "__enabled": true,
+              "string1": "Press Left Click to spawn a platform",
+              "string2": "Reach the end to move to the next level",
+              "string3": null
+            }
+          ]
         }
       ]
     }

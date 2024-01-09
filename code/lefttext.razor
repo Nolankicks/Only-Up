@@ -4,24 +4,24 @@
 
 <root>
  <div class="title">
-Press Left Click to spawn a light show</p>
+@string1
 		
         </div>
 		<div class="title">
-Press Right Click to spawn a light show
+@string2
 		</div>
 				<div class="title">
-Press R to reload the scene
+@string3
 		</div>
 </root>
 
 @code
 {
+		[Property] public string string1 {get; set;} 
+		[Property] public string string2 {get; set;} 
+		[Property] public string string3 {get; set;} 
 
 
-
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( string1, string2, string3 );
 
 }

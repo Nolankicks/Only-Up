@@ -20,7 +20,7 @@ public sealed class PlayerSpawnLevel4 : Component
 		
 		if (Input.Pressed("Attack1"))
 		{
-			var pos = Transform.Position + Vector3.Up * 200.0f + lookDir.Forward.WithZ( 0.0f ) * 200.0f;
+			var pos = Transform.Position + Vector3.Up * 200.0f + lookDir.Forward.WithZ( 0.0f ) * 300.0f;
 			SceneUtility.Instantiate( Attack1, pos );
 			Sound.Play(soundEvent);
 			
