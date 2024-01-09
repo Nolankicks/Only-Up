@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
 using Sandbox;
 
 
@@ -23,17 +24,16 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 		
     }
 
-    void ITriggerListener.OnTriggerEnter(Collider other)
+public void OnTriggerEnter(Collider other)
+{
+    if (!other.GameObject.IsValid())
+        return;
+
+    if (other.GameObject.Components.TryGet<Health>(out var health))
     {
-		
-
-		_iTouching = true;
-		Health.Death();
-
-	   
-
-         
+        health.OnDeath();
     }
+}
 
     void ITriggerListener.OnTriggerExit( Collider other ) 
     {

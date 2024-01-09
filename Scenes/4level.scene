@@ -342,7 +342,7 @@
     {
       "Id": "b438642d-7514-437b-96ef-a77202a33dc1",
       "Name": "trigger",
-      "Position": "-173.3381,778.3317,-106.0371",
+      "Position": "-173.3381,-168.6774,-106.0371",
       "Enabled": true,
       "Components": [
         {
