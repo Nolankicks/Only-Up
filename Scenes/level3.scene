@@ -354,39 +354,7 @@
           "Id": "d0f41c45-05d4-43b1-a50a-21af9736f701",
           "Name": "back to menu",
           "Position": "149.9949,149.995,-212.125",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "ReturnToMenu",
-              "__enabled": true,
-              "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "e1fdabcf-2f2c-4e10-b7c9-272e09b9a6c2",
-      "Name": "restart trigger",
-      "Position": "128,-6.574554,-96",
-      "Scale": "1,1,0.1",
-      "Tags": "trigger",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "2000,2000,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
+          "Enabled": true
         }
       ]
     },
@@ -403,90 +371,9 @@
           "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": true,
-          "Scale": "2000,2000,50",
+          "Scale": "5000,5000,50",
           "Static": false,
           "Surface": null
-        },
-        {
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
-        }
-      ]
-    },
-    {
-      "Id": "d6367686-7eec-4da2-a789-faa8bc61a127",
-      "Name": "restart trigger (2)",
-      "Position": "128,1696,64",
-      "Scale": "1,1,0.1",
-      "Tags": "trigger",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "2000,2000,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
-        }
-      ]
-    },
-    {
-      "Id": "b539f8fa-74e3-4cb8-8cd7-c2f311124c4c",
-      "Name": "restart trigger (3)",
-      "Position": "128,1504,160",
-      "Scale": "1,1,0.1",
-      "Tags": "trigger",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "1000,1000,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
-        }
-      ]
-    },
-    {
-      "Id": "6048bcd1-2266-4420-97c6-6d4014b62f6d",
-      "Name": "restart trigger (4)",
-      "Position": "1216,1504,480",
-      "Scale": "1,1,0.1",
-      "Tags": "trigger",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "1000,1876.602,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
         }
       ]
     },
