@@ -26,7 +26,7 @@ public sealed class Health : Component
 	
 	
 	
-	public void OnDeath()
+	public void Death()
 	{
 		
 		Log.Info("Death");

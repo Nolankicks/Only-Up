@@ -31,7 +31,7 @@ public void OnTriggerEnter(Collider other)
 
     if (other.GameObject.Components.TryGet<Health>(out var health))
     {
-        health.OnDeath();
+        health.Death();
     }
 }
 
