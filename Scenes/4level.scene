@@ -91,6 +91,11 @@
           "__enabled": true,
           "Attack1": "scenes/2cube.prefab",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+        },
+        {
+          "__type": "Health",
+          "__enabled": true,
+          "sceneFile": "scenes/4level.scene"
         }
       ],
       "Children": [
@@ -283,7 +288,6 @@
       "Name": "Death Collider",
       "Position": "36.35936,238.3401,-79.4064",
       "Tags": "trigger",
-      "Enabled": true,
       "Components": [
         {
           "__type": "BoxCollider",
@@ -332,6 +336,27 @@
               "string3": null
             }
           ]
+        }
+      ]
+    },
+    {
+      "Id": "b438642d-7514-437b-96ef-a77202a33dc1",
+      "Name": "trigger",
+      "Position": "-173.3381,778.3317,-106.0371",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "HealthTrigger",
+          "__enabled": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "2000,2000,50",
+          "Static": false,
+          "Surface": null
         }
       ]
     }
