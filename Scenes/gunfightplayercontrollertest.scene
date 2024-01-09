@@ -2,20 +2,6 @@
   "Id": "6ed177a2-00c2-4d8a-853d-4634326a4aaf",
   "GameObjects": [
     {
-      "Id": "4bec7453-2f9f-42a5-a55a-cf9f0a6c3a77",
-      "Name": "2D Skybox",
-      "Position": "201.7656,165.3087,103.451",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "SkyBox2D",
-          "__enabled": true,
-          "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
-          "Tint": "0.06667,0.06275,0.06275,1"
-        }
-      ]
-    },
-    {
       "Id": "9e4c52a4-62aa-4fb2-9745-cda3c9ddc87c",
       "Name": "Player",
       "Position": "448,0,32",
@@ -62,7 +48,11 @@
         {
           "__type": "SpawnPlayer",
           "__enabled": true,
-          "objectToSpawn": "1bb0454b-30eb-4047-9c15-a9122b74e767"
+          "Attack1": "0e8e81a1-4e1f-42a4-9787-3309dc363730",
+          "Attack2": "scenes/emitter.prefab",
+          "reloadScene": "scenes/gunfightplayercontrollertest.scene",
+          "rotation": "0,-0.707107,0,0.7071065",
+          "soundEvent": "sounds/test.sound"
         }
       ],
       "Children": [
@@ -474,27 +464,6 @@
       "Children": []
     },
     {
-      "Id": "6740d546-3804-4b8e-84ba-6fe8cf214625",
-      "Name": "Cubemap",
-      "Position": "-128,0,0",
-      "Scale": "5,5,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "EnvmapProbe",
-          "__enabled": true,
-          "Bounds": {
-            "Mins": "-512,-512,-512",
-            "Maxs": "512,512,512"
-          },
-          "Feathering": 0.02,
-          "Projection": "Sphere",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "TintColor": "1,1,1,1"
-        }
-      ]
-    },
-    {
       "Id": "a7f38c5c-aad0-4ca4-8399-bcefec80c816",
       "Name": "Cube",
       "Position": "0,-200.2936,136",
@@ -870,43 +839,12 @@
               "__type": "ReturnToMenu",
               "__enabled": true,
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+            },
+            {
+              "__type": "lefttext",
+              "__enabled": true
             }
           ]
-        }
-      ]
-    },
-    {
-      "Id": "110d04ef-687d-492e-bcae-78ab671f23a3",
-      "Name": "2D Skybox",
-      "Position": "-216.6811,-116.6887,-43.40217",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "SkyBox2D",
-          "__enabled": true,
-          "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "Id": "48d1d758-85eb-4b07-88ce-b3aa4bedb915",
-      "Name": "Cubemap",
-      "Position": "317.5632,109.1356,160.8931",
-      "Scale": "5,5,5",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "EnvmapProbe",
-          "__enabled": true,
-          "Bounds": {
-            "Mins": "-512,-512,-512",
-            "Maxs": "512,512,512"
-          },
-          "Feathering": 0.02,
-          "Projection": "Sphere",
-          "Texture": "textures/cubemaps/default2.vtex",
-          "TintColor": "1,1,1,1"
         }
       ]
     }

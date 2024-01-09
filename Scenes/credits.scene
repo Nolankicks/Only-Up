@@ -41,7 +41,7 @@
     {
       "Id": "968f5668-7451-45b5-9229-5543cb88c97f",
       "Name": "Emitter (2)",
-      "Position": "704,128,96",
+      "Position": "704,128,93.40004",
       "Rotation": "0,0.707107,0,0.7071065",
       "Enabled": true,
       "Components": [
@@ -133,7 +133,7 @@
               ],
               "alpha": []
             },
-            "ConstantA": "1,0.3003,0.05446,1",
+            "ConstantA": "0.52723,0.05446,1,1",
             "ConstantB": "1,0.71891,0.17327,1"
           },
           "Lifetime": {
@@ -228,7 +228,7 @@
             "Evaluation": "Particle"
           },
           "TimeScale": 0.97,
-          "Tint": "0.9505,0.12234,0.12234,1"
+          "Tint": "0.40391,0.12234,0.9505,1"
         },
         {
           "__type": "ParticleSpriteRenderer",
@@ -254,6 +254,7 @@
           "__enabled": true,
           "Burst": 1000,
           "Delay": 0,
+          "DestroyOnEnd": false,
           "Duration": 3.7,
           "Loop": true,
           "OnEdge": false,

@@ -1,7 +1,8 @@
 {
   "RootObject": {
-    "Id": "abb637f7-7fef-4761-abd0-d71e19569b57",
+    "Id": "b90671f4-6279-4776-981a-6a17df474d0a",
     "Name": "emitter",
+    "Rotation": "0,-0.707107,0,0.7071065",
     "Enabled": true,
     "Components": [
       {
@@ -219,6 +220,7 @@
         "ConeFar": 50,
         "ConeNear": 1,
         "Delay": 0,
+        "DestroyOnEnd": false,
         "Duration": 10,
         "InVolume": false,
         "Loop": true,
