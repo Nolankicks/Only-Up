@@ -1,12 +1,12 @@
 {
   "publish": {
     "Allowed": true,
-    "Enabled": false,
+    "Enabled": true,
     "ProjectConfig": {
-      "Title": "sandboxmap",
+      "Title": "Only\u0026Up Map",
       "Type": "map",
-      "Org": "local",
-      "Ident": "sandboxmap",
+      "Org": "nolankicks",
+      "Ident": "onlyupmap",
       "Tags": null,
       "Schema": 0,
       "HasAssets": false,
