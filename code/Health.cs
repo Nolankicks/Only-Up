@@ -37,11 +37,15 @@ public sealed class Health : Component
 	
 	public void OnDeath()
 	{
-		healthNumber = 50;
+		healthNumber = 0;
 		Log.Info(healthNumber);
 		
 		
 			
+	}
+	public void OnObsticle()
+	{
+		healthNumber = 50;
 	}
 
 

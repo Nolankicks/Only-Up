@@ -388,6 +388,12 @@
           "soundEvent": "sounds/kenney/ui/ui.upvote.sound"
         }
       ]
+    },
+    {
+      "Id": "b3324fde-b86e-45a7-80ba-ab8a0aa8bf37",
+      "Name": "Object",
+      "Position": "57.20801,-423.9612,130.8419",
+      "Enabled": true
     }
   ],
   "SceneProperties": {
