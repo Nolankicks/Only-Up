@@ -19,8 +19,8 @@ public sealed class SpawnTrigger : Component, Component.ITriggerListener //Chang
 
 	
 			        Log.Info("In");
-       SceneUtility.Instantiate(prefabScene, vector, rotation );
-		
+       //SceneUtility.Instantiate(prefabScene, vector, rotation );
+		gameObject.Clone(vector, rotation);
 		
 		
 
@@ -41,7 +41,7 @@ public sealed class SpawnTrigger : Component, Component.ITriggerListener //Chang
     }
 
 	
-	[Property] public PrefabScene prefabScene {get; set;}
+	[Property] public GameObject gameObject {get; set;}
 	//public Vector3( float x, float y, float z );
 	[Property] Vector3 vector { get; set; }
 	[Property] Rotation rotation {get; set;}
