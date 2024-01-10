@@ -10,6 +10,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "CharacterController",
           "__enabled": true,
           "Acceleration": 10,
@@ -20,6 +21,7 @@
           "StepHeight": 18
         },
         {
+          "__version": 0,
           "__type": "PlayerController",
           "__enabled": true,
           "AnimationHelper": "9e4c52a4-62aa-4fb2-9745-cda3c9ddc87c",
@@ -30,6 +32,7 @@
           "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         },
         {
+          "__version": 0,
           "__type": "CitizenAnimationHelper",
           "__enabled": true,
           "BodyWeight": 1,
@@ -46,6 +49,7 @@
           "Target": "e290314a-eddb-4f18-8304-94ccb852986c"
         },
         {
+          "__version": 0,
           "__type": "SpawnPlayer",
           "__enabled": true,
           "Attack1": "0e8e81a1-4e1f-42a4-9787-3309dc363730",
@@ -64,6 +68,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "SkinnedModelRenderer",
               "__enabled": true,
               "BodyGroups": 321,
@@ -76,6 +81,7 @@
               "Tint": "1,1,1,1"
             },
             {
+              "__version": 0,
               "__type": "HighlightOutline",
               "__enabled": true,
               "Color": "1,1,1,1",
@@ -102,6 +108,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "SphereCollider",
               "__enabled": true,
               "Center": "0,0,0",
@@ -127,6 +134,7 @@
               "Enabled": true,
               "Components": [
                 {
+                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
@@ -141,27 +149,6 @@
               ]
             },
             {
-              "Id": "a700739f-9bdf-4d07-97a6-951a64512690",
-              "Name": "hair",
-              "Position": "-198.8018,-37.83206,18.15666",
-              "Tags": "player",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
-                  "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "e290314a-eddb-4f18-8304-94ccb852986c",
-                  "CreateBoneObjects": false,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy_black.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            },
-            {
               "Id": "2966f01f-1d69-47af-b03a-900ee92f6fa8",
               "Name": "eyebrows",
               "Position": "-220.3054,-131.6116,56.61692",
@@ -169,6 +156,7 @@
               "Enabled": true,
               "Components": [
                 {
+                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
@@ -177,27 +165,6 @@
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Model": "models/citizen_clothes/hair/eyebrows/models/eyebrows.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            },
-            {
-              "Id": "8bc94121-238c-494a-85a4-ad8c6ddddda2",
-              "Name": "beard",
-              "Position": "-242.4854,-22.71204,40.74399",
-              "Tags": "player",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
-                  "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "e290314a-eddb-4f18-8304-94ccb852986c",
-                  "CreateBoneObjects": false,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/citizen_clothes/hair/goatee/models/goatee_black.vmdl",
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -216,6 +183,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "CameraComponent",
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
@@ -242,6 +210,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -251,13 +220,15 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "SpawnTrigger",
           "__enabled": true,
-          "prefabScene": "scenes/emitter.prefab",
+          "gameObject": null,
           "rotation": "0,-0.707107,0,0.7071065",
           "vector": "10,10,10"
         },
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -278,6 +249,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "TextRenderer",
               "__enabled": true,
               "Color": "1,1,1,1",
@@ -298,6 +270,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -307,13 +280,15 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "SpawnTrigger",
           "__enabled": true,
-          "prefabScene": "scenes/cubeprefab.prefab",
+          "gameObject": null,
           "rotation": "0,-0.707107,0,0.7071065",
           "vector": "-269,-435.484,20"
         },
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -334,6 +309,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "TextRenderer",
               "__enabled": true,
               "Color": "1,1,1,1",
@@ -354,6 +330,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -363,6 +340,7 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -373,6 +351,7 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__version": 0,
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/menu.scene",
@@ -389,6 +368,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "TextRenderer",
               "__enabled": true,
               "Color": "1,1,1,1",
@@ -409,6 +389,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -418,6 +399,7 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -428,6 +410,7 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__version": 0,
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/gunfightplayercontrollertest.scene",
@@ -444,6 +427,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "TextRenderer",
               "__enabled": true,
               "Color": "1,1,1,1",
@@ -463,6 +447,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
           "MapName": "sandboxmap",
@@ -488,6 +473,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "SkinnedModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -500,6 +486,7 @@
           "Tint": "0.5149,0.94554,0.55796,1"
         },
         {
+          "__version": 0,
           "__type": "Rigidbody",
           "__enabled": true,
           "AngularDamping": 0,
@@ -510,6 +497,7 @@
           "StartAsleep": false
         },
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -527,6 +515,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "SkinnedModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -539,6 +528,7 @@
           "Tint": "0.5149,0.94554,0.55796,1"
         },
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -548,6 +538,7 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "Rigidbody",
           "__enabled": true,
           "AngularDamping": 0,
@@ -566,6 +557,7 @@
       "Rotation": "0.00000000817723,-0.1371913,0.00000000000001273258,0.9905457",
       "Components": [
         {
+          "__version": 0,
           "__type": "ParticleEffect",
           "__enabled": true,
           "Alpha": {
@@ -754,6 +746,7 @@
           "Tint": "0.20792,0.88911,1,1"
         },
         {
+          "__version": 0,
           "__type": "ParticleSpriteRenderer",
           "__enabled": true,
           "Additive": true,
@@ -773,6 +766,7 @@
           "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
         },
         {
+          "__version": 0,
           "__type": "ParticleConeEmitter",
           "__enabled": true,
           "Burst": 371.21,
@@ -796,6 +790,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -806,6 +801,7 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__version": 0,
           "__type": "Rigidbody",
           "__enabled": true,
           "AngularDamping": 0,
@@ -816,6 +812,7 @@
           "StartAsleep": false
         },
         {
+          "__version": 0,
           "__type": "SphereCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -833,6 +830,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ScreenPanel",
           "__enabled": true,
           "AutoScreenScale": true,
@@ -849,11 +847,13 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "ReturnToMenu",
               "__enabled": true,
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
             },
             {
+              "__version": 0,
               "__type": "lefttext",
               "__enabled": true,
               "string1": "Press Left Click to spawn a light show",

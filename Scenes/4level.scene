@@ -310,6 +310,19 @@
               "string1": "Press Left Click to spawn a platform",
               "string2": "Reach the end to move to the next level",
               "string3": null
+            },
+            {
+              "__version": 0,
+              "__type": "ReturnToMenu",
+              "__enabled": true,
+              "menuScene": null,
+              "soundEvent": null
+            },
+            {
+              "__version": 0,
+              "__type": "HealthUi",
+              "__enabled": true,
+              "health": "af8551bb-2dc0-4e9b-997f-b22015c25aed"
             }
           ]
         }

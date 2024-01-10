@@ -5,45 +5,45 @@ public sealed class Health : Component
 {
 
 	[Property] public SceneFile sceneFile {get; set;}
-	public int healthNumber = 100;
+	public long healthNumber {get; set;} = 100;
 	
 	
 	
 
 
+	
 	
 	protected override void OnStart()
 	{
-			
+
 	}
 	
-	//public void Restart()
-	//{
-		//if (healthNumber == 0)
-		//{
-			//GameManager.ActiveScene.Load(sceneFile);
-		//}
-	//}
+	protected override void OnUpdate()
+	{
+
+			
+			if (healthNumber == 0)
+			{
+				GameManager.ActiveScene.Load(sceneFile);
+				
+			}
+
+	}
+	
+
 	
 	
 	
 	
 	public void OnDeath()
 	{
+		healthNumber = 50;
+		Log.Info(healthNumber);
 		
-		Log.Info("OnDeath");
-		GameManager.ActiveScene.Load(sceneFile);
 		
 			
 	}
 
-	public void AtDeath()
-	{
-		if (healthNumber == 0)
-		{
-			GameManager.ActiveScene.Load(sceneFile);
-		}
 
-	}
 
 }

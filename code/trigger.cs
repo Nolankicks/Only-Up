@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 using Sandbox;
-
+[Group( "Trigger" )]
 public sealed class Trigger : Component, Component.ITriggerListener //Change "Trigger to the name of your file
 {
 

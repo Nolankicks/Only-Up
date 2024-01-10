@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.VisualBasic;
 using Sandbox;
 
-
+[Group( "Trigger" )]
 public sealed class HealthTrigger : Component, Component.ITriggerListener //Change "Trigger to the name of your file
 {
 
