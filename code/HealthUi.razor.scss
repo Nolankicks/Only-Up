@@ -13,15 +13,15 @@ HealthUi
 	.health
 	{
 		background-color: #0004;
-        border-radius: 3px;
-        padding: 10px 20px;
+        border-radius: 6px;
+        padding: 20px 40px;
         color: white;
         font-weight: bolder;
         font-size: 30px;
         font-family: poppins;
         justify-content: center;
         align-items: center;
-        gap: 16px;
-        backdrop-filter: blur( 20px );
+        gap: 32px;
+        backdrop-filter: blur( 40px );
 	}
 }
