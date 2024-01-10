@@ -23,7 +23,8 @@ public sealed class SpawnPlayer : Component
 		if (Input.Pressed("Attack1"))
 		{
 			var pos = Transform.Position + Vector3.Up * 200.0f + lookDir.Forward.WithZ( 0.0f ) * 200.0f;
-			SceneUtility.Instantiate( Attack1, pos );
+			//SceneUtility.Instantiate( Attack1, pos );
+			Attack1.Clone(pos);
 			Sound.Play(soundEvent);
 			
 			
@@ -34,9 +35,9 @@ public sealed class SpawnPlayer : Component
 		if (Input.Pressed("Attack2"))
 		{
 		var pos = Transform.Position + Vector3.Up * 1.0f + lookDir.Forward.WithZ( 0.0f ) * 200.0f;
-			SceneUtility.Instantiate( Attack2, pos, rotation );
+			//SceneUtility.Instantiate( Attack2, pos, rotation );
 			Sound.Play(soundEvent);
-	
+			Attack2.Clone(pos, rotation);
 
 
 

@@ -8,6 +8,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -18,6 +19,7 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -36,6 +38,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "DirectionalLight",
           "__enabled": true,
           "LightColor": "0.91373,0.98039,1,1",
@@ -51,6 +54,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "CharacterController",
           "__enabled": true,
           "Acceleration": 10,
@@ -61,6 +65,7 @@
           "StepHeight": 18
         },
         {
+          "__version": 0,
           "__type": "PlayerController",
           "__enabled": true,
           "AnimationHelper": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
@@ -71,6 +76,7 @@
           "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         },
         {
+          "__version": 0,
           "__type": "CitizenAnimationHelper",
           "__enabled": true,
           "BodyWeight": 1,
@@ -87,12 +93,14 @@
           "Target": "3bcb2fdc-a4cb-4946-9c62-097432db4c42"
         },
         {
+          "__version": 0,
           "__type": "PlayerSpawnLevel4",
           "__enabled": true,
           "Attack1": "scenes/2cube.prefab",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
         },
         {
+          "__version": 0,
           "__type": "Health",
           "__enabled": true,
           "sceneFile": "scenes/4level.scene"
@@ -106,6 +114,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "SkinnedModelRenderer",
               "__enabled": true,
               "BodyGroups": 321,
@@ -134,6 +143,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "SphereCollider",
               "__enabled": true,
               "Center": "0,0,0",
@@ -159,6 +169,7 @@
               "Enabled": true,
               "Components": [
                 {
+                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
@@ -173,27 +184,6 @@
               ]
             },
             {
-              "Id": "1f4035ee-a9a6-4732-8941-6c3773b1c008",
-              "Name": "hair",
-              "Position": "-198.8018,-37.83206,18.15666",
-              "Tags": "player",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
-                  "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
-                  "CreateBoneObjects": false,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy_black.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            },
-            {
               "Id": "855f7d1f-768d-41c5-ab1e-965cfdbf0622",
               "Name": "eyebrows",
               "Position": "-220.3054,-131.6116,56.61692",
@@ -201,6 +191,7 @@
               "Enabled": true,
               "Components": [
                 {
+                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
                   "__enabled": true,
                   "BodyGroups": 18446744073709551615,
@@ -209,27 +200,6 @@
                   "MaterialGroup": null,
                   "MaterialOverride": null,
                   "Model": "models/citizen_clothes/hair/eyebrows/models/eyebrows.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            },
-            {
-              "Id": "c8484972-046c-4b4f-9fae-be73687fe695",
-              "Name": "beard",
-              "Position": "-242.4854,-22.71204,40.74399",
-              "Tags": "player",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
-                  "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
-                  "CreateBoneObjects": false,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/citizen_clothes/hair/goatee/models/goatee_black.vmdl",
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -247,6 +217,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "CameraComponent",
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
@@ -273,6 +244,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -290,6 +262,7 @@
       "Tags": "trigger",
       "Components": [
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -299,6 +272,7 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/4level.scene",
@@ -313,6 +287,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ScreenPanel",
           "__enabled": true,
           "AutoScreenScale": true,
@@ -329,6 +304,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "lefttext",
               "__enabled": true,
               "string1": "Press Left Click to spawn a platform",
@@ -346,10 +322,12 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "HealthTrigger",
           "__enabled": true
         },
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -369,6 +347,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ModelRenderer",
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
@@ -379,6 +358,7 @@
           "Tint": "0.28128,0.92093,0.23559,1"
         },
         {
+          "__version": 0,
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
@@ -388,6 +368,7 @@
           "Surface": null
         },
         {
+          "__version": 0,
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/menu.scene",
