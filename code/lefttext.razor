@@ -5,23 +5,19 @@
 <root>
  <div class="title">
 @string1
+</div>
 		
-        </div>
-		<div class="title">
+		<div class="title2">
 @string2
-		</div>
-				<div class="title">
-@string3
-		</div>
+</div>
 </root>
 
 @code
 {
 		[Property] public string string1 {get; set;} 
 		[Property] public string string2 {get; set;} 
-		[Property] public string string3 {get; set;} 
 
 
-	protected override int BuildHash() => System.HashCode.Combine( string1, string2, string3 );
+	protected override int BuildHash() => System.HashCode.Combine( string1, string2 );
 
 }

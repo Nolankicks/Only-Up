@@ -13,9 +13,40 @@ lefttext
 
 	.title
 	{
-		font-size: 35px;
-		font-family: Poppins;
-		color: #fff;
+		background-color: #0004;
+        border-radius: 6px;
+        padding: 20px 40px;
+        color: white;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: poppins;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        backdrop-filter: blur( 40px );
+		left: 0;
+
+		bottom: 25;
+		
+		
+
+	}
+	.title2
+	{
+		background-color: #0004;
+        border-radius: 6px;
+        padding: 20px 40px;
+        color: white;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: poppins;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        backdrop-filter: blur( 40px );
+		left: 0;
+
+		bottom: 0;
 		
 
 	}
