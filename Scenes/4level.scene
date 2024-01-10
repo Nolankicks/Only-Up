@@ -361,11 +361,9 @@
       ]
     },
     {
-      "Id": "6f4b9383-acad-45b4-a788-1ca6c2a76856",
-      "Name": "Win Trigger",
-      "Position": "3712,0.00004230811,0",
-      "Rotation": "0,0,0.707107,0.7071065",
-      "Scale": "25,10,1",
+      "Id": "07f85e87-3bd3-4734-8a88-13a17fe33361",
+      "Name": "Trigger menu",
+      "Position": "3247.66,1741.605,175.7035",
       "Enabled": true,
       "Components": [
         {
@@ -376,7 +374,7 @@
           "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
-          "Tint": "0,1,0,1"
+          "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
@@ -391,16 +389,7 @@
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/menu.scene",
-          "soundEvent": "sounds/kenney/ui/ui.popup.message.open.sound"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "soundEvent": null
         }
       ]
     }

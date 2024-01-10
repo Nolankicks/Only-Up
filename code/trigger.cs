@@ -6,7 +6,7 @@ public sealed class Trigger : Component, Component.ITriggerListener //Change "Tr
 
  bool _iTouching; 
  
-
+	
 
 
 	protected override void OnStart()
@@ -17,12 +17,14 @@ public sealed class Trigger : Component, Component.ITriggerListener //Change "Tr
 
     void ITriggerListener.OnTriggerEnter(Collider other)
     {
-		
-
+		if (other.Tags.Has("Player"))
+{
 		_iTouching = true;
         Log.Info("In");
        GameManager.ActiveScene.Load(sceneFile);
       Sound.Play(soundEvent);
+}
+
 
 	   
 
