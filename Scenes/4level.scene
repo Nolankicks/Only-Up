@@ -277,7 +277,7 @@
           "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": false,
-          "Scale": "5000,5000,0.1",
+          "Scale": "10000,10000,0.1",
           "Static": false,
           "Surface": null
         }
@@ -362,7 +362,7 @@
     },
     {
       "Id": "6f4b9383-acad-45b4-a788-1ca6c2a76856",
-      "Name": "Cube",
+      "Name": "Win Trigger",
       "Position": "3712,0.00004230811,0",
       "Rotation": "0,0,0.707107,0.7071065",
       "Scale": "25,10,1",
@@ -390,8 +390,8 @@
         {
           "__type": "Trigger",
           "__enabled": true,
-          "sceneFile": null,
-          "soundEvent": null
+          "sceneFile": "scenes/menu.scene",
+          "soundEvent": "sounds/kenney/ui/ui.popup.message.open.sound"
         },
         {
           "__type": "BoxCollider",
