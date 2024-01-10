@@ -24,16 +24,17 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 		
     }
 
-public void OnTriggerEnter(Collider other)
-{
-    if (!other.GameObject.IsValid())
-        return;
-
-    if (other.GameObject.Components.TryGet<Health>(out var health))
+    public void OnTriggerEnter( Collider other )
     {
-        health.Death();
+        if ( !other.GameObject.IsValid() )
+            return;
+
+        var health = other.GameObject.Components.GetInParentOrSelf<Health>();
+        if ( health.IsValid() )
+        {
+            health.OnDeath();
+        }
     }
-}
 
     void ITriggerListener.OnTriggerExit( Collider other ) 
     {

@@ -12,7 +12,7 @@
           "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
-          "MaterialOverride": null,
+          "MaterialOverride": "materials/grass/floor_grass_dirt_weed_blend_a.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -354,7 +354,51 @@
           "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": true,
-          "Scale": "2000,2000,50",
+          "Scale": "10000,10000,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "6f4b9383-acad-45b4-a788-1ca6c2a76856",
+      "Name": "Cube",
+      "Position": "3712,0.00004230811,0",
+      "Rotation": "0,0,0.707107,0.7071065",
+      "Scale": "25,10,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0,1,0,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "Trigger",
+          "__enabled": true,
+          "sceneFile": null,
+          "soundEvent": null
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
           "Static": false,
           "Surface": null
         }
@@ -372,5 +416,7 @@
   },
   "Title": "4level",
   "Description": "",
-  "__references": []
+  "__references": [
+    "facepunch.floor_grass_dirt_weed_blend_a"
+  ]
 }
