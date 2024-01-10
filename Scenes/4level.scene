@@ -363,7 +363,9 @@
     {
       "Id": "07f85e87-3bd3-4734-8a88-13a17fe33361",
       "Name": "Trigger menu",
-      "Position": "3247.66,1741.605,175.7035",
+      "Position": "4064,0,0",
+      "Scale": "5,5,1",
+      "Tags": "trigger",
       "Enabled": true,
       "Components": [
         {
@@ -380,7 +382,7 @@
           "__type": "BoxCollider",
           "__enabled": true,
           "Center": "0,0,0",
-          "IsTrigger": false,
+          "IsTrigger": true,
           "Scale": "50,50,50",
           "Static": false,
           "Surface": null
@@ -389,7 +391,7 @@
           "__type": "Trigger",
           "__enabled": true,
           "sceneFile": "scenes/menu.scene",
-          "soundEvent": null
+          "soundEvent": "sounds/kenney/ui/ui.upvote.sound"
         }
       ]
     }
