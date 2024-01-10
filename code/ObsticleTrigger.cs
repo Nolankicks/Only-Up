@@ -5,7 +5,8 @@ using Sandbox;
 [Group( "Trigger" )]
 public sealed class ObsticleTrigger : Component, Component.ITriggerListener //Change "Trigger to the name of your file
 {
-
+[Property] public Health health {get; set;}
+[Property] public SoundEvent soundEvent {get; set;}
  bool _iTouching; 
 
  public void istouching(bool _iTouching)
@@ -26,14 +27,12 @@ public sealed class ObsticleTrigger : Component, Component.ITriggerListener //Ch
 
     public void OnTriggerEnter( Collider other )
     {
-        if ( !other.GameObject.IsValid() )
-            return;
 
-        var health = other.GameObject.Components.GetInParentOrSelf<Health>();
-        if ( health.IsValid() )
-        {
-            health.OnObsticle();
-        }
+		if (other.Tags.Has("Player"))
+{
+		health.healthNumber = health.healthNumber - 25;
+		Sound.Play(soundEvent);
+}
     }
 
     void ITriggerListener.OnTriggerExit( Collider other ) 

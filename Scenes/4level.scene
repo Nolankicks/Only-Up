@@ -50,6 +50,7 @@
     {
       "Id": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
       "Name": "player",
+      "Position": "-134.5618,0,0",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -110,6 +111,7 @@
         {
           "Id": "3bcb2fdc-a4cb-4946-9c62-097432db4c42",
           "Name": "body",
+          "Position": "0,0,0",
           "Tags": "player",
           "Enabled": true,
           "Components": [
@@ -212,7 +214,7 @@
     {
       "Id": "1fa5c6fa-10ff-460a-a08c-d5bfbbbd7dc7",
       "Name": "Camera",
-      "Position": "70.2108,2.014908,11.77882",
+      "Position": "64.78328,2.014908,11.77882",
       "Tags": "maincamera",
       "Enabled": true,
       "Components": [
@@ -233,6 +235,49 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        },
+        {
+          "__version": 0,
+          "__type": "Bloom",
+          "__enabled": true,
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {},
+            {
+              "x": 1,
+              "y": 1
+            }
+          ],
+          "Mode": "Additive",
+          "Strength": 0.48,
+          "Threshold": 0.8,
+          "ThresholdWidth": 0.68
+        },
+        {
+          "__version": 0,
+          "__type": "Sharpen",
+          "__enabled": true,
+          "Scale": 0.2
+        },
+        {
+          "__version": 0,
+          "__type": "Tonemapping",
+          "__enabled": true,
+          "ExposureCompensation": 0,
+          "MaximumExposure": 2,
+          "MinimumExposure": 0.95,
+          "Rate": 0.69
         }
       ]
     },
@@ -315,8 +360,8 @@
               "__version": 0,
               "__type": "ReturnToMenu",
               "__enabled": true,
-              "menuScene": null,
-              "soundEvent": null
+              "menuScene": "scenes/menu.scene",
+              "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
             },
             {
               "__version": 0,
@@ -354,8 +399,47 @@
     {
       "Id": "07f85e87-3bd3-4734-8a88-13a17fe33361",
       "Name": "Trigger menu",
-      "Position": "4064,0,0",
-      "Scale": "5,5,1",
+      "Position": "3968,0,0",
+      "Scale": "10,25,1",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.28128,0.92093,0.23559,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Trigger",
+          "__enabled": true,
+          "sceneFile": "scenes/menu.scene",
+          "soundEvent": "sounds/kenney/ui/ui.upvote.sound"
+        }
+      ]
+    },
+    {
+      "Id": "6307a7cf-725e-4e20-a240-b7f85aacef5e",
+      "Name": "Trigger menu (1)",
+      "Position": "4192,0,608",
+      "Rotation": "0,0.707107,0,0.7071065",
+      "Scale": "25,25,1",
       "Tags": "trigger",
       "Enabled": true,
       "Components": [
@@ -391,9 +475,78 @@
     },
     {
       "Id": "b3324fde-b86e-45a7-80ba-ab8a0aa8bf37",
-      "Name": "Object",
-      "Position": "57.20801,-423.9612,130.8419",
-      "Enabled": true
+      "Name": "Obsticle Trigger",
+      "Position": "352,0,64",
+      "Scale": "1,7,3",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ObsticleTrigger",
+          "__enabled": true,
+          "health": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
+          "soundEvent": "sounds/kenney/ui/ui.button.deny.sound"
+        },
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/dev/bright_100.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,0.16078,0.16078,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": true,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Movement",
+          "__enabled": true,
+          "ShouldMove": true,
+          "Transform1": {
+            "UniformScale": 1,
+            "Position": "352,0,64",
+            "Scale": "1,1,1"
+          },
+          "Transform2": {
+            "UniformScale": 1,
+            "Position": "3616,0,64",
+            "Scale": "1,1,1"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "22cfad82-e5f7-420e-8a71-3fee277b5a7e",
+      "Name": "Cubemap",
+      "Position": "65.5249,-194.9134,193.0275",
+      "Scale": "10,10,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "EnvmapProbe",
+          "__enabled": true,
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "Feathering": 0.02,
+          "Projection": "Sphere",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {

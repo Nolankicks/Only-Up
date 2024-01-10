@@ -850,6 +850,7 @@
               "__version": 0,
               "__type": "ReturnToMenu",
               "__enabled": true,
+              "menuScene": "scenes/menu.scene",
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
             },
             {
