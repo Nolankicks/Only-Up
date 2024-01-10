@@ -22,13 +22,13 @@ public class Movement : Component
             _desiredTransform = _swapTransforms ? Transform1 : Transform2;
 
             // if we are close in position to the desired transform, swap em
-            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 1f )
+            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 0.1f )
             {
                 // swap em now
                 _swapTransforms = !_swapTransforms;
             }
 
-            GameObject.Transform.Position = GameObject.Transform.Position.LerpTo( _desiredTransform.Position, Time.Delta * 0.5f );
+            GameObject.Transform.Position = GameObject.Transform.Position.LerpTo( _desiredTransform.Position, Time.Delta * 2f );
         }
     }
 }

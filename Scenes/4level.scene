@@ -516,11 +516,12 @@
           "Transform1": {
             "UniformScale": 1,
             "Position": "352,0,64",
-            "Scale": "1,1,1"
+            "Scale": "1,1,1",
+            "Rotation": "0,0,0,1"
           },
           "Transform2": {
             "UniformScale": 1,
-            "Position": "3616,0,64",
+            "Position": "3520,0,64",
             "Scale": "1,1,1"
           }
         }
