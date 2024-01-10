@@ -1,8 +1,8 @@
 {
-  "Id": "4ee5994b-fddb-4888-b8f8-1a98b0b1e43c",
+  "Id": "509d8df8-fe1b-4bab-9cca-eaa790110019",
   "GameObjects": [
     {
-      "Id": "37926b85-6835-49ca-a9fa-adc72205059e",
+      "Id": "079e6bbc-963e-4505-820a-a6728fd47976",
       "Name": "Camera",
       "Position": "195.4234,110.1275,-199.1878",
       "Tags": "maincamera",
@@ -28,42 +28,7 @@
       ]
     },
     {
-      "Id": "ce76e92c-90fa-44c8-8a47-cbb8393017d3",
-      "Name": "Screen",
-      "Position": "195.4234,110.1275,-199.1878",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        }
-      ],
-      "Children": [
-        {
-          "Id": "921c0ac8-918d-4f03-9a8a-b2bfaf88bcae",
-          "Name": "uier",
-          "Position": "195.4234,110.1275,-199.1878",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "leveltwomenu",
-              "__enabled": true,
-              "buttonSound": "sounds/kenney/ui/ui.button.press.sound",
-              "no": "scenes/menu.scene",
-              "playSound": true,
-              "text": "Play level 2?",
-              "yes": "scenes/level2.scene"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "a3459207-1e20-445d-a343-4c48f064f64f",
+      "Id": "9324f8f4-edd1-4854-8d64-d4fab07a9398",
       "Name": "Sun",
       "Position": "-538.6897,154.262,24.26187",
       "Rotation": "0,0.707107,0,0.7071065",
@@ -79,7 +44,7 @@
       ]
     },
     {
-      "Id": "73c0e4be-b18a-431f-ac21-fd4eb5e2023f",
+      "Id": "e62ed3b4-5982-43d2-a32c-431e41c59017",
       "Name": "Emitter (2)",
       "Position": "704,128,96",
       "Rotation": "0,0.707107,0,0.7071065",
@@ -173,7 +138,7 @@
               ],
               "alpha": []
             },
-            "ConstantA": "0.06,1,0,1",
+            "ConstantA": "1,0.03465,0.03465,1",
             "ConstantB": "1,0.71891,0.17327,1"
           },
           "Lifetime": {
@@ -305,7 +270,7 @@
       ]
     },
     {
-      "Id": "b64eb39d-8d82-423e-a8c9-500e56d270ee",
+      "Id": "82052716-7946-4019-94b6-c2c3dfcd28c1",
       "Name": "2D Skybox",
       "Position": "166.6065,-25.35442,-58.64799",
       "Enabled": true,
@@ -319,7 +284,7 @@
       ]
     },
     {
-      "Id": "7d5d1baa-e408-49e6-8ced-2f17e64bee2a",
+      "Id": "afdc40d3-15ae-4f1e-9452-e4f81197055c",
       "Name": "sound",
       "Position": "195.423,110.128,-199.188",
       "Enabled": true,
@@ -340,6 +305,31 @@
           "Volume": 1
         }
       ]
+    },
+    {
+      "Id": "3a571c12-b879-4a9f-be85-bf4aa434f71f",
+      "Name": "Screen",
+      "Position": "83.71112,104.5088,-28.04602",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "leveltwomenu",
+          "__enabled": true,
+          "buttonSound": "sounds/kenney/ui/ui.button.press.sound",
+          "no": "scenes/menu.scene",
+          "playSound": true,
+          "text": "Play level 4?",
+          "yes": "scenes/4level.scene"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -351,7 +341,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true
   },
-  "Title": "level2yesorno",
+  "Title": "to4level",
   "Description": "",
   "__references": []
 }

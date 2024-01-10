@@ -376,7 +376,7 @@
           "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "0.28128,0.92093,0.23559,1"
         },
         {
           "__type": "BoxCollider",

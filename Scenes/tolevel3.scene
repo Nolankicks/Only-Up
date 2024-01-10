@@ -1,4 +1,5 @@
 {
+  "Id": "c9b47a3d-269e-4da7-ad10-8dfdf087155d",
   "GameObjects": [
     {
       "Id": "6b90a60e-6aa3-48b4-bffa-7b768d16c89a",
@@ -51,8 +52,9 @@
             {
               "__type": "leveltwomenu",
               "__enabled": true,
-              "ButtonSound": "sounds/kenney/ui/ui.button.press.sound",
+              "buttonSound": "sounds/kenney/ui/ui.button.press.sound",
               "no": "scenes/menu.scene",
+              "playSound": true,
               "text": "Play level 3?",
               "yes": "scenes/level3.scene"
             }
@@ -290,6 +292,7 @@
           "__enabled": true,
           "Burst": 1000,
           "Delay": 0,
+          "DestroyOnEnd": false,
           "Duration": 3.7,
           "Loop": true,
           "OnEdge": false,

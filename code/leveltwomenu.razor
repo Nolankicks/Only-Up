@@ -16,9 +16,9 @@
 {
 
 	[Property] public SceneFile yes { get; set; } //allows the scene to be change in the editor
-	[Property] public SoundEvent ButtonSound {get; set;}
+
 		[Property] public string text { get; set; } = "Hello World";
-	[Property] public SoundFile buttonSound {get; set;}
+	[Property] public SoundEvent buttonSound {get; set;}
 	[Property] public bool playSound {get; set;}
 	
 	
@@ -26,28 +26,28 @@
 	{
 		Log.Info("aaa");
 		GameManager.ActiveScene.Load(yes);
-		Sound.Play(ButtonSound);
+		Sound.Play(buttonSound);
 	}	
 
-	protected override int BuildHash() => System.HashCode.Combine( yes, no, text ); //does some hash shit idk
+
 	
 [Property] public SceneFile no { get; set; }
 	void changeScene2()
 	{
 		Log.Info("bbb");
 		GameManager.ActiveScene.Load(no);
-		Sound.Play(ButtonSound);
+		Sound.Play(buttonSound);
 	}
 	void buttonMusic()
 	{
 		if (playSound = true)
 		{
-			Sound.Play(ButtonSound);
+			Sound.Play(buttonSound);
 		}
 		
 	}
 		
 
 
-
+	protected override int BuildHash() => System.HashCode.Combine( yes, no, text ); //does some hash shit idk
 }
