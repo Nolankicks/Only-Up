@@ -70,7 +70,7 @@
           "__enabled": true,
           "AnimationHelper": "2bdf14e0-13ba-4a0b-8ea0-bcca523fa735",
           "Body": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
-          "Camera": "095baac3-9eff-43f1-940b-ebadb61c81df",
+          "Camera": null,
           "Distance": 350,
           "Eye": "63e816fb-878d-41e5-94ed-9bff27740ca4",
           "FirstPerson": false,

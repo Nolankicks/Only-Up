@@ -1,5 +1,6 @@
 using Sandbox;
 using Sandbox.Citizen;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Net.Http;
 using System.Runtime;
@@ -16,7 +17,8 @@ public class PlayerController : Component, INetworkSerializable
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public bool FirstPerson { get; set; }
 	[Property] public float Distance {get; set;}
-	[Property] public CameraComponent Camera {get; set;}
+	private CameraComponent Camera;
+	 
 	
 	
 	public bool ifhiding;
@@ -84,8 +86,8 @@ public class PlayerController : Component, INetworkSerializable
 				{
 					camPos = camTrace.EndPosition;
 				}
-				Camera.Transform.Position = camPos;
-				Camera.Transform.Rotation = EyeAngles.ToRotation();
+				cam.Transform.Position = camPos;
+				cam.Transform.Rotation = EyeAngles.ToRotation();
 			}
 
 
