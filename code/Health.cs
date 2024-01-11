@@ -27,16 +27,22 @@ public sealed class Health : Component
 				GameManager.ActiveScene.Load(sceneFile);
 				
 			}
+			
 
 	}
+
+
+		
 	
 
 	
-	
-	
-	
+
+
+
+
 	public void OnDeath()
 	{
+		
 		healthNumber = 0;
 		Log.Info(healthNumber);
 		
@@ -45,8 +51,12 @@ public sealed class Health : Component
 	}
 	public void OnObsticle()
 	{
-		healthNumber = 50;
+		
+
+		healthNumber -= 25;
+
 	}
+	
 
 
 

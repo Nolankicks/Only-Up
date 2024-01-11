@@ -27,12 +27,16 @@ public sealed class ObsticleTrigger : Component, Component.ITriggerListener //Ch
 
     public void OnTriggerEnter( Collider other )
     {
-
+_iTouching = true;
+		
 		if (other.Tags.Has("Player"))
-{
-		health.healthNumber = health.healthNumber - 25;
+{		
+		{
+		health.OnObsticle();
 		Sound.Play(soundEvent);
+		}
 }
+
     }
 
     void ITriggerListener.OnTriggerExit( Collider other ) 

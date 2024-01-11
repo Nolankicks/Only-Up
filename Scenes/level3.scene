@@ -41,6 +41,8 @@
           "__enabled": true,
           "AnimationHelper": "3d7efb52-3d37-4c7c-b7e5-54e4db46573f",
           "Body": "3164764c-0f94-4d72-82b9-72a4c6b68c5d",
+          "Camera": "34e5d63b-34db-4622-aed9-c6a19a51cedf",
+          "Distance": 0,
           "Eye": "a3459e9f-9798-495f-bcab-02a2cc05f4c2",
           "FirstPerson": false,
           "Gravity": "0,0,800",
@@ -69,6 +71,12 @@
           "__enabled": true,
           "Source": "3164764c-0f94-4d72-82b9-72a4c6b68c5d",
           "Volume": 2
+        },
+        {
+          "__version": 0,
+          "__type": "Health",
+          "__enabled": true,
+          "sceneFile": "scenes/level3.scene"
         }
       ],
       "Children": [
@@ -185,7 +193,7 @@
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
-                  "Model": "models/dev/error.vmdl",
+                  "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy.vmdl",
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -251,7 +259,7 @@
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
-                  "Model": "models/dev/error.vmdl",
+                  "Model": "models/citizen_clothes/hair/scruffy_beard/models/scruffy_beard_brown.vmdl",
                   "RenderType": "On",
                   "Tint": "1,1,1,1"
                 }
@@ -381,6 +389,20 @@
               "__enabled": true,
               "menuScene": "scenes/menu.scene",
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+            }
+          ]
+        },
+        {
+          "Id": "c50f3482-aee0-489b-9fa8-a26fda558d8a",
+          "Name": "Health Ui",
+          "Position": "-160.3356,-196.5446,90.82693",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "HealthUi",
+              "__enabled": true,
+              "health": "3d7efb52-3d37-4c7c-b7e5-54e4db46573f"
             }
           ]
         }

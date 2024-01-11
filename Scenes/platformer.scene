@@ -98,8 +98,10 @@
           "__enabled": true,
           "AnimationHelper": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7",
           "Body": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
+          "Camera": "9a3926cd-89a3-4f5e-ba66-260d31e6ee6e",
+          "Distance": 350,
           "Eye": "d59c1d92-907c-429c-8214-8e5f7460fcfb",
-          "FirstPerson": false,
+          "FirstPerson": true,
           "Gravity": "0,0,800",
           "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         },
@@ -126,6 +128,12 @@
           "__enabled": true,
           "Source": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
           "Volume": 2
+        },
+        {
+          "__version": 0,
+          "__type": "Health",
+          "__enabled": true,
+          "sceneFile": "scenes/platformer.scene"
         }
       ],
       "Children": [
@@ -143,7 +151,7 @@
               "__enabled": true,
               "BodyGroups": 0,
               "BoneMergeTarget": null,
-              "CreateBoneObjects": true,
+              "CreateBoneObjects": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/citizen/citizen.vmdl",
@@ -470,7 +478,7 @@
                                         {
                                           "Id": "ce2e5902-07b8-486d-8c70-9a66fcdf51db",
                                           "Name": "arm_lower_L_twist0",
-                                          "Position": "0.000006483232,0.00000758022,-0.00006434019",
+                                          "Position": "0,0,0",
                                           "Tags": "player",
                                           "Enabled": true
                                         },
@@ -484,7 +492,7 @@
                                         {
                                           "Id": "90962694-dd02-4578-a582-5fbb28b4d669",
                                           "Name": "arm_elbow_helper_L",
-                                          "Position": "-0.000005405808,0.000003063116,-0.00006161761",
+                                          "Position": "0,0,0",
                                           "Rotation": "0.000000372529,-0.00000002980232,-0.7577644,0.6525282",
                                           "Tags": "player",
                                           "Enabled": true
@@ -494,7 +502,7 @@
                                     {
                                       "Id": "fbc9b776-fe94-42f3-ab3d-8e87ca4c3786",
                                       "Name": "arm_upper_L_twist0",
-                                      "Position": "0.00001501787,0.0000139646,-0.00002700522",
+                                      "Position": "0,0,0",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -711,15 +719,15 @@
                                         {
                                           "Id": "d883c3ad-3b12-407b-a96e-8e608efface5",
                                           "Name": "arm_lower_R_twist0",
-                                          "Position": "-0.00001620712,0.00002659347,-0.00004494276",
+                                          "Position": "0,0,0",
                                           "Tags": "player",
                                           "Enabled": true,
                                           "Children": [
                                             {
                                               "Id": "f8ccdd03-dffc-497a-adf6-2512234fd8ba",
                                               "Name": "arm_elbow_helper_R",
-                                              "Position": "-0.000006301124,0.00003151576,-0.00005436999",
-                                              "Rotation": "-0.0000008270144,0.0000002235174,0.7577678,-0.6525242",
+                                              "Position": "-0.00001584749,0.00005493223,-0.0001028965",
+                                              "Rotation": "-0.0000007227063,0.0000001788139,0.7577676,-0.6525243",
                                               "Tags": "player",
                                               "Enabled": true
                                             }
@@ -730,7 +738,7 @@
                                     {
                                       "Id": "77b803cd-a9dd-4ee0-aef5-68499b7e7d90",
                                       "Name": "arm_upper_R_twist0",
-                                      "Position": "-0.00001004129,0.00001794298,-0.0000584176",
+                                      "Position": "0,0,0",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -803,14 +811,14 @@
                         {
                           "Id": "4e6a3d4b-f625-4e40-b5d7-8499681a9f24",
                           "Name": "leg_lower_R_twist0",
-                          "Position": "-0.000005890251,0.000004494478,-0.00001049927",
+                          "Position": "0,0,0",
                           "Tags": "player",
                           "Enabled": true
                         },
                         {
                           "Id": "62f8abca-24df-446e-a3d6-f16b368bdab5",
                           "Name": "leg_knee_helper_R",
-                          "Position": "0.000001736438,0.000004707826,-0.000009435021",
+                          "Position": "0,0,0",
                           "Rotation": "0.0000009685755,-0.0000012815,0.7135269,0.7006278",
                           "Tags": "player",
                           "Enabled": true
@@ -827,7 +835,7 @@
                     {
                       "Id": "6c41e3e7-0eb0-43ac-bf0a-4353ab34d4f8",
                       "Name": "leg_upper_R_twist0",
-                      "Position": "0.000007629445,0.000006078011,-0.00001714475",
+                      "Position": "0,0,0",
                       "Rotation": "-0.00000008940697,0.00000009685755,0.000002995133,1",
                       "Tags": "player",
                       "Enabled": true
@@ -835,7 +843,7 @@
                     {
                       "Id": "29dfd9f8-aa0f-4a13-aef4-c75325492b04",
                       "Name": "leg_glute_helper_R",
-                      "Position": "0.00002098089,0.000005578758,-0.00001770962",
+                      "Position": "0,0,0",
                       "Rotation": "-0.000001117587,-0.0000005960464,-0.7071052,0.7071084",
                       "Tags": "player",
                       "Enabled": true
@@ -886,14 +894,14 @@
                         {
                           "Id": "a4d69ea7-d77a-408a-b89c-d63fa89703ed",
                           "Name": "leg_lower_L_twist0",
-                          "Position": "-0.000007739953,0.000002883383,-0.000009739767",
+                          "Position": "0,0,0",
                           "Tags": "player",
                           "Enabled": true
                         },
                         {
                           "Id": "562df5c8-19ef-423f-9530-a6beb4d6559e",
                           "Name": "leg_knee_helper_L",
-                          "Position": "-0.00001533665,0.000001850143,-0.000009626105",
+                          "Position": "0,0,0",
                           "Rotation": "-0.000002980232,-0.00000166893,0.7135277,0.7006271",
                           "Tags": "player",
                           "Enabled": true
@@ -910,14 +918,14 @@
                     {
                       "Id": "bd1f7cff-a15e-451f-9ea4-37937bf6a957",
                       "Name": "leg_upper_L_twist0",
-                      "Position": "0.000007629401,0.00000996229,-0.000009106908",
+                      "Position": "0,0,0",
                       "Tags": "player",
                       "Enabled": true
                     },
                     {
                       "Id": "234b1419-ef3c-4612-bcaf-b97dd1d9a77a",
                       "Name": "leg_glute_helper_L",
-                      "Position": "0.0000190735,0.000009549767,-0.000009345945",
+                      "Position": "0,0,0",
                       "Rotation": "-0.000000923872,-0.0000007748604,-0.7071055,0.7071081",
                       "Tags": "player",
                       "Enabled": true
@@ -987,6 +995,50 @@
                   "Rotation": "0.650896,0.276287,-0.2762894,0.6508948",
                   "Tags": "player",
                   "Enabled": true
+                }
+              ]
+            },
+            {
+              "Id": "2b3b2f2b-e453-4a2f-bfb7-2b133a83b9f5",
+              "Name": "aumor",
+              "Position": "-95.18141,114.1345,-10.27402",
+              "Rotation": "0,0,-0.259606,0.9657148",
+              "Tags": "player",
+              "Components": [
+                {
+                  "__version": 0,
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/full_outfit/medieval_armour/models/medieval_armour.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "Id": "e4ae46bb-d47e-4a94-be6e-2951b2ef6429",
+              "Name": "Helmit",
+              "Position": "-185.2857,104.0606,57.17301",
+              "Rotation": "0,0,-0.259606,0.9657148",
+              "Tags": "player",
+              "Components": [
+                {
+                  "__version": 0,
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen_clothes/hat/bucket_helmet/models/bucket_helmet.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
                 }
               ]
             }
@@ -1973,28 +2025,6 @@
           ]
         },
         {
-          "Id": "2b3b2f2b-e453-4a2f-bfb7-2b133a83b9f5",
-          "Name": "aumor",
-          "Position": "-139.5801,51.02524,-10.27402",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/full_outfit/medieval_armour/models/medieval_armour.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
           "Id": "89ddceee-0001-4362-9a6f-08b53e65ab67",
           "Name": "Collider",
           "Position": "0,0,-0.2471827",
@@ -2010,28 +2040,6 @@
               "Radius": 25,
               "Static": false,
               "Surface": null
-            }
-          ]
-        },
-        {
-          "Id": "e4ae46bb-d47e-4a94-be6e-2951b2ef6429",
-          "Name": "Helmit",
-          "Position": "-212.488,-2.87001,57.17301",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/hat/bucket_helmet/models/bucket_helmet.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
             }
           ]
         }
@@ -2066,6 +2074,20 @@
               "__enabled": true,
               "menuScene": "scenes/menu.scene",
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+            }
+          ]
+        },
+        {
+          "Id": "560a880c-61ba-46ff-8404-ff08d50dd92b",
+          "Name": "Health Ui",
+          "Position": "-71.09019,-59.23643,21.57351",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "HealthUi",
+              "__enabled": true,
+              "health": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7"
             }
           ]
         }
@@ -2326,6 +2348,111 @@
           "Model": "models/prop_wooden_crates_01.vmdl",
           "Static": false,
           "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "4f552324-0fe2-4bed-b679-b222c4aa4baf",
+      "Name": "Obsticle",
+      "Position": "249.13,-14.579,29.938",
+      "Scale": "1,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/dev/bright_100.vmat",
+          "Model": null,
+          "RenderType": "On",
+          "Tint": "1,0.28837,0.28837,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ObsticleTrigger",
+          "__enabled": true,
+          "health": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7",
+          "soundEvent": "sounds/player_use_fail.sound"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Movement",
+          "__enabled": true,
+          "ShouldMove": true,
+          "Transform1": {
+            "UniformScale": 1,
+            "Position": "249.13,-14.579,29.938",
+            "Scale": "1,1,1"
+          },
+          "Transform2": {
+            "UniformScale": 1,
+            "Position": "249.13,-14.579,328.658",
+            "Scale": "1,1,1"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "d909ad55-275b-4ca0-a212-9c21e5ccf3fd",
+      "Name": "Fixed Update",
+      "Position": "-31.30988,-109.4421,70.49464",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "FixedUpdateActionComponent",
+          "__enabled": true,
+          "Action": {
+            "Kind": "Action",
+            "Variables": [
+              {
+                "Id": 1,
+                "Name": "_this",
+                "Type": "Sandbox.Game/Sandbox.Component",
+                "Default": "d909ad55-275b-4ca0-a212-9c21e5ccf3fd"
+              }
+            ],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 2,
+                "Type": "time.delay",
+                "Inputs": {
+                  "seconds": 3
+                },
+                "UserData": {
+                  "Position": "304,16"
+                }
+              }
+            ],
+            "Links": [
+              [
+                0,
+                "_signal",
+                2,
+                "_signal"
+              ]
+            ],
+            "UserData": {
+              "Title": "Action",
+              "id": "adf876d3-a3c2-40c5-8259-44637ebe065a"
+            }
+          }
         }
       ]
     }

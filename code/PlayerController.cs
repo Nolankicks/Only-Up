@@ -1,6 +1,7 @@
 using Sandbox;
 using Sandbox.Citizen;
 using System.Drawing;
+using System.Net.Http;
 using System.Runtime;
 
 public class PlayerController : Component, INetworkSerializable
@@ -14,10 +15,16 @@ public class PlayerController : Component, INetworkSerializable
 	[Property] public GameObject Eye { get; set; }
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public bool FirstPerson { get; set; }
+	[Property] public float Distance {get; set;}
+	[Property] public CameraComponent Camera {get; set;}
+	
+	
+	public bool ifhiding;
 
 	public Angles EyeAngles;
 	public bool IsRunning;
 	private ModelRenderer BodyRender;
+
 
 	protected override void OnEnabled()
 	{
@@ -31,6 +38,7 @@ public class PlayerController : Component, INetworkSerializable
 		{
 			EyeAngles = cam.Transform.Rotation.Angles();
 			EyeAngles.roll = 0;
+			
 		}
 	}
 
@@ -42,21 +50,44 @@ public class PlayerController : Component, INetworkSerializable
 			EyeAngles.pitch += Input.MouseDelta.y * 0.1f;
 			EyeAngles.yaw -= Input.MouseDelta.x * 0.1f;
 			EyeAngles.roll = 0;
+			EyeAngles.pitch = EyeAngles.pitch.Clamp( -89.9f, 89.9f );
 
 			var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 
 			var lookDir = EyeAngles.ToRotation();
-
+			var camPos = Eye.Transform.Position;
 			if ( FirstPerson )
 			{
 				cam.Transform.Position = Eye.Transform.Position;
 				cam.Transform.Rotation = lookDir;
+				Camera.FieldOfView = 90;
+				var body = GameObject.Components.GetInParentOrSelf<SkinnedModelRenderer>();
+				body.Enabled = false;
+				body.RenderType = ModelRenderer.ShadowRenderType.On;
+				
+
 			}
 			else
 			{
-				cam.Transform.Position = Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
-				cam.Transform.Rotation = lookDir;
+				//cam.Transform.Position = Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
+				//cam.Transform.Rotation = lookDir;
+				var camForward = EyeAngles.ToRotation().Forward;
+				var camTrace = Scene.Trace.Ray(camPos, camPos - (camForward * Distance) )
+				.WithoutTags("player", "trigger")
+				.Run();
+
+				if(camTrace.Hit)
+				{
+					camPos = camTrace.HitPosition + camTrace.Normal;
+				}
+				else
+				{
+					camPos = camTrace.EndPosition;
+				}
+				Camera.Transform.Position = camPos;
+				Camera.Transform.Rotation = EyeAngles.ToRotation();
 			}
+
 
 
 
