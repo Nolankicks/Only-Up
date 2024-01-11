@@ -1,11 +1,13 @@
 using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
 using Sandbox;
 
-public sealed class Health : Component
+public sealed class HealthManager : Component
 {
-
-	[Property] public SceneFile sceneFile {get; set;}
+	
+	//[Property] public SceneFile sceneFile {get; set;}
 	public long healthNumber {get; set;} = 100;
+	[Property] public SceneFile sceneFile {get; set;}
 	
 	
 	
@@ -20,17 +22,16 @@ public sealed class Health : Component
 	
 	protected override void OnUpdate()
 	{
-
-			
-			if (healthNumber == 0)
+				if (healthNumber == 0)
 			{
 				GameManager.ActiveScene.Load(sceneFile);
-				
+
 			}
-			
+	}
+	public void AtDeath()
+	{
 
 	}
-
 
 		
 	
@@ -44,7 +45,9 @@ public sealed class Health : Component
 	{
 		
 		healthNumber = 0;
+		
 		Log.Info(healthNumber);
+		
 		
 		
 			
@@ -53,7 +56,7 @@ public sealed class Health : Component
 	{
 		
 
-		healthNumber -= 25;
+		 healthNumber -= 25;
 
 	}
 	

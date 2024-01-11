@@ -29,7 +29,7 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
         if ( !other.GameObject.IsValid() )
             return;
 
-        var health = other.GameObject.Components.GetInParentOrSelf<Health>();
+        var health = other.GameObject.Components.GetInAncestorsOrSelf<HealthManager>();
         if ( health.IsValid() )
         {
             health.OnDeath();

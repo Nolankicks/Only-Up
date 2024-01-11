@@ -26,6 +26,7 @@ public class PlayerController : Component, INetworkSerializable
 	public Angles EyeAngles;
 	public bool IsRunning;
 	private ModelRenderer BodyRender;
+	
 
 
 	protected override void OnEnabled()

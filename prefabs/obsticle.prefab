@@ -1,0 +1,59 @@
+{
+  "RootObject": {
+    "Id": "4f552324-0fe2-4bed-b679-b222c4aa4baf",
+    "Name": "Obsticle",
+    "Position": "249.13,-14.579,29.938",
+    "Scale": "1,5,1",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "ModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": "materials/dev/bright_100.vmat",
+        "Model": null,
+        "RenderType": "On",
+        "Tint": "1,0.28837,0.28837,1"
+      },
+      {
+        "__version": 0,
+        "__type": "ObsticleTrigger",
+        "__enabled": true,
+        "health": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7",
+        "soundEvent": "sounds/player_use_fail.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "BoxCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "Movement",
+        "__enabled": true,
+        "ShouldMove": true,
+        "Transform1": {
+          "UniformScale": 1,
+          "Position": "249.13,-14.579,29.938",
+          "Scale": "1,1,1"
+        },
+        "Transform2": {
+          "UniformScale": 1,
+          "Position": "249.13,-14.579,328.658",
+          "Scale": "1,1,1"
+        }
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

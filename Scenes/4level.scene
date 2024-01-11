@@ -70,7 +70,6 @@
           "__enabled": true,
           "AnimationHelper": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
           "Body": "6069cbe0-61c6-4783-971f-c4224c1a73cd",
-          "Camera": "1fa5c6fa-10ff-460a-a08c-d5bfbbbd7dc7",
           "Distance": 350,
           "Eye": "29dbcd42-2183-467d-9664-43f48708f4f3",
           "FirstPerson": false,
@@ -103,7 +102,7 @@
         },
         {
           "__version": 0,
-          "__type": "Health",
+          "__type": "HealthManager",
           "__enabled": true,
           "sceneFile": "scenes/4level.scene"
         }
@@ -1408,7 +1407,7 @@
           "__version": 0,
           "__type": "ObsticleTrigger",
           "__enabled": true,
-          "health": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
+          "health": null,
           "soundEvent": "sounds/player_use_fail.sound"
         },
         {

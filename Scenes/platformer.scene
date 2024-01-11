@@ -98,7 +98,6 @@
           "__enabled": true,
           "AnimationHelper": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7",
           "Body": "9dd718a1-9344-4759-a602-3fc6e2b8340b",
-          "Camera": "9a3926cd-89a3-4f5e-ba66-260d31e6ee6e",
           "Distance": 350,
           "Eye": "d59c1d92-907c-429c-8214-8e5f7460fcfb",
           "FirstPerson": false,
@@ -131,7 +130,7 @@
         },
         {
           "__version": 0,
-          "__type": "Health",
+          "__type": "HealthManager",
           "__enabled": true,
           "sceneFile": "scenes/platformer.scene"
         }
@@ -2141,10 +2140,8 @@
         },
         {
           "__version": 0,
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/platformer.scene",
-          "soundEvent": "sounds/player_use_fail.sound"
+          "__type": "HealthTrigger",
+          "__enabled": true
         }
       ]
     },
@@ -2359,52 +2356,7 @@
       "Position": "249.13,-14.579,29.938",
       "Scale": "1,5,1",
       "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/dev/bright_100.vmat",
-          "Model": null,
-          "RenderType": "On",
-          "Tint": "1,0.28837,0.28837,1"
-        },
-        {
-          "__version": 0,
-          "__type": "ObsticleTrigger",
-          "__enabled": true,
-          "health": "2f7d4fd5-9ff5-4d40-9852-f05704b4e7a7",
-          "soundEvent": "sounds/player_use_fail.sound"
-        },
-        {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "Movement",
-          "__enabled": true,
-          "ShouldMove": true,
-          "Transform1": {
-            "UniformScale": 1,
-            "Position": "249.13,-14.579,29.938",
-            "Scale": "1,1,1"
-          },
-          "Transform2": {
-            "UniformScale": 1,
-            "Position": "249.13,-14.579,328.658",
-            "Scale": "1,1,1"
-          }
-        }
-      ]
+      "__Prefab": "prefabs/obsticle.prefab"
     },
     {
       "Id": "d909ad55-275b-4ca0-a212-9c21e5ccf3fd",

@@ -41,7 +41,6 @@
           "__enabled": true,
           "AnimationHelper": "3d7efb52-3d37-4c7c-b7e5-54e4db46573f",
           "Body": "3164764c-0f94-4d72-82b9-72a4c6b68c5d",
-          "Camera": "34e5d63b-34db-4622-aed9-c6a19a51cedf",
           "Distance": 350,
           "Eye": "a3459e9f-9798-495f-bcab-02a2cc05f4c2",
           "FirstPerson": false,
@@ -74,9 +73,10 @@
         },
         {
           "__version": 0,
-          "__type": "Health",
+          "__type": "HealthManager",
           "__enabled": true,
-          "sceneFile": "scenes/level3.scene"
+          "sceneFile": "scenes/level3.scene",
+          "soundEvent": "sounds/half-life-2-death-sound.sound"
         }
       ],
       "Children": [
@@ -428,10 +428,8 @@
         },
         {
           "__version": 0,
-          "__type": "Trigger",
-          "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
+          "__type": "HealthTrigger",
+          "__enabled": true
         }
       ]
     },
@@ -1093,6 +1091,60 @@
           "__enabled": true,
           "sceneFile": "scenes/to4level.scene",
           "soundEvent": "sounds/kenney/ui/ui.upvote.sound"
+        }
+      ]
+    },
+    {
+      "Id": "0624555c-8a80-42c0-ab37-ec53311dfd4c",
+      "Name": "Obsticle",
+      "Position": "672.0001,960,96",
+      "Rotation": "0.00000004024841,0.00000004024844,0.707107,0.7071065",
+      "Scale": "1,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/dev/bright_100.vmat",
+          "Model": null,
+          "RenderType": "On",
+          "Tint": "1,0.28837,0.28837,1"
+        },
+        {
+          "__version": 0,
+          "__type": "ObsticleTrigger",
+          "__enabled": true,
+          "health": null,
+          "soundEvent": "sounds/player_use_fail.sound"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Movement",
+          "__enabled": true,
+          "ShouldMove": true,
+          "Transform1": {
+            "UniformScale": 1,
+            "Position": "672,960,96",
+            "Scale": "1,1,1"
+          },
+          "Transform2": {
+            "UniformScale": 1,
+            "Position": "672,960,544",
+            "Scale": "1,1,1"
+          }
         }
       ]
     }
