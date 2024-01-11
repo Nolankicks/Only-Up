@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Net.Http;
 using System.Runtime;
-
+[Title("Only Up PlayerController")]
 public class PlayerController : Component, INetworkSerializable
 {
 	[Property] public Vector3 Gravity { get; set; } = new Vector3( 0, 0, 800 );
