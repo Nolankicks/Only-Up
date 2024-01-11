@@ -101,7 +101,7 @@
           "Camera": "9a3926cd-89a3-4f5e-ba66-260d31e6ee6e",
           "Distance": 350,
           "Eye": "d59c1d92-907c-429c-8214-8e5f7460fcfb",
-          "FirstPerson": true,
+          "FirstPerson": false,
           "Gravity": "0,0,800",
           "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         },
