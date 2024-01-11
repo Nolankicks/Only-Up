@@ -1004,6 +1004,7 @@
               "Position": "-95.18141,114.1345,-10.27402",
               "Rotation": "0,0,-0.259606,0.9657148",
               "Tags": "player",
+              "Enabled": true,
               "Components": [
                 {
                   "__version": 0,
@@ -1026,6 +1027,7 @@
               "Position": "-185.2857,104.0606,57.17301",
               "Rotation": "0,0,-0.259606,0.9657148",
               "Tags": "player",
+              "Enabled": true,
               "Components": [
                 {
                   "__version": 0,
