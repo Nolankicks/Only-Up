@@ -42,7 +42,7 @@
           "AnimationHelper": "3d7efb52-3d37-4c7c-b7e5-54e4db46573f",
           "Body": "3164764c-0f94-4d72-82b9-72a4c6b68c5d",
           "Camera": "34e5d63b-34db-4622-aed9-c6a19a51cedf",
-          "Distance": 0,
+          "Distance": 350,
           "Eye": "a3459e9f-9798-495f-bcab-02a2cc05f4c2",
           "FirstPerson": false,
           "Gravity": "0,0,800",
