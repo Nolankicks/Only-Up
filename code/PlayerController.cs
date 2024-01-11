@@ -63,10 +63,10 @@ public class PlayerController : Component, INetworkSerializable
 			{
 				cam.Transform.Position = Eye.Transform.Position;
 				cam.Transform.Rotation = lookDir;
-				Camera.FieldOfView = 90;
-				var body = GameObject.Components.GetInParentOrSelf<SkinnedModelRenderer>();
+				cam.FieldOfView = 90;
+				var body = GameObject.Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
 				body.Enabled = false;
-				body.RenderType = ModelRenderer.ShadowRenderType.On;
+
 				
 
 			}
