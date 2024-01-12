@@ -103,7 +103,7 @@
           "__version": 0,
           "__type": "SpawnDummy",
           "__enabled": true,
-          "dummy": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
+          "dummy": "code/dummy.prefab",
           "spawn": null
         }
       ],
@@ -230,12 +230,6 @@
           "Surface": null
         }
       ]
-    },
-    {
-      "Id": "1087d399-86f4-4962-982f-0ccd6e9953b9",
-      "Name": "SpawnDummy",
-      "Position": "332.4618,22.91067,20.85592",
-      "Enabled": true
     }
   ],
   "SceneProperties": {
