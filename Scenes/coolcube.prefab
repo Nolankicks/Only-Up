@@ -1,30 +1,23 @@
 {
   "RootObject": {
-    "Id": "c9de00f0-85c0-4e7e-9e1d-70063606a7b3",
-    "Name": "Cube",
-    "Position": "-160,2.014908,48",
+    "Id": "21354628-04fd-498f-9ae7-02854ca0a0af",
+    "Name": "coolcube",
+    "Scale": "0.5,0.5,0.5",
     "Enabled": true,
     "Components": [
       {
+        "__version": 0,
         "__type": "ModelRenderer",
         "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "models/dev/box.vmdl",
+        "Model": "models/dev/sphere.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "BoxCollider",
-        "__enabled": true,
-        "Center": "0,0,0",
-        "IsTrigger": false,
-        "Scale": "50,50,50",
-        "Static": false,
-        "Surface": null
-      },
-      {
+        "__version": 0,
         "__type": "Rigidbody",
         "__enabled": true,
         "AngularDamping": 0,
@@ -33,6 +26,16 @@
         "Locking": {},
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__version": 0,
+        "__type": "SphereCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 10,
+        "Static": false,
+        "Surface": null
       }
     ]
   },

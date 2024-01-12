@@ -1,0 +1,253 @@
+{
+  "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
+  "GameObjects": [
+    {
+      "Id": "0dde9049-738c-44c5-b27a-53c254024c72",
+      "Name": "Trigger",
+      "Position": "611.5807,-56.0808,49.68496",
+      "Scale": "5,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ShooterTrigger",
+          "__enabled": true,
+          "gameObject": null,
+          "soundFile": null
+        }
+      ]
+    },
+    {
+      "Id": "0ffae5e1-dda9-4691-a591-36b3a32dd666",
+      "Name": "Sun",
+      "Position": "-583.1084,-148.3224,138.6466",
+      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+      "Scale": "3,3,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "4c422ddb-2869-4c55-9b67-36a015a31454",
+      "Name": "Plane",
+      "Scale": "5,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100,0.1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
+      "Name": "Player",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "330a5bd9-990d-4ffe-b061-35c0827fab95",
+          "Body": "330a5bd9-990d-4ffe-b061-35c0827fab95",
+          "Distance": 350,
+          "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+          "FirstPerson": false,
+          "Gravity": "0,0,800",
+          "jumpSound": null
+        },
+        {
+          "__version": 0,
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__version": 0,
+          "__type": "Shooter",
+          "__enabled": true,
+          "gameObject": "1724f810-1cc0-4eac-b670-d84a6fb54683"
+        },
+        {
+          "__version": 0,
+          "__type": "SpawnDummy",
+          "__enabled": true,
+          "dummy": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
+          "spawn": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "330a5bd9-990d-4ffe-b061-35c0827fab95",
+          "Name": "Body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__version": 0,
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "330a5bd9-990d-4ffe-b061-35c0827fab95"
+            }
+          ]
+        },
+        {
+          "Id": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "344e46f1-83cf-4ab5-b782-ef956695ea7f",
+      "Name": "Camera",
+      "Position": "-207.9418,-9.327429,4.526798",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
+      "Name": "Terry",
+      "Position": "192,0,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "__Prefab": "code/dummy.prefab"
+    },
+    {
+      "Id": "1724f810-1cc0-4eac-b670-d84a6fb54683",
+      "Name": "coolcube",
+      "Position": "96.00002,288,-32",
+      "Tags": "bullet",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__version": 0,
+          "__type": "SphereCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Radius": 10,
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "1087d399-86f4-4962-982f-0ccd6e9953b9",
+      "Name": "SpawnDummy",
+      "Position": "332.4618,22.91067,20.85592",
+      "Enabled": true
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "removetest",
+  "Description": "",
+  "__references": []
+}

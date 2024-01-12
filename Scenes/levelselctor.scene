@@ -8,6 +8,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "SkyBox2D",
           "__enabled": true,
           "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
@@ -23,6 +24,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "CameraComponent",
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
@@ -48,6 +50,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ScreenPanel",
           "__enabled": true,
           "AutoScreenScale": true,
@@ -64,6 +67,7 @@
           "Enabled": true,
           "Components": [
             {
+              "__version": 0,
               "__type": "levelselector",
               "__enabled": true,
               "buttonClickSound": "sounds/kenney/ui/ui.button.press.sound",
@@ -73,7 +77,8 @@
               "sceneOne": "scenes/platformer.scene",
               "sceneSandbox": "scenes/gunfightplayercontrollertest.scene",
               "sceneThree": "scenes/level3.scene",
-              "sceneTwo": "scenes/level2.scene"
+              "sceneTwo": "scenes/level2.scene",
+              "shooterScene": "scenes/removetest.scene"
             }
           ]
         }
@@ -87,6 +92,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "DirectionalLight",
           "__enabled": true,
           "LightColor": "0.91373,0.98039,1,1",
@@ -103,6 +109,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "ParticleEffect",
           "__enabled": true,
           "Alpha": {
@@ -288,6 +295,7 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__version": 0,
           "__type": "ParticleSpriteRenderer",
           "__enabled": true,
           "Additive": true,
@@ -307,6 +315,7 @@
           "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
         },
         {
+          "__version": 0,
           "__type": "ParticleSphereEmitter",
           "__enabled": true,
           "Burst": 1000,
@@ -328,6 +337,7 @@
       "Enabled": true,
       "Components": [
         {
+          "__version": 0,
           "__type": "SoundBoxComponent",
           "__enabled": true,
           "Force2d": true,
