@@ -4,6 +4,9 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener
 {
 	[Property] public SoundEvent soundFile {get; set;}
 	[Property] public GameObject gameObject {get; set;}
+
+	
+	
 	
 
 	bool iTouching = false;
@@ -16,6 +19,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener
             return;
 
         var health = other.GameObject.Components.GetInAncestorsOrSelf<SphereCollider>();
+
 		
         if ( health.IsValid() )
         {
@@ -23,6 +27,12 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener
 			Sound.Play(soundFile);
 			GameObject.Destroy();
 			other.GameObject.Destroy();
+			//var modelRenderer = terry.Components.Create<ModelRenderer>();
+			
+			
+			
+			//terryObject.Components.Create<ModelRenderer>();
+			
 			
 			
 			

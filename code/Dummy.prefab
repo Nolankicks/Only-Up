@@ -1,9 +1,7 @@
 {
   "RootObject": {
-    "Id": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
-    "Name": "Terry",
-    "Position": "192,0,0",
-    "Rotation": "0,0,1,-0.0000006397578",
+    "Id": "653d7c9f-2634-4ef2-90d3-c8bef7773bc8",
+    "Name": "dummy",
     "Enabled": true,
     "Components": [
       {
@@ -23,17 +21,16 @@
         "__version": 0,
         "__type": "ShooterTrigger",
         "__enabled": true,
-        "gameObject": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
+        "gameObject": "code/dummy.prefab",
         "soundFile": "sounds/impacts/impact-bullet-flesh.sound"
       },
       {
         "__version": 0,
-        "__type": "CapsuleCollider",
+        "__type": "BoxCollider",
         "__enabled": true,
-        "End": "0,0,10",
-        "IsTrigger": true,
-        "Radius": 25,
-        "Start": "0,0,64.6",
+        "Center": "0,0,39.90004",
+        "IsTrigger": false,
+        "Scale": "39.40012,50,74.3002",
         "Static": false,
         "Surface": null
       }

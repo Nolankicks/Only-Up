@@ -4,9 +4,11 @@ public sealed class SpawnDummy : Component
 {
 	[Property] GameObject dummy {get; set;}
 	[Property] Rotation rotation {get; set;}
+
 	
 	protected override void OnUpdate()
 	{
+
 			var pc = Components.Get<PlayerController>();
 		var lookDir = pc.EyeAngles.ToRotation();
 		if (Input.Pressed("Attack2"))

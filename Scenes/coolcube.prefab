@@ -2,7 +2,7 @@
   "RootObject": {
     "Id": "29c46685-767a-4c32-bc93-e3e146e1a78c",
     "Name": "coolcube",
-    "Scale": "0.5,0.5,0.5",
+    "Scale": "0.2,0.2,0.2",
     "Enabled": true,
     "Components": [
       {
@@ -18,21 +18,6 @@
       },
       {
         "__version": 0,
-        "__type": "SphereCollider",
-        "__enabled": true,
-        "Center": "0,0,0",
-        "IsTrigger": false,
-        "Radius": 10,
-        "Static": false,
-        "Surface": null
-      },
-      {
-        "__version": 0,
-        "__type": "Despawner",
-        "__enabled": true
-      },
-      {
-        "__version": 0,
         "__type": "Rigidbody",
         "__enabled": true,
         "AngularDamping": 0,
@@ -41,6 +26,21 @@
         "Locking": {},
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__version": 0,
+        "__type": "SphereCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Radius": 10,
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "Despawner",
+        "__enabled": true
       }
     ]
   },
