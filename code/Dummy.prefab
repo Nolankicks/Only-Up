@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "653d7c9f-2634-4ef2-90d3-c8bef7773bc8",
+    "Id": "807b62f0-15aa-449b-87bb-9d490c0202d7",
     "Name": "dummy",
     "Enabled": true,
     "Components": [
@@ -26,11 +26,12 @@
       },
       {
         "__version": 0,
-        "__type": "BoxCollider",
+        "__type": "CapsuleCollider",
         "__enabled": true,
-        "Center": "0,0,39.90004",
-        "IsTrigger": false,
-        "Scale": "39.40012,50,74.3002",
+        "End": "0,0,69.79979",
+        "IsTrigger": true,
+        "Radius": 20,
+        "Start": "0,0,0",
         "Static": false,
         "Surface": null
       }

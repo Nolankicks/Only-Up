@@ -58,8 +58,8 @@
           "__version": 0,
           "__type": "PlayerController",
           "__enabled": true,
-          "AnimationHelper": "330a5bd9-990d-4ffe-b061-35c0827fab95",
-          "Body": "330a5bd9-990d-4ffe-b061-35c0827fab95",
+          "AnimationHelper": null,
+          "Body": null,
           "Distance": 0,
           "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
           "FirstPerson": false,
@@ -132,7 +132,7 @@
     {
       "Id": "bbeae71e-6ad7-406c-9421-65de79d5b144",
       "Name": "Terry (1)",
-      "Position": "211.4282,0,-1.445511",
+      "Position": "219.8101,0.0002812504,0.0001572205",
       "Rotation": "-0.0000003576281,-0.0000000000002287954,1,-0.0000006397578",
       "Enabled": true,
       "__Prefab": "code/dummy.prefab"
@@ -140,12 +140,14 @@
     {
       "Id": "f0ed99f4-90e3-477b-a7b6-3802f3254e19",
       "Name": "GameObject Test",
-      "Position": "160,96,2.520195",
+      "Position": "160,96,30.33807",
+      "Enabled": true,
       "Components": [
         {
           "__version": 0,
           "__type": "GameObjectTest",
-          "__enabled": true
+          "__enabled": true,
+          "material": "materials/bakscratch.vmat"
         }
       ]
     },
