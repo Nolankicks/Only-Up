@@ -2,22 +2,6 @@
   "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
   "GameObjects": [
     {
-      "Id": "0dde9049-738c-44c5-b27a-53c254024c72",
-      "Name": "Trigger",
-      "Position": "611.5807,-56.0808,49.68496",
-      "Scale": "5,5,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ShooterTrigger",
-          "__enabled": true,
-          "gameObject": null,
-          "soundFile": null
-        }
-      ]
-    },
-    {
       "Id": "0ffae5e1-dda9-4691-a591-36b3a32dd666",
       "Name": "Sun",
       "Position": "-583.1084,-148.3224,138.6466",
@@ -78,7 +62,7 @@
           "Body": "330a5bd9-990d-4ffe-b061-35c0827fab95",
           "Distance": 350,
           "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
-          "FirstPerson": false,
+          "FirstPerson": true,
           "Gravity": "0,0,800",
           "jumpSound": null
         },
@@ -97,14 +81,20 @@
           "__version": 0,
           "__type": "Shooter",
           "__enabled": true,
-          "gameObject": "1724f810-1cc0-4eac-b670-d84a6fb54683"
+          "gameObject": "scenes/coolcube.prefab",
+          "soundEvent": "sounds/kenney/ui/ui.downvote.sound"
         },
         {
           "__version": 0,
           "__type": "SpawnDummy",
           "__enabled": true,
           "dummy": "code/dummy.prefab",
-          "spawn": null
+          "rotation": "-0,0,1,-0.0000006397578"
+        },
+        {
+          "__version": 0,
+          "__type": "ClothingManager",
+          "__enabled": true
         }
       ],
       "Children": [
@@ -183,53 +173,12 @@
       ]
     },
     {
-      "Id": "7d9fd356-4fee-4fcb-befe-bdd4a63d9318",
-      "Name": "Terry",
-      "Position": "192,0,0",
-      "Rotation": "0,0,1,-0.0000006397578",
+      "Id": "bbeae71e-6ad7-406c-9421-65de79d5b144",
+      "Name": "Terry (1)",
+      "Position": "211.4282,0,-1.445511",
+      "Rotation": "-0.0000003576281,-0.0000000000002287954,1,-0.0000006397578",
       "Enabled": true,
       "__Prefab": "code/dummy.prefab"
-    },
-    {
-      "Id": "1724f810-1cc0-4eac-b670-d84a6fb54683",
-      "Name": "coolcube",
-      "Position": "96.00002,288,-32",
-      "Tags": "bullet",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/sphere.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "Rigidbody",
-          "__enabled": true,
-          "AngularDamping": 0,
-          "Gravity": true,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        },
-        {
-          "__version": 0,
-          "__type": "SphereCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Radius": 10,
-          "Static": false,
-          "Surface": null
-        }
-      ]
     }
   ],
   "SceneProperties": {

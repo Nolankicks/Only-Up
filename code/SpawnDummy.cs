@@ -3,7 +3,7 @@ using Sandbox;
 public sealed class SpawnDummy : Component
 {
 	[Property] GameObject dummy {get; set;}
-	[Property] GameObject spawn {get; set;}
+	[Property] Rotation rotation {get; set;}
 	
 	protected override void OnUpdate()
 	{
@@ -13,7 +13,7 @@ public sealed class SpawnDummy : Component
 		{
 			var pos = Transform.Position + Vector3.Up * 0.0f + lookDir.Forward.WithZ( 0.0f ) * 200.0f;
 			//SceneUtility.Instantiate( Attack1, pos );
-			dummy.Clone(pos);
+			dummy.Clone(pos, rotation);
 			
 			
 			
