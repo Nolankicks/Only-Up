@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "807b62f0-15aa-449b-87bb-9d490c0202d7",
+    "Id": "d6ea2bcc-bbdc-447d-bb6b-69d744f35abf",
     "Name": "dummy",
     "Enabled": true,
     "Components": [
@@ -22,7 +22,11 @@
         "__type": "ShooterTrigger",
         "__enabled": true,
         "gameObject": "code/dummy.prefab",
-        "soundFile": "sounds/impacts/impact-bullet-flesh.sound"
+        "gameObject1": "scenes/emitter2.prefab",
+        "ragdoll": "scenes/ragdoll.prefab",
+        "rotation": "-0,0,1,-0.0000006397578",
+        "soundFile": "sounds/impacts/impact-bullet-flesh.sound",
+        "vector3": "0,0,64"
       },
       {
         "__version": 0,

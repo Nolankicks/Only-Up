@@ -1,0 +1,35 @@
+{
+  "RootObject": {
+    "Id": "6bbe889b-3d6d-4fd4-b0ed-9da3be105561",
+    "Name": "ragdoll",
+    "Rotation": "0,0,1,-0.0000006397578",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 341,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "ModelPhysics",
+        "__enabled": true,
+        "Locking": {},
+        "Model": "models/citizen/citizen.vmdl",
+        "Renderer": "6bbe889b-3d6d-4fd4-b0ed-9da3be105561"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

@@ -24,7 +24,7 @@ public class Movement : Component
             _desiredTransform = _swapTransforms ? Transform1 : Transform2;
 
             // if we are close in position to the desired transform, swap em
-            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 100f )
+            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 100.0f )
             {
                 // swap em now
                 _swapTransforms = !_swapTransforms;

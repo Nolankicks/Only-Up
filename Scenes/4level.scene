@@ -105,6 +105,13 @@
           "__type": "HealthManager",
           "__enabled": true,
           "sceneFile": "scenes/4level.scene"
+        },
+        {
+          "__version": 0,
+          "__type": "FootStepSound",
+          "__enabled": true,
+          "Source": null,
+          "Volume": 2
         }
       ],
       "Children": [
@@ -1436,6 +1443,7 @@
           "__type": "Movement",
           "__enabled": true,
           "ShouldMove": true,
+          "soundEvent": "sounds/kenney/ui/ui.button.deny.sound",
           "Transform1": {
             "UniformScale": 1,
             "Position": "437.172,0,46.252",

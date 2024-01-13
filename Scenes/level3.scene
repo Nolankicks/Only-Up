@@ -75,8 +75,7 @@
           "__version": 0,
           "__type": "HealthManager",
           "__enabled": true,
-          "sceneFile": "scenes/level3.scene",
-          "soundEvent": "sounds/half-life-2-death-sound.sound"
+          "sceneFile": "scenes/level3.scene"
         }
       ],
       "Children": [
@@ -1135,6 +1134,7 @@
           "__type": "Movement",
           "__enabled": true,
           "ShouldMove": true,
+          "soundEvent": "sounds/kenney/ui/ui.button.deny.sound",
           "Transform1": {
             "UniformScale": 1,
             "Position": "672,960,96",
