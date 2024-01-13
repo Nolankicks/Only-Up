@@ -1,7 +1,7 @@
 {
   "RootObject": {
-    "Id": "cc1a616a-ed9e-4a65-80da-e0fec73bd0c3",
-    "Name": "Emitter (2)",
+    "Id": "33c0baeb-2c45-4591-9a59-26bb159442a0",
+    "Name": "emitter2",
     "Enabled": true,
     "Components": [
       {
@@ -208,13 +208,13 @@
         "Scale": 2,
         "Shadows": false,
         "SortMode": "ByDistance",
-        "Texture": "materials/decals/blood1_color_tga_5a3b5d9b.generated.vtex"
+        "Texture": "materials/particles/shapes/circle1.vtex"
       },
       {
         "__version": 0,
         "__type": "ParticleSphereEmitter",
         "__enabled": true,
-        "Burst": 1000,
+        "Burst": 200,
         "Delay": 0,
         "DestroyOnEnd": false,
         "Duration": 3.7,
