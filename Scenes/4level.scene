@@ -1398,8 +1398,8 @@
     {
       "Id": "b3324fde-b86e-45a7-80ba-ab8a0aa8bf37",
       "Name": "Obsticle Trigger",
-      "Position": "512,0,64",
-      "Scale": "1,10,3",
+      "Position": "3562.5,0,46.25219",
+      "Scale": "0.5,100,0.25",
       "Tags": "trigger",
       "Enabled": true,
       "Components": [
@@ -1407,7 +1407,7 @@
           "__version": 0,
           "__type": "ObsticleTrigger",
           "__enabled": true,
-          "health": null,
+          "health": "af8551bb-2dc0-4e9b-997f-b22015c25aed",
           "soundEvent": "sounds/player_use_fail.sound"
         },
         {
@@ -1438,13 +1438,13 @@
           "ShouldMove": true,
           "Transform1": {
             "UniformScale": 1,
-            "Position": "352,0,64",
+            "Position": "437.172,0,46.252",
             "Scale": "1,1,1",
             "Rotation": "0,0,0,1"
           },
           "Transform2": {
             "UniformScale": 1,
-            "Position": "3520,0,64",
+            "Position": "3562.5,0,46.252",
             "Scale": "1,1,1"
           }
         }

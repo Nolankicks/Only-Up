@@ -8,6 +8,8 @@ public class Movement : Component
 
     [Property]
     public bool ShouldMove { get; set; } = false;
+	[Property] public SoundEvent soundEvent {get; set;}
+    
 
     private bool _swapTransforms = false;
     private Transform _desiredTransform;
@@ -22,13 +24,15 @@ public class Movement : Component
             _desiredTransform = _swapTransforms ? Transform1 : Transform2;
 
             // if we are close in position to the desired transform, swap em
-            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 0.1f )
+            if ( GameObject.Transform.World.Position.DistanceSquared( _desiredTransform.Position ) < 100f )
             {
                 // swap em now
                 _swapTransforms = !_swapTransforms;
+				Sound.Play(soundEvent);
+                
             }
 
-            GameObject.Transform.Position = GameObject.Transform.Position.LerpTo( _desiredTransform.Position, Time.Delta * 2f );
+            GameObject.Transform.Position = GameObject.Transform.Position.LerpTo( _desiredTransform.Position, Time.Delta * 1f );
         }
     }
 }

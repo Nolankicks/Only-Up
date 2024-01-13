@@ -2,6 +2,11 @@
   "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
   "GameObjects": [
     {
+      "Id": "a5d4e064-13be-4708-82b8-c2ad5fa56135",
+      "Name": "Spawn",
+      "Enabled": true
+    },
+    {
       "Id": "0ffae5e1-dda9-4691-a591-36b3a32dd666",
       "Name": "Sun",
       "Position": "-583.1084,-148.3224,138.6466",
