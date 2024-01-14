@@ -9,18 +9,22 @@ public sealed class DummyManager : Component
 	[Property] public Vector3 vector3 {get; set;}
 	[Property] public Rotation rotation {get; set;}
 	[Property] public ShooterTrigger shooterTrigger {get; set;}
+
 	
 	protected override void OnUpdate()
 	{
 
 	}
+
+	
 	public void OnDeath()
 	{
 		var emitter = emitterObj; 
 		var ragdoll = ragdollObj;
 		var obj = GameObject;
 		var ro = obj.Transform.Rotation;
-		var fnro = ro;
+
+		
 		
 		
 		Components.TryGet<SkinnedModelRenderer>(out var skinned2, FindMode.EnabledInSelf );
@@ -29,7 +33,5 @@ public sealed class DummyManager : Component
 		Log.Info("Hello");
 		var sp1 = skinned2.Transform.Position;
 		ragdoll.Clone(sp1, fnro);
-		
-		
 	}
 }

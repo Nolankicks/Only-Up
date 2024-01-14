@@ -191,5 +191,7 @@
   },
   "Title": "removetest",
   "Description": "",
-  "__references": []
+  "__references": [
+    "nolankicks.platformertest"
+  ]
 }

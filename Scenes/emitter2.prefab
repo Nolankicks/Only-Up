@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "e321f834-c9b1-4122-9718-4a071565803b",
+    "Id": "0a7b27ce-25fa-4df5-aa5a-1e88a970890f",
     "Name": "emitter2",
     "Enabled": true,
     "Components": [
@@ -57,7 +57,7 @@
           "Evaluation": "Particle",
           "Constants": "0.2,0.1,0,0"
         },
-        "Collision": true,
+        "Collision": false,
         "CollisionIgnore": "player",
         "CollisionRadius": 1,
         "Damping": {

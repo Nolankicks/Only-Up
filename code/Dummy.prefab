@@ -41,7 +41,7 @@
         "__enabled": true,
         "emitterObj": "scenes/emitter2.prefab",
         "ragdollObj": "scenes/ragdoll.prefab",
-        "rotation": "0,0,1,-0.0000006397578",
+        "rotation": "0,0,0,1",
         "shooterTrigger": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
         "vector3": "0,0,70"
       }
@@ -186,5 +186,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "__references": [
+    "nolankicks.platformertest"
+  ]
 }
