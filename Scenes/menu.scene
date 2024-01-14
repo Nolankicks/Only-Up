@@ -35,13 +35,7 @@
               "__version": 0,
               "__type": "mainmenu",
               "__enabled": true,
-              "buttonClickSound": "sounds/kenney/ui/ui.button.press.sound",
-              "byText": "A game by Nolan",
-              "creditsScene": "scenes/credits.scene",
-              "levelSelector": "scenes/levelselctor.scene",
-              "menuTitle": "Only\u0026Up",
-              "playSound": true,
-              "startGame": "scenes/platformer.scene"
+              "GameScene": "scenes/removetest.scene"
             }
           ]
         }

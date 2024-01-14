@@ -1,176 +1,141 @@
 mainmenu
 {
-	.toprighttext {
-		font-size: 15px;
-		font-family: 'Poppins', sans-serif;
-		font-weight: bold;
-	  }
-
-	  .credits {
-		position: absolute; 
-		right: 20;
-		bottom: 20;
-		pointer-events: all;
-		flex-direction: row;
-		padding: 25px;
-		color: #ccc;
-		font-family: Poppins;
-		font-size: 50px;
-	  }
-
-
-
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	justify-content: center;
-	align-items: center;
-	font-weight: bold;
-	border-radius: 20px;
-	pointer-events: all;
-	
-
-	.text
-	{position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-   
+    background-color: #333;
     pointer-events: all;
     flex-direction: row;
     padding: 60px;
     color: #ccc;
     font-family: Poppins;
-    font-size: 100px;}
+    font-size: 14px;
 
-	.bytext
-	{		position: absolute; 
-		left: 20;
-		bottom: 20;
-		pointer-events: all;
-		flex-direction: row;
-		padding: 25px;
-		color: #ccc;
-		font-family: Poppins;
-		font-size: 50px;}
-	
-	
-	button {
-		padding: 5px 10px;
-		color: #aaa;
-		background-color: #161414;
-		margin: 5px;
-		cursor: pointer;
-		opacity: 1;
-		border-radius: 7px;
-		max-width: 300px;
-		flex-grow: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	  
-		.title {
-		  font-size: 15px;
-		  font-family: 'Poppins', sans-serif;
-		  font-weight: bold;
-		}
-	  
-		&:hover {
-		  opacity: 1;
-		  background-color: #3555d2;
-		  color: #fff;
-		}
-	  
-		&:active {
-		  background-color: #fff;
-		  color: #e41d1d;
-		}
-	  }
-	  exitbutton {
-		padding: 5px 10px;
-		color: #aaa;
-		background-color: #161414;
-		margin: 5px;
-		cursor: pointer;
-		opacity: 1;
-		border-radius: 7px;
-		max-width: 300px;
-		flex-grow: 1;
-		display: flex;
 
-		justify-content: center;
-		position: absolute; 
-		right: 0;
-		bottom: 0;
+    .left
+    {
+        width: 400px;
+        flex-direction: column;
 
-		flex-direction: row;
+        > .title
+        {
+            font-size: 40px;
+            font-weight: bold;
+        }
 
-	  
-		.title {
-		  font-size: 15px;
-		  font-family: 'Poppins', sans-serif;
-		  font-weight: bold;
-		}
-	  
-		&:hover {
-		  opacity: 1;
-		  background-color: #3555d2;
-		  color: #fff;
-		}
-	  
-		&:active {
-		  background-color: #fff;
-		  color: #e41d1d;
-		}
-	  }
-	  creditbutton {
-		padding: 5px 10px;
-		color: #aaa;
-		background-color: #161414;
-		margin: 5px;
-		cursor: pointer;
-		opacity: 1;
-		border-radius: 7px;
-		max-width: 300px;
-		flex-grow: 1;
-		display: flex;
+        > .explanation
+        {
+            color: #aaaa;
+            font-size: 17px;
+            margin-bottom: 50px;
+            width: 100%;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 
-		justify-content: center;
-		position: absolute; 
-		right: 75;
-		bottom: 0;
-		
+    .scene-list
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px;
+        justify-content: center;
+    }
 
-		flex-direction: row;
+    .lobby-list
+    {
+        width: 500px;
+        flex-direction: column;
+        margin: 20px;
+        overflow: scroll;
+        gap: 5px;
+    }
 
-	  
-		.title {
-		  font-size: 15px;
-		  font-family: 'Poppins', sans-serif;
-		  font-weight: bold;
-		}
-	  
-		&:hover {
-		  opacity: 1;
-		  background-color: #3555d2;
-		  color: #fff;
-		}
-	  
-		&:active {
-		  background-color: #fff;
-		  color: #e41d1d;
-		}
-	  }
-	  
-	
-	
-	
-	
-	}
-	  
+    .header
+    {
+        margin-bottom: 10px;
+        font-size: 20px;
+        width: 100%;
+        font-weight: bold;
+    }
+}
 
-	
+
+SceneButton
+{
+    padding: 5px 10px;
+    color: #aaa;
+    background-color: #444;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 7px;
+    flex-direction: column;
+    max-width: 300px;
+    flex-grow: 1;
+
+    .title
+    {
+        font-size: 19px;
+        font-family: Poppins;
+        font-weight: bold;
+    }
+
+    &:hover
+    {
+        opacity: 1;
+        background-color: #3555d2;
+        color: #fff;
+    }
+
+    &:active
+    {
+        background-color: #fff;
+        color: #666;
+    }
+}
+
+
+.lobby-list > .button
+{
+    background-color: transparent;
+    color: #aaa;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 2px;
+    width: 280px;
+    cursor: pointer;
+    width: 100%;
+    flex-direction: column;
+
+    .title
+    {
+        flex-grow: 1;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .meta
+    {
+        gap: 10px;
+        font-size: 12px;
+
+        .map
+        {
+            flex-grow: 1;
+        }
+
+        .count
+        {
+            white-space: nowrap;
+        }
+    }
+
+    &:hover
+    {
+        background-color: #f13edc;
+        color: #fff;
+    }
+}

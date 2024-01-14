@@ -14,7 +14,7 @@ public sealed class PlayerSpawnLevel4 : Component
 	
 	protected override void OnUpdate()
 	{
-		var pc = Components.Get<PlayerController>();
+		var pc = Components.Get<PlayerController2>();
 		var lookDir = pc.EyeAngles.ToRotation();
 		
 		

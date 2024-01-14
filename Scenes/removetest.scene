@@ -57,20 +57,7 @@
       "Id": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
       "Name": "Player",
       "Tags": "player",
-      "Enabled": true,
       "Components": [
-        {
-          "__version": 0,
-          "__type": "PlayerController",
-          "__enabled": true,
-          "AnimationHelper": null,
-          "Body": null,
-          "Distance": 0,
-          "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
-          "FirstPerson": false,
-          "Gravity": "0,0,800",
-          "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
-        },
         {
           "__version": 0,
           "__type": "CharacterController",
@@ -84,17 +71,30 @@
         },
         {
           "__version": 0,
-          "__type": "Shooter",
-          "__enabled": true,
-          "gameObject": "scenes/coolcube.prefab",
-          "soundEvent": "sounds/kenney/ui/ui.downvote.sound"
-        },
-        {
-          "__version": 0,
           "__type": "SpawnDummy",
           "__enabled": true,
           "dummy": "code/dummy.prefab",
           "rotation": "0,0,1,-0.0000006397578"
+        },
+        {
+          "__version": 0,
+          "__type": "Shooter",
+          "__enabled": true,
+          "bullet": "scenes/coolcube.prefab",
+          "parent": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
+          "soundEvent": "sounds/physics/glass.pane.impact.sound"
+        },
+        {
+          "__version": 0,
+          "__type": "PlayerController2",
+          "__enabled": true,
+          "AnimationHelper": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+          "Body": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+          "Distance": 0,
+          "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+          "FirstPerson": false,
+          "Gravity": "0,0,800",
+          "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         }
       ],
       "Children": [
@@ -104,6 +104,44 @@
           "Position": "0,0,64",
           "Tags": "player",
           "Enabled": true
+        },
+        {
+          "Id": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+          "Name": "body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__version": 0,
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "c7fee001-2cee-467d-9656-6a83af8c34d4"
+            }
+          ]
         }
       ]
     },
@@ -178,6 +216,24 @@
       "Rotation": "0,0,1,-0.0000006397578",
       "Enabled": true,
       "__Prefab": "code/dummy.prefab"
+    },
+    {
+      "Id": "f67d75c2-0955-4f02-bbc6-25c9801f0837",
+      "Name": "Network",
+      "Position": "111.5285,-54.8481,31.56",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "NetworkHelper",
+          "__enabled": true,
+          "PlayerPrefab": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
+          "SpawnPoints": [
+            "a5d4e064-13be-4708-82b8-c2ad5fa56135"
+          ],
+          "StartServer": true
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -191,7 +247,5 @@
   },
   "Title": "removetest",
   "Description": "",
-  "__references": [
-    "nolankicks.platformertest"
-  ]
+  "__references": []
 }

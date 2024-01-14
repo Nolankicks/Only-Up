@@ -1,73 +1,101 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using Sandbox.Network;
+@using Sandbox.Diagnostics;
+@using System.Collections.Generic;
+@using System.Threading.Tasks;
+@using System.Linq;
 @inherits PanelComponent
 
 <root>
-    <div class="text">@menuTitle</div>
+    <div class="lobby-list">
 
-	<div class="bytext">@byText</div>
-    <button @onclick=@changeScene>Start New Game</button>
-    <button @onclick=@changeScene2>Level Selector</button>
-	<exitbutton @onclick=@Close>Exit</exitbutton>
-	<creditbutton @onclick=@creditsChange>Credits</creditbutton>
+        <div class="header">
+            <div class="title">Server List</div>
+        </div>
 
+        @if (refreshing)
+        {
+            <div>Refreshing..</div>
+        }
+        else if (list.Count == 0)
+        {
+            <div>No lobbies were found</div>
+        }
+        else
+        {
+            @foreach (var lobby in list)
+            {
+                <div class="button" onclick=@(() => OpenLobby( lobby ) )>
+
+                    <div class="title">
+                        @lobby.Name
+                    </div>
+
+                    <div class="meta">
+
+                        <div class="count">
+                            @lobby.Members / @lobby.MaxMembers
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        }
+    </div>
 </root>
 
 @code
 {
-    [Property] public SceneFile startGame { get; set; }
-    [Property] public SceneFile levelSelector { get; set; }
-	  [Property] public SceneFile creditsScene {get; set;}
-   
-    [Property] public SoundEvent buttonClickSound { get; set; }
-    [Property] public bool playSound {get; set;}
-	 [Property] public string menuTitle { get; set; } = "";
 
-	
-	[Property] public string byText {get; set;} = "";
+    bool refreshing;
+    List<LobbyInformation> list = new();
+        [Property] SceneFile GameScene;
 
-    
-
-    
-	
-
-	
-	void changeScene()
+    protected override void OnEnabled()
     {
-        Log.Info("aaa");
-        
-        if (playSound==true)
-       
-        {
- Sound.Play(buttonClickSound);
-        }
-        
-        GameManager.ActiveScene.Load(startGame);
-        
-        
+        base.OnEnabled();
+
+        Assert.True(GameObject.IsValid());
+
+        _ = RefreshLobbyList();
     }
 
-    void changeScene2()
+    async Task RefreshLobbyList()
     {
-        Log.Info("bbb");
-        if (playSound==true)
-       
+        bool isFirst = true;
+        while ( true )
         {
- Sound.Play(buttonClickSound);
+            refreshing = true;
+            StateHasChanged();
+
+            list = await GameNetworkSystem.QueryLobbies();
+
+            if(isFirst)
+            {
+                list = list.OrderBy( x => x.Members ).ToList();
+                if(list.Count == 0)
+                {
+                    GameManager.ActiveScene.Load(GameScene);
+                }
+                else if(list.Count == 1)
+                {
+                    GameNetworkSystem.Connect( list[0].LobbyId );
+                }
+            }
+
+            refreshing = false;
+            StateHasChanged();
+
+            await Task.DelayRealtimeSeconds( 5.0f );
+
+            isFirst = false;
         }
-        GameManager.ActiveScene.Load(levelSelector);
     }
-	void creditsChange()
-	{
-		GameManager.ActiveScene.Load(creditsScene);
-	}
 
-
-static void Close()
-{
-	Game.Close();
-}
-	
-
-    protected override int BuildHash() => System.HashCode.Combine(startGame, levelSelector, byText, buttonClickSound, playSound, creditsScene, menuTitle);
+    void OpenLobby( LobbyInformation lobby )
+    {
+        GameNetworkSystem.Connect( lobby.LobbyId );
+    }
 }

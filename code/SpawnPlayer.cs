@@ -16,7 +16,7 @@ public sealed class SpawnPlayer : Component
 	
 	protected override void OnUpdate()
 	{
-		var pc = Components.Get<PlayerController>();
+		var pc = Components.Get<PlayerController2>();
 		var lookDir = pc.EyeAngles.ToRotation();
 		
 		
