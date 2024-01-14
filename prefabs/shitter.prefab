@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "fd9a15b1-3c62-4654-a6c2-902383854d49",
+    "Id": "d2af4d09-5430-4768-96b3-577dc9209033",
     "Name": "shitter",
     "Tags": "player",
     "Enabled": true,
@@ -25,31 +25,31 @@
       },
       {
         "__version": 0,
-        "__type": "Shooter",
+        "__type": "PlayerController2",
         "__enabled": true,
-        "bullet": "scenes/coolcube.prefab",
-        "soundEvent": "sounds/physics/props/pottery_flowerpot/impact_bullet_pottery.sound"
+        "AnimationHelper": "a68f2aa2-4913-4efb-b26c-57e0640a0552",
+        "Body": "a68f2aa2-4913-4efb-b26c-57e0640a0552",
+        "Eye": "edf2ad17-3443-4a0c-88f5-0c2a9bfec7b3",
+        "FirstPerson": false,
+        "Gravity": "0,0,800"
       },
       {
         "__version": 0,
-        "__type": "PlayerController2",
+        "__type": "Shooter",
         "__enabled": true,
-        "AnimationHelper": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
-        "Body": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
-        "Eye": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
-        "FirstPerson": false,
-        "Gravity": "0,0,800"
+        "ObjectToSpawn": "prefabs/coolcube.prefab",
+        "playerController2": null
       }
     ],
     "Children": [
       {
-        "Id": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
+        "Id": "edf2ad17-3443-4a0c-88f5-0c2a9bfec7b3",
         "Name": "eye",
         "Position": "0,0,64",
         "Enabled": true
       },
       {
-        "Id": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
+        "Id": "a68f2aa2-4913-4efb-b26c-57e0640a0552",
         "Name": "body",
         "Enabled": true,
         "Components": [
@@ -71,7 +71,7 @@
             "__type": "CitizenAnimationHelper",
             "__enabled": true,
             "BodyWeight": 1,
-            "EyeSource": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
+            "EyeSource": "edf2ad17-3443-4a0c-88f5-0c2a9bfec7b3",
             "EyesWeight": 1,
             "HeadWeight": 1,
             "Height": 1,
@@ -81,12 +81,12 @@
             "IkRightHand": null,
             "LookAt": null,
             "LookAtEnabled": false,
-            "Target": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7"
+            "Target": "a68f2aa2-4913-4efb-b26c-57e0640a0552"
           }
         ]
       },
       {
-        "Id": "fe72457c-a8f7-4ea9-9b71-483d3dbc0315",
+        "Id": "1f3213e1-8cdc-4490-ad8c-a248439d9b84",
         "Name": "NetworkSession",
         "Position": "59.74862,-21.85177,63.37813",
         "Enabled": true,

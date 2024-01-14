@@ -127,7 +127,7 @@
           "__version": 0,
           "__type": "NetworkHelper",
           "__enabled": true,
-          "PlayerPrefab": "prefabs/shitter.prefab",
+          "PlayerPrefab": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff",
           "SpawnPoints": [
             "a5d4e064-13be-4708-82b8-c2ad5fa56135"
           ],
@@ -181,6 +181,101 @@
           "__version": 0,
           "__type": "FPStrigger",
           "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff",
+      "Name": "shitter",
+      "Tags": "player",
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "player",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__version": 0,
+          "__type": "SpawnDummy",
+          "__enabled": true,
+          "dummy": "code/dummy.prefab",
+          "rotation": "0,0,1,-0.0000006397578"
+        },
+        {
+          "__version": 0,
+          "__type": "PlayerController2",
+          "__enabled": true,
+          "AnimationHelper": "cd552adb-fa88-4851-b125-be136543e907",
+          "Body": "cd552adb-fa88-4851-b125-be136543e907",
+          "Eye": "8d075fc9-8c3b-4378-a5f3-f5c92ea71328",
+          "FirstPerson": false,
+          "Gravity": "0,0,800"
+        },
+        {
+          "__version": 0,
+          "__type": "NetworkTest",
+          "__enabled": true,
+          "ObjectToSpawn": "prefabs/coolcube.prefab"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "8d075fc9-8c3b-4378-a5f3-f5c92ea71328",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        },
+        {
+          "Id": "cd552adb-fa88-4851-b125-be136543e907",
+          "Name": "body",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__version": 0,
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": "8d075fc9-8c3b-4378-a5f3-f5c92ea71328",
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "cd552adb-fa88-4851-b125-be136543e907"
+            }
+          ]
+        },
+        {
+          "Id": "f0735910-cbc8-4f30-8c78-d9cbb817bee9",
+          "Name": "NetworkSession",
+          "Position": "59.74862,-21.85177,63.37813",
+          "Tags": "player",
+          "Enabled": true
         }
       ]
     }
