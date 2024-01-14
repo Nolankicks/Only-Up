@@ -1,0 +1,107 @@
+{
+  "RootObject": {
+    "Id": "fd9a15b1-3c62-4654-a6c2-902383854d49",
+    "Name": "shitter",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "SpawnDummy",
+        "__enabled": true,
+        "dummy": "code/dummy.prefab",
+        "rotation": "0,0,1,-0.0000006397578"
+      },
+      {
+        "__version": 0,
+        "__type": "Shooter",
+        "__enabled": true,
+        "bullet": "scenes/coolcube.prefab",
+        "soundEvent": "sounds/physics/props/pottery_flowerpot/impact_bullet_pottery.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "PlayerController2",
+        "__enabled": true,
+        "AnimationHelper": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
+        "Body": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
+        "Eye": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
+        "FirstPerson": false,
+        "Gravity": "0,0,800"
+      }
+    ],
+    "Children": [
+      {
+        "Id": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
+        "Name": "eye",
+        "Position": "0,0,64",
+        "Enabled": true
+      },
+      {
+        "Id": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7",
+        "Name": "body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "SkinnedModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__version": 0,
+            "__type": "CitizenAnimationHelper",
+            "__enabled": true,
+            "BodyWeight": 1,
+            "EyeSource": "2afcdde6-c7a5-4138-9e96-5b7d48012de2",
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": "3344c9b3-0a3b-4a58-9ab5-20bbb06f0fc7"
+          }
+        ]
+      },
+      {
+        "Id": "fe72457c-a8f7-4ea9-9b71-483d3dbc0315",
+        "Name": "NetworkSession",
+        "Position": "59.74862,-21.85177,63.37813",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "NetworkSession",
+            "__enabled": true
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

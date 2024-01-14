@@ -66,7 +66,7 @@
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 70,
+          "FieldOfView": 80,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
@@ -127,7 +127,7 @@
           "__version": 0,
           "__type": "NetworkHelper",
           "__enabled": true,
-          "PlayerPrefab": "8903d29a-3da8-45ea-ac61-9bb18a451dfc",
+          "PlayerPrefab": "code/shitter.prefab",
           "SpawnPoints": [
             "a5d4e064-13be-4708-82b8-c2ad5fa56135"
           ],
@@ -163,113 +163,6 @@
           "__type": "Chat",
           "__enabled": true,
           "MyStringValue": ""
-        }
-      ]
-    },
-    {
-      "Id": "8903d29a-3da8-45ea-ac61-9bb18a451dfc",
-      "Name": "networkprefab",
-      "Position": "-123.5554,58.11163,0.5",
-      "Tags": "player",
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "CharacterController",
-          "__enabled": true,
-          "Acceleration": 10,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "player",
-          "Radius": 16,
-          "StepHeight": 18
-        },
-        {
-          "__version": 0,
-          "__type": "SpawnDummy",
-          "__enabled": true,
-          "dummy": "901937ec-a5f0-410b-817d-e5c8dea5d7be",
-          "rotation": "0,0,1,-0.0000006397578"
-        },
-        {
-          "__version": 0,
-          "__type": "PlayerController2",
-          "__enabled": true,
-          "AnimationHelper": "6ba30c4c-da99-4abf-93f0-034180768beb",
-          "Body": "6ba30c4c-da99-4abf-93f0-034180768beb",
-          "Distance": 300,
-          "Eye": "c44a78bd-8d69-4120-b293-a50ce1abc7b3",
-          "FirstPerson": false,
-          "Gravity": "0,0,800",
-          "jumpSound": "sounds/footsteps/footstep-dirt.sound"
-        },
-        {
-          "__version": 0,
-          "__type": "Shooter",
-          "__enabled": true,
-          "bullet": "scenes/coolcube.prefab",
-          "soundEvent": "sounds/physics/props/pottery_flowerpot/impact_bullet_pottery.sound"
-        }
-      ],
-      "Children": [
-        {
-          "Id": "c44a78bd-8d69-4120-b293-a50ce1abc7b3",
-          "Name": "eye",
-          "Position": "0,0,64",
-          "Tags": "player",
-          "Enabled": true
-        },
-        {
-          "Id": "6ba30c4c-da99-4abf-93f0-034180768beb",
-          "Name": "body",
-          "Position": "0,0,0",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 341,
-              "BoneMergeTarget": null,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__version": 0,
-              "__type": "CitizenAnimationHelper",
-              "__enabled": true,
-              "BodyWeight": 1,
-              "EyeSource": "c44a78bd-8d69-4120-b293-a50ce1abc7b3",
-              "EyesWeight": 1,
-              "HeadWeight": 1,
-              "Height": 1,
-              "IkLeftFoot": null,
-              "IkLeftHand": null,
-              "IkRightFoot": null,
-              "IkRightHand": null,
-              "LookAt": null,
-              "LookAtEnabled": false,
-              "Target": "6ba30c4c-da99-4abf-93f0-034180768beb"
-            }
-          ]
-        },
-        {
-          "Id": "85028a0f-4e60-4a7a-8384-2142c9bced21",
-          "Name": "NetworkSession",
-          "Position": "59.74862,-21.85177,63.37813",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "NetworkSession",
-              "__enabled": true
-            }
-          ]
         }
       ]
     }

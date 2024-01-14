@@ -29,10 +29,11 @@ public sealed class DummyManager : Component
 		
 		Components.TryGet<SkinnedModelRenderer>(out var skinned2, FindMode.EnabledInSelf );
 		var sp = skinned2.Transform.Position + vector3;
-		emitter.Clone(sp);
+		var e = emitter.Clone(sp);
 		Log.Info("Hello");
 		var sp1 = skinned2.Transform.Position;
 		var n = ragdoll.Clone(sp1, fnro);
 		n.Network.Spawn();
+		e.Network.Spawn();
 	}
 }

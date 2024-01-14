@@ -7,7 +7,7 @@ public sealed class NetworkSession : Component
 		if ( IsProxy )
 			return;
 			
-		var pc = Components.Get<PlayerController2>();
-		var lookDir = pc.EyeAngles.ToRotation();
+
+		
 	}
 }
