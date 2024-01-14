@@ -4,13 +4,14 @@
     {
       "Id": "a5d4e064-13be-4708-82b8-c2ad5fa56135",
       "Name": "Spawn",
+      "Position": "0,0,70.82589",
       "Enabled": true
     },
     {
       "Id": "0ffae5e1-dda9-4691-a591-36b3a32dd666",
       "Name": "Sun",
       "Position": "-583.1084,-148.3224,138.6466",
-      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+      "Rotation": "0.234681,0.1839679,-0.3425471,0.8909223",
       "Scale": "3,3,1",
       "Enabled": true,
       "Components": [
@@ -18,38 +19,9 @@
           "__version": 0,
           "__type": "DirectionalLight",
           "__enabled": true,
-          "LightColor": "0.91373,0.98039,1,1",
+          "LightColor": "0.69302,0.55893,0.38358,1",
           "Shadows": true,
-          "SkyColor": "0.05882,0.07451,0.08235,1"
-        }
-      ]
-    },
-    {
-      "Id": "4c422ddb-2869-4c55-9b67-36a015a31454",
-      "Name": "Plane",
-      "Scale": "5,5,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "100,100,1",
-          "Static": false,
-          "Surface": null
+          "SkyColor": "0,0,0,1"
         }
       ]
     },
@@ -90,7 +62,7 @@
           "__version": 0,
           "__type": "GameObjectTest",
           "__enabled": true,
-          "material": "materials/bakscratch.vmat"
+          "material": "materials/error.vmat"
         }
       ]
     },
@@ -181,6 +153,40 @@
           "__version": 0,
           "__type": "FPStrigger",
           "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "f4e94e84-2045-4666-9e74-5302e340b02c",
+      "Name": "Map",
+      "Position": "-1294.072,577.4641,729.5055",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "MapInstance",
+          "__enabled": true,
+          "MapName": "maps/battleground.vmap",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "ec536b04-af5a-4361-8a3e-08f243ee3c00",
+      "Name": "2D Skybox",
+      "Position": "-2.880169,-23.57191,-76.75574",
+      "Rotation": "0.000000002549219,0.0000000000000001025118,0.04276883,0.999085",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "materials/battlegroundskybox.vmat",
+          "Tint": "1,1,1,1"
         }
       ]
     }
