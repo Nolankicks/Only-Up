@@ -11,8 +11,7 @@ public sealed class NetworkTest : Component
 
 	protected override void OnUpdate()
 	{
-		if ( IsProxy )
-			return;
+
 
 		var pc = Components.Get<PlayerController2>();
 		var lookDir = pc.EyeAngles.ToRotation();
@@ -26,8 +25,8 @@ public sealed class NetworkTest : Component
 
 			var p = o.Components.Get<Rigidbody>();
 			p.Velocity = lookDir.Forward * 500.0f;
-
-			o.Network.Spawn();
+			
+			
 		}
 
 
