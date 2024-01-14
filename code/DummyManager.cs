@@ -23,7 +23,7 @@ public sealed class DummyManager : Component
 		var ragdoll = ragdollObj;
 		var obj = GameObject;
 		var ro = obj.Transform.Rotation;
-
+		var fnro = ro;
 		
 		
 		
