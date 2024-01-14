@@ -127,7 +127,7 @@
           "__version": 0,
           "__type": "NetworkHelper",
           "__enabled": true,
-          "PlayerPrefab": "code/shitter.prefab",
+          "PlayerPrefab": "prefabs/shitter.prefab",
           "SpawnPoints": [
             "a5d4e064-13be-4708-82b8-c2ad5fa56135"
           ],

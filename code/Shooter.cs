@@ -23,7 +23,7 @@ public sealed class Shooter : Component
 			p.Velocity = lookDir.Forward * 5000f;
 			soundEvent.UI = true;
 			Sound.Play(soundEvent);
-
+			o.Network.Spawn();
 
 		}
 	}
