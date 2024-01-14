@@ -8,6 +8,9 @@ public sealed class SpawnDummy : Component
 	
 	protected override void OnUpdate()
 	{
+		if ( IsProxy )
+		return;
+
 		var pc = Components.Get<PlayerController2>();
 		var lookDir = pc.EyeAngles.ToRotation();
 		var pcDir = pc.EyeAngles * rotation;
@@ -15,9 +18,10 @@ public sealed class SpawnDummy : Component
 		
 		{
 			var pos = Transform.Position + Vector3.Up * 0.0f + lookDir.Forward.WithZ( 0.0f ) * 200.0f;
-			//SceneUtility.Instantiate( Attack1, pos );
+			var o = dummy.Clone(pos, pcDir);
 			
-			dummy.Clone(pos, pcDir);
+			o.Network.Spawn();
+			
 		}
 	}
 }

@@ -1,8 +1,9 @@
 {
   "RootObject": {
-    "Id": "29c46685-767a-4c32-bc93-e3e146e1a78c",
+    "Id": "c5f44661-9aac-4672-a2ba-31b98a8a3a89",
     "Name": "coolcube",
     "Scale": "0.2,0.2,0.2",
+    "Networked": true,
     "Enabled": true,
     "Components": [
       {

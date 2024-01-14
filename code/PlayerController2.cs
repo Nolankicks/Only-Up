@@ -87,7 +87,7 @@ public class PlayerController2 : Component, INetworkSerializable
 				{
 					camPos = camTrace.EndPosition;
 				}
-				cam.Transform.Position = camPos;
+				cam.Transform.Position = camPos +  Vector3.Up * 25.0f;
 				cam.Transform.Rotation = EyeAngles.ToRotation();
 			}
 

@@ -32,6 +32,7 @@ public sealed class DummyManager : Component
 		emitter.Clone(sp);
 		Log.Info("Hello");
 		var sp1 = skinned2.Transform.Position;
-		ragdoll.Clone(sp1, fnro);
+		var n = ragdoll.Clone(sp1, fnro);
+		n.Network.Spawn();
 	}
 }

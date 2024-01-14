@@ -1,7 +1,8 @@
 {
   "RootObject": {
-    "Id": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+    "Id": "a2e371c9-6d93-403e-a07a-70679b5ad901",
     "Name": "dummy",
+    "Networked": true,
     "Enabled": true,
     "Components": [
       {
@@ -42,19 +43,19 @@
         "emitterObj": "scenes/emitter2.prefab",
         "ragdollObj": "scenes/ragdoll.prefab",
         "rotation": "0,0,0,1",
-        "shooterTrigger": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+        "shooterTrigger": "a2e371c9-6d93-403e-a07a-70679b5ad901",
         "vector3": "0,0,70"
       }
     ],
     "Children": [
       {
-        "Id": "17994d04-974f-4aaf-a539-be1b0662c9d9",
+        "Id": "60b840ae-c01f-4923-a8cb-8cc0ea2eb3b9",
         "Name": "Cloths",
         "Position": "-148.4277,-21.01374,19.99891",
         "Enabled": true,
         "Children": [
           {
-            "Id": "acae87e6-e802-40c3-908e-2976ca7a9a1b",
+            "Id": "68303227-64bc-4a52-a06e-7d40b632d216",
             "Name": "Aurmor",
             "Position": "-300.0732,-45.5975,39.71455",
             "Enabled": true,
@@ -64,7 +65,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -75,7 +76,7 @@
             ]
           },
           {
-            "Id": "f6351489-1dd3-4a3b-a0fe-c5cdadb56a81",
+            "Id": "59f02aab-deef-4aea-b46d-be281f6c242d",
             "Name": "Shirt",
             "Position": "-150.0366,-22.79875,19.85728",
             "Enabled": true,
@@ -85,7 +86,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -96,7 +97,7 @@
             ]
           },
           {
-            "Id": "ff294336-2376-4dc8-b12a-0ed32bcdab9b",
+            "Id": "2a6d5740-7022-4388-8da0-160f360ba2c5",
             "Name": "pants",
             "Position": "-150.0366,-22.79875,19.85728",
             "Enabled": true,
@@ -106,7 +107,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -117,7 +118,7 @@
             ]
           },
           {
-            "Id": "a2ff1c26-5199-4631-9fc2-8208d38f8950",
+            "Id": "784f27dd-95ae-4b0a-95f4-9052392f94a3",
             "Name": "Gloves",
             "Position": "-150.0366,-22.79875,19.85728",
             "Enabled": true,
@@ -127,7 +128,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -138,7 +139,7 @@
             ]
           },
           {
-            "Id": "8112bf0d-03ea-4d9e-9dfa-511b70ca54ac",
+            "Id": "60760066-5d9c-48c9-ae11-03b676402bc6",
             "Name": "Boots",
             "Position": "-150.0366,-22.79875,19.85728",
             "Enabled": true,
@@ -148,7 +149,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -159,7 +160,7 @@
             ]
           },
           {
-            "Id": "d3285217-4123-4994-bf07-916e88310045",
+            "Id": "daad36cc-5cbf-44e5-b01b-d1b818808be5",
             "Name": "hat",
             "Position": "-72.05421,-22.79863,44.8905",
             "Enabled": true,
@@ -169,7 +170,7 @@
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": "4a4b94fe-6ff6-41e7-8e69-a2245f4c71db",
+                "BoneMergeTarget": "a2e371c9-6d93-403e-a07a-70679b5ad901",
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
@@ -186,7 +187,5 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": [
-    "nolankicks.platformertest"
-  ]
+  "__references": []
 }

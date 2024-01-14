@@ -6,6 +6,7 @@
     "Enabled": true,
     "Components": [
       {
+        "__version": 0,
         "__type": "CharacterController",
         "__enabled": true,
         "Acceleration": 10,
@@ -16,16 +17,7 @@
         "StepHeight": 18
       },
       {
-        "__type": "PlayerController",
-        "__enabled": true,
-        "AnimationHelper": "5be78921-4b09-4431-aad4-1109c9fcff71",
-        "Body": "7194ae26-ed28-48c1-9afe-f55e59361bfd",
-        "Eye": "c10714b4-8167-42e1-befb-b0f3a36d5555",
-        "FirstPerson": false,
-        "Gravity": "0,0,800",
-        "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
-      },
-      {
+        "__version": 0,
         "__type": "CitizenAnimationHelper",
         "__enabled": true,
         "BodyWeight": 1,
@@ -49,6 +41,7 @@
         "Enabled": true,
         "Components": [
           {
+            "__version": 0,
             "__type": "SkinnedModelRenderer",
             "__enabled": true,
             "BodyGroups": 321,
@@ -76,6 +69,7 @@
         "Enabled": true,
         "Components": [
           {
+            "__version": 0,
             "__type": "SphereCollider",
             "__enabled": true,
             "Center": "0,0,0",
@@ -99,6 +93,7 @@
             "Enabled": true,
             "Components": [
               {
+                "__version": 0,
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
@@ -119,6 +114,7 @@
             "Enabled": true,
             "Components": [
               {
+                "__version": 0,
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
@@ -126,7 +122,7 @@
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
-                "Model": "models/citizen_clothes/hair/hair_shortscruffy/models/hair_shortscruffy_black.vmdl",
+                "Model": "models/dev/error.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
@@ -139,6 +135,7 @@
             "Enabled": true,
             "Components": [
               {
+                "__version": 0,
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
@@ -159,6 +156,7 @@
             "Enabled": true,
             "Components": [
               {
+                "__version": 0,
                 "__type": "SkinnedModelRenderer",
                 "__enabled": true,
                 "BodyGroups": 18446744073709551615,
@@ -166,7 +164,7 @@
                 "CreateBoneObjects": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
-                "Model": "models/citizen_clothes/hair/goatee/models/goatee_black.vmdl",
+                "Model": "models/dev/error.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }

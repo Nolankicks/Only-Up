@@ -1,0 +1,95 @@
+{
+  "RootObject": {
+    "Id": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
+    "Name": "networkprefab",
+    "Tags": "player",
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "SpawnDummy",
+        "__enabled": true,
+        "dummy": "code/dummy.prefab",
+        "rotation": "0,0,1,-0.0000006397578"
+      },
+      {
+        "__version": 0,
+        "__type": "PlayerController2",
+        "__enabled": true,
+        "AnimationHelper": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+        "Body": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+        "Distance": 0,
+        "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+        "FirstPerson": false,
+        "Gravity": "0,0,800",
+        "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "Shooter",
+        "__enabled": true,
+        "bullet": "scenes/coolcube.prefab",
+        "soundEvent": "sounds/physics/props/pottery_flowerpot/impact_bullet_pottery.sound"
+      }
+    ],
+    "Children": [
+      {
+        "Id": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+        "Name": "eye",
+        "Position": "0,0,64",
+        "Enabled": true
+      },
+      {
+        "Id": "c7fee001-2cee-467d-9656-6a83af8c34d4",
+        "Name": "body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "SkinnedModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__version": 0,
+            "__type": "CitizenAnimationHelper",
+            "__enabled": true,
+            "BodyWeight": 1,
+            "EyeSource": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": "c7fee001-2cee-467d-9656-6a83af8c34d4"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
