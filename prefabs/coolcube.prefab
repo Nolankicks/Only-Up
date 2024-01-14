@@ -1,9 +1,8 @@
 {
   "RootObject": {
-    "Id": "c5f44661-9aac-4672-a2ba-31b98a8a3a89",
+    "Id": "0f205b47-2fdd-4503-95d5-5ef53433cbda",
     "Name": "coolcube",
     "Scale": "0.2,0.2,0.2",
-    "Networked": true,
     "Enabled": true,
     "Components": [
       {
@@ -33,7 +32,7 @@
         "__type": "SphereCollider",
         "__enabled": true,
         "Center": "0,0,0",
-        "IsTrigger": true,
+        "IsTrigger": false,
         "Radius": 10,
         "Static": false,
         "Surface": null
