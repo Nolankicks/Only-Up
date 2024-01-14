@@ -1,0 +1,200 @@
+{
+  "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
+  "GameObjects": [
+    {
+      "Id": "a5d4e064-13be-4708-82b8-c2ad5fa56135",
+      "Name": "Spawn",
+      "Enabled": true
+    },
+    {
+      "Id": "0ffae5e1-dda9-4691-a591-36b3a32dd666",
+      "Name": "Sun",
+      "Position": "-583.1084,-148.3224,138.6466",
+      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+      "Scale": "3,3,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "4c422ddb-2869-4c55-9b67-36a015a31454",
+      "Name": "Plane",
+      "Scale": "5,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100,1",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "344e46f1-83cf-4ab5-b782-ef956695ea7f",
+      "Name": "Camera",
+      "Position": "-207.9418,-9.327429,4.526798",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 80,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "f0ed99f4-90e3-477b-a7b6-3802f3254e19",
+      "Name": "GameObject Test",
+      "Position": "160,96,30.33807",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "GameObjectTest",
+          "__enabled": true,
+          "material": "materials/bakscratch.vmat"
+        }
+      ]
+    },
+    {
+      "Id": "44a7f420-ccc7-4161-8fe6-2cc68414c941",
+      "Name": "Crosshair",
+      "Position": "77.49072,-142.3065,51.00916",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Crosshair",
+          "__enabled": true,
+          "MyStringValue": "Hello World!"
+        }
+      ]
+    },
+    {
+      "Id": "f67d75c2-0955-4f02-bbc6-25c9801f0837",
+      "Name": "Network",
+      "Position": "111.5285,-54.8481,31.56",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "NetworkHelper",
+          "__enabled": true,
+          "PlayerPrefab": "code/shitter.prefab",
+          "SpawnPoints": [
+            "a5d4e064-13be-4708-82b8-c2ad5fa56135"
+          ],
+          "StartServer": true
+        }
+      ]
+    },
+    {
+      "Id": "901937ec-a5f0-410b-817d-e5c8dea5d7be",
+      "Name": "dummy",
+      "Position": "192,0,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "__Prefab": "code/dummy.prefab"
+    },
+    {
+      "Id": "ff0ed604-a9dc-41cc-84e4-0c4dae1f0514",
+      "Name": "Chat",
+      "Position": "158.3149,-154.0814,-143.1198",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Chat",
+          "__enabled": true,
+          "MyStringValue": ""
+        },
+        {
+          "__version": 0,
+          "__type": "Leave",
+          "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "46a0630a-8ae4-4dfe-a227-539a56507733",
+      "Name": "Trigger",
+      "Position": "-35.65233,64.39301,90.19578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "FPStrigger",
+          "__enabled": true
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "removetest",
+  "Description": "",
+  "__references": []
+}
