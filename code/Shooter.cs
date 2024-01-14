@@ -18,6 +18,7 @@ public sealed class Shooter : Component
 
 			var p = o.Components.Get<Rigidbody>();
 			p.Velocity = lookDir.Forward * 5000f;
+			soundEvent.UI = true;
 			Sound.Play(soundEvent);
 
 

@@ -1,0 +1,60 @@
+{
+  "RootObject": {
+    "Id": "2c9ffa8f-6c86-481c-a701-d0ec13a8c849",
+    "Name": "Player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "PlayerController",
+        "__enabled": true,
+        "AnimationHelper": null,
+        "Body": null,
+        "Distance": 0,
+        "Eye": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+        "FirstPerson": false,
+        "Gravity": "0,0,800",
+        "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "Shooter",
+        "__enabled": true,
+        "gameObject": "scenes/coolcube.prefab",
+        "soundEvent": "sounds/kenney/ui/ui.downvote.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "SpawnDummy",
+        "__enabled": true,
+        "dummy": "fff99b15-dabc-438a-a36f-2a55038154d9",
+        "rotation": "0,0,1,-0.0000006397578"
+      }
+    ],
+    "Children": [
+      {
+        "Id": "9caa78c8-8bd5-4e0e-9310-819ae44312e2",
+        "Name": "eye",
+        "Position": "0,0,64",
+        "Tags": "player",
+        "Enabled": true
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

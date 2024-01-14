@@ -94,7 +94,7 @@
           "__type": "SpawnDummy",
           "__enabled": true,
           "dummy": "code/dummy.prefab",
-          "rotation": "-0,0,1,-0.0000006397578"
+          "rotation": "0,0,1,-0.0000006397578"
         }
       ],
       "Children": [
@@ -135,14 +135,6 @@
       ]
     },
     {
-      "Id": "bbeae71e-6ad7-406c-9421-65de79d5b144",
-      "Name": "Terry (1)",
-      "Position": "160,0.0002251936,0.0001258845",
-      "Rotation": "-0.0000003576281,-0.0000000000002287954,1,-0.0000006397578",
-      "Enabled": true,
-      "__Prefab": "code/dummy.prefab"
-    },
-    {
       "Id": "f0ed99f4-90e3-477b-a7b6-3802f3254e19",
       "Name": "GameObject Test",
       "Position": "160,96,30.33807",
@@ -178,6 +170,14 @@
           "MyStringValue": "Hello World!"
         }
       ]
+    },
+    {
+      "Id": "901937ec-a5f0-410b-817d-e5c8dea5d7be",
+      "Name": "dummy",
+      "Position": "192,0,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "__Prefab": "code/dummy.prefab"
     }
   ],
   "SceneProperties": {
