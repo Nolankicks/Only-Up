@@ -163,6 +163,24 @@
           "__type": "Chat",
           "__enabled": true,
           "MyStringValue": ""
+        },
+        {
+          "__version": 0,
+          "__type": "Leave",
+          "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "46a0630a-8ae4-4dfe-a227-539a56507733",
+      "Name": "Trigger",
+      "Position": "-35.65233,64.39301,90.19578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "FPStrigger",
+          "__enabled": true
         }
       ]
     }
