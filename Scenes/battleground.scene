@@ -57,9 +57,12 @@
           "__enabled": true,
           "AnimationHelper": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "Body": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
+          "Distance": 300,
           "Eye": "e7d3c328-62ec-4390-b9df-caa9bf411942",
           "FirstPerson": false,
-          "Gravity": "0,0,800"
+          "Gravity": "0,0,800",
+          "jumpSound": null,
+          "playjumpSound": false
         },
         {
           "__version": 0,
