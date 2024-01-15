@@ -57,12 +57,10 @@
           "__enabled": true,
           "AnimationHelper": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "Body": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
-          "Distance": 300,
+          "Distance": 350,
           "Eye": "e7d3c328-62ec-4390-b9df-caa9bf411942",
           "FirstPerson": false,
-          "Gravity": "0,0,800",
-          "jumpSound": null,
-          "playjumpSound": false
+          "Gravity": "0,0,800"
         },
         {
           "__version": 0,
@@ -158,6 +156,7 @@
               "__type": "fpsdeathtrigger",
               "__enabled": true,
               "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
+              "health": null,
               "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
             }
           ]
@@ -185,11 +184,9 @@
           ]
         },
         {
-          "Id": "7b64379c-b2d9-4402-b507-8013835c460d",
+          "Id": "7ed68ec5-9964-4e14-8d32-85e0d7c39fc5",
           "Name": "Screen",
-          "Position": "15.25287,-269.057,-301.2442",
-          "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
-          "Scale": "3,3,1",
+          "Position": "151.7913,21.83241,26.17463",
           "Tags": "player",
           "Enabled": true,
           "Components": [
@@ -201,24 +198,23 @@
               "Opacity": 1,
               "Scale": 1,
               "ZIndex": 100
-            },
+            }
+          ],
+          "Children": [
             {
-              "__version": 0,
-              "__type": "Chat",
-              "__enabled": true,
-              "MyStringValue": ""
-            },
-            {
-              "__version": 0,
-              "__type": "Crosshair",
-              "__enabled": true,
-              "MyStringValue": "x"
-            },
-            {
-              "__version": 0,
-              "__type": "HealthUi",
-              "__enabled": true,
-              "health": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+              "Id": "7a6fe65f-29e2-4743-91ce-99d0802f61da",
+              "Name": "Object",
+              "Position": "151.7913,21.83241,26.17463",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__version": 0,
+                  "__type": "HealthUi",
+                  "__enabled": true,
+                  "health": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+                }
+              ]
             }
           ]
         }
@@ -580,7 +576,7 @@
               "__type": "DummyManager",
               "__enabled": true,
               "emitterObj": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
-              "ragdollObj": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
+              "ragdollObj": "prefabs/ragdoll.prefab",
               "rotation": "0,0,0,1",
               "shooterTrigger": "a037c278-dbe0-407a-b9ef-16337d205c41",
               "vector3": "0,0,70"

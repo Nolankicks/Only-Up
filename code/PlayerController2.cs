@@ -1,14 +1,11 @@
 using Sandbox;
 using Sandbox.Citizen;
-using System.ComponentModel.DataAnnotations;
 using System.Drawing;
-using System.Net.Http;
 using System.Runtime;
-[Title("FPS player controller")]
-public class PlayerController2 : Component, INetworkSerializable
+
+public class PlayerController2 : Component
 {
 	[Property] public Vector3 Gravity { get; set; } = new Vector3( 0, 0, 800 );
-	[Property] public SoundEvent jumpSound {get; set;}
 
 	public Vector3 WishVelocity { get; private set; }
 
@@ -17,32 +14,27 @@ public class PlayerController2 : Component, INetworkSerializable
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 	[Property] public bool FirstPerson { get; set; }
 	[Property] public float Distance {get; set;}
-	[Property] public bool playjumpSound {get; set;}
-	private CameraComponent Camera;
-	 
-	
-	
-	public bool ifhiding;
 
-	public Angles EyeAngles;
-	public bool IsRunning;
-	private ModelRenderer BodyRender;
-	
+	[Sync]
+	public Angles EyeAngles { get; set; }
 
+	[Sync]
+	public bool IsRunning { get; set; }
 
 	protected override void OnEnabled()
 	{
 		base.OnEnabled();
-		
+
 		if ( IsProxy )
 			return;
 
 		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
+		
 		if ( cam is not null )
 		{
-			EyeAngles = cam.Transform.Rotation.Angles();
-			EyeAngles.roll = 0;
-			
+			var ee = cam.Transform.Rotation.Angles();
+			ee.roll = 0;
+			EyeAngles = ee;
 		}
 	}
 
@@ -51,30 +43,22 @@ public class PlayerController2 : Component, INetworkSerializable
 		// Eye input
 		if ( !IsProxy )
 		{
-			EyeAngles.pitch += Input.MouseDelta.y * 0.1f;
-			EyeAngles.yaw -= Input.MouseDelta.x * 0.1f;
-			EyeAngles.roll = 0;
-			EyeAngles.pitch = EyeAngles.pitch.Clamp( -89.9f, 89.9f );
-
+			var ee = EyeAngles;
+			ee += Input.AnalogLook * 0.5f;
+			ee.roll = 0;
+			EyeAngles = ee;
+var camPos = Eye.Transform.Position;
 			var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 
 			var lookDir = EyeAngles.ToRotation();
-			var camPos = Eye.Transform.Position;
+
 			if ( FirstPerson )
 			{
 				cam.Transform.Position = Eye.Transform.Position;
 				cam.Transform.Rotation = lookDir;
-				cam.FieldOfView = 90;
-				var body = GameObject.Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
-				body.Enabled = false;
-
-				
-
 			}
 			else
 			{
-				//cam.Transform.Position = Transform.Position + lookDir.Backward * 300 + Vector3.Up * 75.0f;
-				//cam.Transform.Rotation = lookDir;
 				var camForward = EyeAngles.ToRotation().Forward;
 				var camTrace = Scene.Trace.Ray(camPos, camPos - (camForward * Distance) )
 				.WithoutTags("player", "trigger")
@@ -91,7 +75,6 @@ public class PlayerController2 : Component, INetworkSerializable
 				cam.Transform.Position = camPos + Vector3.Up * 25f;
 				cam.Transform.Rotation = EyeAngles.ToRotation();
 			}
-
 
 
 
@@ -139,11 +122,6 @@ public class PlayerController2 : Component, INetworkSerializable
 	public void OnJump( float floatValue, string dataString, object[] objects, Vector3 position )
 	{
 		AnimationHelper?.TriggerJump();
-		
-		if (playjumpSound)
-		{
-		Sound.Play(jumpSound);
-		}
 	}
 
 	float fJumps;
@@ -202,13 +180,7 @@ public class PlayerController2 : Component, INetworkSerializable
 	{
 		var rot = EyeAngles.ToRotation();
 
-		WishVelocity = 0;
-
-		if ( Input.Down( "Forward" ) ) WishVelocity += rot.Forward;
-		if ( Input.Down( "Backward" ) ) WishVelocity += rot.Backward;
-		if ( Input.Down( "Left" ) ) WishVelocity += rot.Left;
-		if ( Input.Down( "Right" ) ) WishVelocity += rot.Right;
-
+		WishVelocity = rot * Input.AnalogMove;
 		WishVelocity = WishVelocity.WithZ( 0 );
 
 		if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
@@ -216,22 +188,4 @@ public class PlayerController2 : Component, INetworkSerializable
 		if ( Input.Down( "Run" ) ) WishVelocity *= 320.0f;
 		else WishVelocity *= 110.0f;
 	}
-
-	public void Write( ref ByteStream stream )
-	{
-		stream.Write( IsRunning );
-		stream.Write( EyeAngles );
-	}
-
-	public void Read( ByteStream stream )
-	{
-		IsRunning = stream.Read<bool>();
-		EyeAngles = stream.Read<Angles>();
-	}
-
-
-
-		
-
-
 }

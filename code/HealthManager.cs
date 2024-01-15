@@ -39,7 +39,7 @@ public sealed class HealthManager : Component
 	}
 	public void BulletHit()
 	{
-		healthNumber -= 25;
+		healthNumber = 0;
 		Sound.Play(hitsound);
 	}
 
@@ -57,7 +57,6 @@ public sealed class HealthManager : Component
 		{
 		var emittervar = emitter.Clone(Transform.World);
 		var ragdolvar = ragdol.Clone (Transform.World);
-		ragdolvar.Network.Spawn();
 		emittervar.Network.Spawn();
 		Log.Info(healthNumber);
 		}
