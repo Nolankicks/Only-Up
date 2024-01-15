@@ -660,11 +660,6 @@
           "__type": "Crosshair",
           "__enabled": true,
           "MyStringValue": "x"
-        },
-        {
-          "__version": 0,
-          "__type": "Leave",
-          "__enabled": true
         }
       ]
     },
@@ -812,7 +807,7 @@
     },
     {
       "Id": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff",
-      "Name": "shitter",
+      "Name": "player",
       "Tags": "player",
       "Components": [
         {
@@ -903,6 +898,25 @@
           "Position": "-35.65233,64.39301,90.19578",
           "Tags": "player",
           "Enabled": true
+        },
+        {
+          "Id": "17746b49-618f-4f90-a4a6-2165f2569ed8",
+          "Name": "collider",
+          "Position": "0,0,12.07656",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SphereCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 10,
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     },
@@ -916,6 +930,30 @@
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "504ed81b-f21f-4d02-8901-20c7c480e52d",
+      "Name": "Trigger",
+      "Position": "165.9446,-76.0041,-204.3708",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "FPStrigger",
+          "__enabled": true,
+          "respawngameObject": "a5d4e064-13be-4708-82b8-c2ad5fa56135"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "5000,5000,50",
+          "Static": false,
+          "Surface": null
         }
       ]
     }
