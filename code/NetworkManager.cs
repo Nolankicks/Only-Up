@@ -1,13 +1,16 @@
+using Sandbox.Network;
+
 namespace Sandbox;
 
-public sealed class GameNetworkManager2 : Component, Component.INetworkListener
+public sealed class NetworkManager : Component, Component.INetworkListener
 {
 	[Property] public GameObject PlayerPrefab { get; set; }
 	[Property] public GameObject SpawnPoint { get; set; }
 
 	public void OnActive( Connection channel )
 	{
-
+		Log.Info( $"Player '{channel.DisplayName}' is becoming active" );
+		Log.Info( $"Avatar: {channel.GetUserData( "avatar" )}" );
 
 		var clothing = new ClothingContainer();
 		clothing.Deserialize( channel.GetUserData( "avatar" ) );
@@ -21,7 +24,7 @@ public sealed class GameNetworkManager2 : Component, Component.INetworkListener
 		{
 			clothing.Apply( body );
 		}
-
-		player.Network.Spawn(channel);
+			
+		player.Network.Spawn( channel );
 	}
 }

@@ -1,13 +1,18 @@
 using Sandbox;
+using Sandbox.Network;
+using System.Threading.Tasks;
 
 public sealed class NetworkSession : Component
 {
-	protected override void OnUpdate()
+	protected override void OnStart()
 	{
-		if ( IsProxy )
-			return;
-			
-
-		
+		//
+		// Create a lobby if we're not connected
+		//
+		if ( !GameNetworkSystem.IsActive )
+		{
+			GameNetworkSystem.CreateLobby();
+		}
 	}
+
 }

@@ -99,7 +99,7 @@
           "__version": 0,
           "__type": "NetworkHelper",
           "__enabled": true,
-          "PlayerPrefab": "code/shitter.prefab",
+          "PlayerPrefab": null,
           "SpawnPoints": [
             "a5d4e064-13be-4708-82b8-c2ad5fa56135"
           ],
@@ -166,13 +166,12 @@
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "maps/battleground.vmap",
+          "MapName": "battleground.vmap",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
         }
-      ],
-      "Children": []
+      ]
     },
     {
       "Id": "ec536b04-af5a-4361-8a3e-08f243ee3c00",
