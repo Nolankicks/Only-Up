@@ -7,9 +7,11 @@ public sealed class HealthManager : Component
 	
 	//[Property] public SceneFile sceneFile {get; set;}
 	public long healthNumber {get; set;} = 100;
-	[Property] public SceneFile sceneFile {get; set;}
 	[Property] public PlayerController2 playerController2 {get; set;}
 	[Property] public Vector3 vector3 {get; set;}
+	[Property] public SoundEvent hitsound {get; set;}
+	 [Property] public GameObject emitter {get; set;}
+ 	[Property] public GameObject ragdol {get; set;}
 	
 	
 	
@@ -35,6 +37,11 @@ public sealed class HealthManager : Component
 	{
 
 	}
+	public void BulletHit()
+	{
+		healthNumber -= 25;
+		Sound.Play(hitsound);
+	}
 
 		
 	
@@ -46,11 +53,14 @@ public sealed class HealthManager : Component
 
 	public void OnDeath()
 	{
-		
-		healthNumber = 0;
-		
+		if (0 >= healthNumber)
+		{
+		var emittervar = emitter.Clone(Transform.World);
+		var ragdolvar = ragdol.Clone (Transform.World);
+		ragdolvar.Network.Spawn();
+		emittervar.Network.Spawn();
 		Log.Info(healthNumber);
-		
+		}
 		
 		
 			

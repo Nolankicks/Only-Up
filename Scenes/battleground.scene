@@ -27,7 +27,7 @@
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "maps/battleground.vpk",
+          "MapName": "maps/battleground.vmap",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
@@ -82,8 +82,10 @@
           "__version": 0,
           "__type": "HealthManager",
           "__enabled": true,
+          "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
+          "hitsound": "sounds/impacts/impact-bullet-flesh.sound",
           "playerController2": "471628cc-cb8e-4b8d-8956-378f1ff05757",
-          "sceneFile": null,
+          "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
           "vector3": "0,0,0"
         }
       ],
@@ -155,7 +157,8 @@
               "__version": 0,
               "__type": "fpsdeathtrigger",
               "__enabled": true,
-              "healthManager": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+              "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
+              "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
             }
           ]
         },
@@ -180,6 +183,44 @@
               "WorldspacePlayback": true
             }
           ]
+        },
+        {
+          "Id": "7b64379c-b2d9-4402-b507-8013835c460d",
+          "Name": "Screen",
+          "Position": "15.25287,-269.057,-301.2442",
+          "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+          "Scale": "3,3,1",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ScreenPanel",
+              "__enabled": true,
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__version": 0,
+              "__type": "Chat",
+              "__enabled": true,
+              "MyStringValue": ""
+            },
+            {
+              "__version": 0,
+              "__type": "Crosshair",
+              "__enabled": true,
+              "MyStringValue": "x"
+            },
+            {
+              "__version": 0,
+              "__type": "HealthUi",
+              "__enabled": true,
+              "health": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+            }
+          ]
         }
       ]
     },
@@ -199,7 +240,7 @@
               "__version": 0,
               "__type": "SkinnedModelRenderer",
               "__enabled": true,
-              "BodyGroups": 1,
+              "BodyGroups": 341,
               "BoneMergeTarget": null,
               "CreateBoneObjects": false,
               "MaterialGroup": "default",
@@ -215,142 +256,6 @@
               "Locking": {},
               "Model": "models/citizen/citizen.vmdl",
               "Renderer": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
-            }
-          ],
-          "Children": [
-            {
-              "Id": "b5f46df4-aea6-484e-8950-83222447318a",
-              "Name": "Cloths",
-              "Position": "-148.4277,-21.01374,19.99891",
-              "Enabled": true,
-              "Children": [
-                {
-                  "Id": "a659ffde-3401-45f4-8bdb-17d5f72c318d",
-                  "Name": "Aurmor",
-                  "Position": "-300.0732,-45.5975,39.71455",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/vest/tactical_vest/models/tactical_vest_army.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                },
-                {
-                  "Id": "e115476a-cccd-4d51-8a17-ba21131b0a42",
-                  "Name": "Shirt",
-                  "Position": "-150.0366,-22.79875,19.85728",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/shirt/army_shirt/model/army_shirt.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                },
-                {
-                  "Id": "3b4fbe86-ce5d-4681-95c6-f8d500adf199",
-                  "Name": "pants",
-                  "Position": "-150.0366,-22.79875,19.85728",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/trousers/cargopants/models/brown_cargo_pants.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                },
-                {
-                  "Id": "3b90030e-a361-415e-ab60-f70b75c8389c",
-                  "Name": "Gloves",
-                  "Position": "-150.0366,-22.79875,19.85728",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/gloves/tactical_gloves/models/army_gloves.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                },
-                {
-                  "Id": "754338a3-5cb6-43bd-abf0-9c2f9103772d",
-                  "Name": "Boots",
-                  "Position": "-150.0366,-22.79875,19.85728",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/shoes/boots/models/army_boots.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                },
-                {
-                  "Id": "e85b7367-dbcb-4fe1-9125-29b21b4eafcd",
-                  "Name": "hat",
-                  "Position": "-72.05421,-22.79863,44.8905",
-                  "Enabled": true,
-                  "Components": [
-                    {
-                      "__version": 0,
-                      "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
-                      "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
-                      "CreateBoneObjects": false,
-                      "MaterialGroup": null,
-                      "MaterialOverride": null,
-                      "Model": "models/citizen_clothes/hat/tactical_helmet/models/tactical_helmet_army.vmdl",
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -821,46 +726,8 @@
       ]
     },
     {
-      "Id": "7b64379c-b2d9-4402-b507-8013835c460d",
-      "Name": "Screen",
-      "Position": "15.25287,-269.057,-301.2442",
-      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
-      "Scale": "3,3,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__version": 0,
-          "__type": "Chat",
-          "__enabled": true,
-          "MyStringValue": ""
-        },
-        {
-          "__version": 0,
-          "__type": "Crosshair",
-          "__enabled": true,
-          "MyStringValue": "x"
-        },
-        {
-          "__version": 0,
-          "__type": "HealthUi",
-          "__enabled": true,
-          "health": "471628cc-cb8e-4b8d-8956-378f1ff05757"
-        }
-      ]
-    },
-    {
       "Id": "1fd08f87-f0d0-41aa-b8dc-9c07de6e62de",
       "Name": "Spawn",
-      "Position": "-55.53426,0,51.78418",
       "Enabled": true
     },
     {
