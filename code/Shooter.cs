@@ -16,7 +16,7 @@ public sealed class Shooter : Component
 		var lookDir = pc.EyeAngles.ToRotation();
 		if ( Input.Pressed( "Attack1" ) )
 		{
-			var pos = Transform.Position + Vector3.Up * 64.0f;
+			var pos = Transform.Position + Vector3.Up * 64.0f + lookDir.Forward.WithZ( 0.0f ) * 50.0f;
 			var o = gameObject.Clone( pos);
 			o.Enabled = true;
 			

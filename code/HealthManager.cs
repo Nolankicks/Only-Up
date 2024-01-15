@@ -8,6 +8,8 @@ public sealed class HealthManager : Component
 	//[Property] public SceneFile sceneFile {get; set;}
 	public long healthNumber {get; set;} = 100;
 	[Property] public SceneFile sceneFile {get; set;}
+	[Property] public PlayerController2 playerController2 {get; set;}
+	[Property] public Vector3 vector3 {get; set;}
 	
 	
 	
@@ -17,14 +19,15 @@ public sealed class HealthManager : Component
 	
 	protected override void OnStart()
 	{
-
+		healthNumber = 100;
 	}
 	
 	protected override void OnUpdate()
 	{
 				if (healthNumber == 0)
 			{
-				GameManager.ActiveScene.Load(sceneFile);
+				playerController2.Transform.Position = vector3;
+				healthNumber = 100;
 
 			}
 	}

@@ -177,6 +177,7 @@
           "Name": "coolcube",
           "Position": "-262.8327,166.7466,358.3994",
           "Scale": "0.2,0.2,0.2",
+          "Tags": "bullet",
           "Components": [
             {
               "__version": 0,
@@ -660,6 +661,12 @@
           "__type": "Crosshair",
           "__enabled": true,
           "MyStringValue": "x"
+        },
+        {
+          "__version": 0,
+          "__type": "HealthUi",
+          "__enabled": true,
+          "health": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff"
         }
       ]
     },
@@ -844,6 +851,14 @@
           "__enabled": true,
           "dummy": "9709d6bf-2c49-4c72-830b-3eefb3bfb260",
           "rotation": "-0,0,1,-0.0000006397578"
+        },
+        {
+          "__version": 0,
+          "__type": "HealthManager",
+          "__enabled": true,
+          "playerController2": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff",
+          "sceneFile": null,
+          "vector3": "0,0,0"
         }
       ],
       "Children": [
@@ -893,28 +908,28 @@
           ]
         },
         {
-          "Id": "46a0630a-8ae4-4dfe-a227-539a56507733",
-          "Name": "Trigger",
-          "Position": "-35.65233,64.39301,90.19578",
-          "Tags": "player",
-          "Enabled": true
-        },
-        {
           "Id": "17746b49-618f-4f90-a4a6-2165f2569ed8",
           "Name": "collider",
-          "Position": "0,0,12.07656",
+          "Position": "0,-0.03810143,35.62095",
           "Tags": "player",
           "Enabled": true,
           "Components": [
             {
               "__version": 0,
-              "__type": "SphereCollider",
+              "__type": "CapsuleCollider",
               "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Radius": 10,
+              "End": "0,0,12.71134",
+              "IsTrigger": true,
+              "Radius": 25,
+              "Start": "0,0,-30.34357",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__version": 0,
+              "__type": "fpsdeathtrigger",
+              "__enabled": true,
+              "healthManager": "c3f5f9a5-399d-46e9-b2a4-26a7be2a9dff"
             }
           ]
         }
@@ -930,30 +945,6 @@
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "504ed81b-f21f-4d02-8901-20c7c480e52d",
-      "Name": "Trigger",
-      "Position": "165.9446,-76.0041,-204.3708",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "FPStrigger",
-          "__enabled": true,
-          "respawngameObject": "a5d4e064-13be-4708-82b8-c2ad5fa56135"
-        },
-        {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "5000,5000,50",
-          "Static": false,
-          "Surface": null
         }
       ]
     }
