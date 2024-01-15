@@ -7,9 +7,8 @@ public sealed class Leave : Component
 	{
 		if (Input.EscapePressed)
 		{
-			GameNetworkSystem.Disconnect();
-			GameManager.ActiveScene.LoadFromFile("scenes/menu.scene");
-
+			Game.Close();
+			Log.Info("Quit");
 		}
 	}
 

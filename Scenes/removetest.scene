@@ -660,6 +660,11 @@
           "__type": "Crosshair",
           "__enabled": true,
           "MyStringValue": "x"
+        },
+        {
+          "__version": 0,
+          "__type": "Leave",
+          "__enabled": true
         }
       ]
     },
