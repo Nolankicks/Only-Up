@@ -35,7 +35,7 @@
               "__version": 0,
               "__type": "mainmenu",
               "__enabled": true,
-              "GameScene": "scenes/removetest.scene"
+              "GameScene": "scenes/battleground.scene"
             }
           ]
         }

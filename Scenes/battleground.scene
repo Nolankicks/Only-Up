@@ -18,22 +18,26 @@
       ]
     },
     {
-      "Id": "62c3ef7a-4294-4664-81b1-35dc20a478ab",
-      "Name": "NetworkSession",
-      "Position": "-50.18213,53.29623,44.50891",
+      "Id": "86375cb3-42ef-4740-afdc-c3a156e0f53c",
+      "Name": "Map",
+      "Position": "872.0355,1400.415,425.4068",
       "Enabled": true,
       "Components": [
         {
           "__version": 0,
-          "__type": "NetworkSession",
-          "__enabled": true
+          "__type": "MapInstance",
+          "__enabled": true,
+          "MapName": "maps/battleground.vpk",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
         }
-      ]
+      ],
+      "Children": []
     },
     {
-      "Id": "97984d80-5e2e-4ca6-acbd-740524f91620",
+      "Id": "471628cc-cb8e-4b8d-8956-378f1ff05757",
       "Name": "player",
-      "Position": "149.8835,0,174.7682",
       "Tags": "player",
       "Components": [
         {
@@ -51,9 +55,9 @@
           "__version": 0,
           "__type": "PlayerController2",
           "__enabled": true,
-          "AnimationHelper": "1812978f-fac3-49ff-a407-1144665f17e1",
-          "Body": "1812978f-fac3-49ff-a407-1144665f17e1",
-          "Eye": "0b93a67b-b057-412c-9497-3860c88c3045",
+          "AnimationHelper": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
+          "Body": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
+          "Eye": "e7d3c328-62ec-4390-b9df-caa9bf411942",
           "FirstPerson": false,
           "Gravity": "0,0,800"
         },
@@ -61,37 +65,36 @@
           "__version": 0,
           "__type": "Shooter",
           "__enabled": true,
-          "gameObject": "b3de3e9e-7c26-4876-9826-a097cb2317e6",
+          "gameObject": "272d0705-9275-4ba0-80ca-194eacad60dc",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
         },
         {
           "__version": 0,
           "__type": "SpawnDummy",
           "__enabled": true,
-          "dummy": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+          "dummy": "a037c278-dbe0-407a-b9ef-16337d205c41",
           "rotation": "-0,0,1,-0.0000006397578"
         },
         {
           "__version": 0,
           "__type": "HealthManager",
           "__enabled": true,
-          "playerController2": "97984d80-5e2e-4ca6-acbd-740524f91620",
+          "playerController2": "471628cc-cb8e-4b8d-8956-378f1ff05757",
           "sceneFile": null,
           "vector3": "0,0,0"
         }
       ],
       "Children": [
         {
-          "Id": "0b93a67b-b057-412c-9497-3860c88c3045",
+          "Id": "e7d3c328-62ec-4390-b9df-caa9bf411942",
           "Name": "eye",
           "Position": "0,0,64",
           "Tags": "player",
           "Enabled": true
         },
         {
-          "Id": "1812978f-fac3-49ff-a407-1144665f17e1",
+          "Id": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "Name": "body",
-          "Position": "0,0,0",
           "Tags": "player",
           "Enabled": true,
           "Components": [
@@ -113,7 +116,7 @@
               "__type": "CitizenAnimationHelper",
               "__enabled": true,
               "BodyWeight": 1,
-              "EyeSource": "0b93a67b-b057-412c-9497-3860c88c3045",
+              "EyeSource": "e7d3c328-62ec-4390-b9df-caa9bf411942",
               "EyesWeight": 1,
               "HeadWeight": 1,
               "Height": 1,
@@ -123,197 +126,46 @@
               "IkRightHand": null,
               "LookAt": null,
               "LookAtEnabled": false,
-              "Target": "1812978f-fac3-49ff-a407-1144665f17e1"
+              "Target": "0ea39d9a-7da3-445b-a3dc-487d1645531b"
             }
           ]
         },
         {
-          "Id": "ed2e66d1-8c02-4cb6-b462-cdeb9bb764f7",
-          "Name": "Trigger",
-          "Position": "-35.65233,64.39301,90.19578",
-          "Tags": "player",
-          "Enabled": true
-        },
-        {
-          "Id": "72b84c56-f427-41e7-9404-837aab7c3add",
+          "Id": "1facedb0-6d53-4366-8aed-7a6500a8ede5",
           "Name": "collider",
-          "Position": "0,0,12.07656",
+          "Position": "0,-0.03810143,35.62095",
           "Tags": "player",
           "Enabled": true,
           "Components": [
             {
               "__version": 0,
-              "__type": "SphereCollider",
+              "__type": "CapsuleCollider",
               "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Radius": 10,
+              "End": "0,0,12.71134",
+              "IsTrigger": true,
+              "Radius": 25,
+              "Start": "0,0,-30.34357",
               "Static": false,
               "Surface": null
-            }
-          ]
-        },
-        {
-          "Id": "9e7814cd-1e74-4d77-9b01-807218d62d2d",
-          "Name": "trigger",
-          "Position": "-770.1933,-163.3604,155.1411",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
+            },
             {
               "__version": 0,
               "__type": "fpsdeathtrigger",
               "__enabled": true,
-              "healthManager": "97984d80-5e2e-4ca6-acbd-740524f91620"
-            },
-            {
-              "__version": 0,
-              "__type": "ModelCollider",
-              "__enabled": true,
-              "IsTrigger": true,
-              "Model": "models/citizen/citizen.vmdl",
-              "Static": false,
-              "Surface": null
+              "healthManager": "471628cc-cb8e-4b8d-8956-378f1ff05757"
             }
           ]
         }
       ]
     },
     {
-      "Id": "50a0505c-f002-4102-a03a-ac289e5065ee",
-      "Name": "Chat",
-      "Position": "158.3149,-154.0814,-143.1198",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        }
-      ]
-    },
-    {
-      "Id": "614e385d-93ec-47ac-92b0-38ea49af9c67",
-      "Name": "dummy",
-      "Position": "452.1503,1452.326,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "__Prefab": "code/dummy.prefab"
-    },
-    {
-      "Id": "500a4341-7297-41e1-bb09-e6b048fa7578",
-      "Name": "Network",
-      "Position": "111.5285,-54.8481,31.56",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "NetworkManager",
-          "__enabled": true,
-          "PlayerPrefab": "97984d80-5e2e-4ca6-acbd-740524f91620",
-          "SpawnPoint": "e36319ce-d6d7-470d-9896-dd767af78f6f"
-        }
-      ]
-    },
-    {
-      "Id": "6e7d2428-1e62-4f8e-9fb8-3dcb0f64f5f5",
-      "Name": "Crosshair",
-      "Position": "77.49072,-142.3065,51.00916",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        }
-      ]
-    },
-    {
-      "Id": "e95f39b7-0edc-4d84-ab64-1437e8945c3e",
-      "Name": "GameObject Test",
-      "Position": "160,-195.2413,131.6322",
-      "Enabled": true
-    },
-    {
-      "Id": "c102c71c-bd66-48ab-bbc8-77390aab7dbe",
-      "Name": "Camera",
-      "Position": "-207.9418,-9.327429,4.526798",
-      "Tags": "maincamera",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "CameraComponent",
-          "__enabled": true,
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 80,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
-        }
-      ]
-    },
-    {
-      "Id": "e36319ce-d6d7-470d-9896-dd767af78f6f",
-      "Name": "Spawn",
-      "Position": "169.379,-115.0778,184.0696",
-      "Enabled": true
-    },
-    {
-      "Id": "a8097d81-b7ff-412d-93ff-207bf4ada00b",
-      "Name": "Screen",
-      "Position": "15.25287,-269.057,-301.2442",
-      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
-      "Scale": "3,3,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__version": 0,
-          "__type": "Chat",
-          "__enabled": true,
-          "MyStringValue": ""
-        },
-        {
-          "__version": 0,
-          "__type": "Crosshair",
-          "__enabled": true,
-          "MyStringValue": "x"
-        }
-      ]
-    },
-    {
-      "Id": "c1739fa4-3453-4555-a804-b80dbf123c11",
+      "Id": "3301f1a3-5081-48a1-9987-8f22f0e8d3eb",
       "Name": "Prefabs",
       "Position": "275.8154,-5.005253,-48.6389",
       "Enabled": true,
       "Children": [
         {
-          "Id": "ed6432f0-41a7-434c-91c3-98108477035c",
+          "Id": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
           "Name": "ragdoll",
           "Position": "-1675.747,219.8839,-974.9626",
           "Rotation": "0,0.707107,0,0.7071065",
@@ -337,18 +189,18 @@
               "__enabled": true,
               "Locking": {},
               "Model": "models/citizen/citizen.vmdl",
-              "Renderer": "ed6432f0-41a7-434c-91c3-98108477035c"
+              "Renderer": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
             }
           ],
           "Children": [
             {
-              "Id": "45e885d5-63cc-4a1f-9c18-d90cadb54a14",
+              "Id": "b5f46df4-aea6-484e-8950-83222447318a",
               "Name": "Cloths",
               "Position": "-148.4277,-21.01374,19.99891",
               "Enabled": true,
               "Children": [
                 {
-                  "Id": "62c06ff2-8217-4061-a866-8e6e75d0ea40",
+                  "Id": "a659ffde-3401-45f4-8bdb-17d5f72c318d",
                   "Name": "Aurmor",
                   "Position": "-300.0732,-45.5975,39.71455",
                   "Enabled": true,
@@ -358,7 +210,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -369,7 +221,7 @@
                   ]
                 },
                 {
-                  "Id": "a016e9bd-f376-437f-9ee5-a3a9dfac00fb",
+                  "Id": "e115476a-cccd-4d51-8a17-ba21131b0a42",
                   "Name": "Shirt",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -379,7 +231,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -390,7 +242,7 @@
                   ]
                 },
                 {
-                  "Id": "66f36455-f4eb-4b06-87d8-b8e745bb271b",
+                  "Id": "3b4fbe86-ce5d-4681-95c6-f8d500adf199",
                   "Name": "pants",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -400,7 +252,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -411,7 +263,7 @@
                   ]
                 },
                 {
-                  "Id": "003ae3fa-2d88-474e-a332-694bd0669250",
+                  "Id": "3b90030e-a361-415e-ab60-f70b75c8389c",
                   "Name": "Gloves",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -421,7 +273,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -432,7 +284,7 @@
                   ]
                 },
                 {
-                  "Id": "d1d712d0-24c1-4d70-9627-bbe470bab8b6",
+                  "Id": "754338a3-5cb6-43bd-abf0-9c2f9103772d",
                   "Name": "Boots",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -442,7 +294,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -453,7 +305,7 @@
                   ]
                 },
                 {
-                  "Id": "42c8d14e-7fa8-4aa5-af2a-43448a813f59",
+                  "Id": "e85b7367-dbcb-4fe1-9125-29b21b4eafcd",
                   "Name": "hat",
                   "Position": "-72.05421,-22.79863,44.8905",
                   "Enabled": true,
@@ -463,7 +315,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "ed6432f0-41a7-434c-91c3-98108477035c",
+                      "BoneMergeTarget": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -478,10 +330,11 @@
           ]
         },
         {
-          "Id": "b3de3e9e-7c26-4876-9826-a097cb2317e6",
+          "Id": "272d0705-9275-4ba0-80ca-194eacad60dc",
           "Name": "coolcube",
           "Position": "-262.8327,166.7466,358.3994",
           "Scale": "0.2,0.2,0.2",
+          "Tags": "bullet",
           "Components": [
             {
               "__version": 0,
@@ -514,16 +367,11 @@
               "Radius": 10,
               "Static": false,
               "Surface": null
-            },
-            {
-              "__version": 0,
-              "__type": "Despawner",
-              "__enabled": true
             }
           ]
         },
         {
-          "Id": "569731e5-b274-467f-9ab2-c576affd05e2",
+          "Id": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
           "Name": "emitter2",
           "Position": "-1815.945,363.7523,-745.3259",
           "Rotation": "0,0.707107,0,0.7071065",
@@ -756,7 +604,7 @@
           ]
         },
         {
-          "Id": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+          "Id": "a037c278-dbe0-407a-b9ef-16337d205c41",
           "Name": "dummyprefab",
           "Position": "-111.1286,5.005218,-68.66571",
           "Rotation": "0,0,1,-0.0000006397578",
@@ -778,7 +626,7 @@
               "__version": 0,
               "__type": "ShooterTrigger",
               "__enabled": true,
-              "dummymodel": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+              "dummymodel": "a037c278-dbe0-407a-b9ef-16337d205c41",
               "soundFile": "sounds/impacts/impact-bullet-flesh.sound"
             },
             {
@@ -796,22 +644,22 @@
               "__version": 0,
               "__type": "DummyManager",
               "__enabled": true,
-              "emitterObj": "569731e5-b274-467f-9ab2-c576affd05e2",
-              "ragdollObj": "ed6432f0-41a7-434c-91c3-98108477035c",
+              "emitterObj": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
+              "ragdollObj": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
               "rotation": "0,0,0,1",
-              "shooterTrigger": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+              "shooterTrigger": "a037c278-dbe0-407a-b9ef-16337d205c41",
               "vector3": "0,0,70"
             }
           ],
           "Children": [
             {
-              "Id": "2eaaeaa5-b31a-4d81-95f3-b47225cf7b9b",
+              "Id": "561fbc4f-43ee-4bab-8446-5ec00cdde953",
               "Name": "Cloths",
               "Position": "-148.4277,-21.01374,19.99891",
               "Enabled": true,
               "Children": [
                 {
-                  "Id": "787bf9cd-d724-414f-9d72-940d4aa7ca11",
+                  "Id": "c5d11bf0-3898-4ae7-b6a9-70c16d959053",
                   "Name": "Aurmor",
                   "Position": "-300.0732,-45.5975,39.71455",
                   "Enabled": true,
@@ -821,7 +669,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -832,7 +680,7 @@
                   ]
                 },
                 {
-                  "Id": "53d2f805-17f8-4506-a66e-5aff3ee96e2c",
+                  "Id": "ec7db1fd-d641-4e0c-9c50-2880f88d4c9e",
                   "Name": "Shirt",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -842,7 +690,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -853,7 +701,7 @@
                   ]
                 },
                 {
-                  "Id": "795aba17-de50-4ae6-ad01-7b7915dcd1a4",
+                  "Id": "69580757-212f-4c9d-b3bf-e3627352921d",
                   "Name": "pants",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -863,7 +711,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -874,7 +722,7 @@
                   ]
                 },
                 {
-                  "Id": "ced85613-38d5-4059-b6b2-ef2eb32555ea",
+                  "Id": "acd1d6cf-0d57-4f3c-8b58-d03a4a3205b7",
                   "Name": "Gloves",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -884,7 +732,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -895,7 +743,7 @@
                   ]
                 },
                 {
-                  "Id": "4deb7901-8e2f-4ede-a0cf-a7ba803d8219",
+                  "Id": "d8d6c532-e61a-4bb6-bb34-e33b2139a99d",
                   "Name": "Boots",
                   "Position": "-150.0366,-22.79875,19.85728",
                   "Enabled": true,
@@ -905,7 +753,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -916,7 +764,7 @@
                   ]
                 },
                 {
-                  "Id": "bf08e745-e958-4180-84c1-3952b8068119",
+                  "Id": "34e013f2-89e3-4ee9-97c4-55a5cdf96aea",
                   "Name": "hat",
                   "Position": "-72.05421,-22.79863,44.8905",
                   "Enabled": true,
@@ -926,7 +774,7 @@
                       "__type": "SkinnedModelRenderer",
                       "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "f853b1fa-dcf2-452a-bf83-18e2466c8cd0",
+                      "BoneMergeTarget": "a037c278-dbe0-407a-b9ef-16337d205c41",
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -943,55 +791,178 @@
       ]
     },
     {
-      "Id": "0fd8aa3c-9b00-49bb-b091-895aa5d45776",
-      "Name": "GameObject",
-      "Position": "-392.0891,0,117.8428",
-      "Enabled": true
-    },
-    {
-      "Id": "86375cb3-42ef-4740-afdc-c3a156e0f53c",
-      "Name": "Map",
-      "Position": "872.0355,1400.415,425.4068",
+      "Id": "7b64379c-b2d9-4402-b507-8013835c460d",
+      "Name": "Screen",
+      "Position": "15.25287,-269.057,-301.2442",
+      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+      "Scale": "3,3,1",
       "Enabled": true,
       "Components": [
         {
           "__version": 0,
-          "__type": "MapInstance",
+          "__type": "ScreenPanel",
           "__enabled": true,
-          "MapName": "maps/battleground.vpk",
-          "OnMapLoaded": null,
-          "OnMapUnloaded": null,
-          "UseMapFromLaunch": false
-        }
-      ],
-      "Children": []
-    },
-    {
-      "Id": "589dd4bb-312c-4afc-a3ab-7fd3336a9803",
-      "Name": "Plane",
-      "Position": "193.0332,-139.524,88.55917",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
         },
         {
           "__version": 0,
-          "__type": "BoxCollider",
+          "__type": "Chat",
           "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "100,100,1",
-          "Static": false,
-          "Surface": null
+          "MyStringValue": ""
+        },
+        {
+          "__version": 0,
+          "__type": "Crosshair",
+          "__enabled": true,
+          "MyStringValue": "x"
+        },
+        {
+          "__version": 0,
+          "__type": "HealthUi",
+          "__enabled": true,
+          "health": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+        }
+      ]
+    },
+    {
+      "Id": "1fd08f87-f0d0-41aa-b8dc-9c07de6e62de",
+      "Name": "Spawn",
+      "Position": "-55.53426,0,51.78418",
+      "Enabled": true
+    },
+    {
+      "Id": "b6d26807-e0a2-4aad-b6ef-8de931e6d5df",
+      "Name": "Sun",
+      "Position": "-583.1084,-148.3224,138.6466",
+      "Rotation": "-0.00000001759582,0.2952088,0.0000000000000002877923,0.9554327",
+      "Scale": "3,3,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "15763d8b-a937-4685-a3ed-7a275a37e1a0",
+      "Name": "Camera",
+      "Position": "-207.9418,-9.327429,4.526798",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 80,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "c1e186a5-19b0-4c1f-b799-fa31f551a326",
+      "Name": "GameObject Test",
+      "Position": "160,96,30.33807",
+      "Enabled": true
+    },
+    {
+      "Id": "a60e3b38-863a-4773-a7c5-d2731556db9a",
+      "Name": "Crosshair",
+      "Position": "77.49072,-142.3065,51.00916",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ]
+    },
+    {
+      "Id": "217406ea-54c6-473f-ba63-868a861dad49",
+      "Name": "Network",
+      "Position": "111.5285,-54.8481,31.56",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "NetworkManager",
+          "__enabled": true,
+          "PlayerPrefab": "471628cc-cb8e-4b8d-8956-378f1ff05757",
+          "SpawnPoint": "1fd08f87-f0d0-41aa-b8dc-9c07de6e62de"
+        }
+      ]
+    },
+    {
+      "Id": "30dfe258-a04e-440b-a833-75741d8ceef3",
+      "Name": "dummy",
+      "Position": "181.5794,-0.00001333335,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "__Prefab": "code/dummy.prefab"
+    },
+    {
+      "Id": "89a94f8f-17db-427a-b88f-35a9851599c9",
+      "Name": "Chat",
+      "Position": "158.3149,-154.0814,-143.1198",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Chat",
+          "__enabled": true,
+          "MyStringValue": ""
+        },
+        {
+          "__version": 0,
+          "__type": "Crosshair",
+          "__enabled": true,
+          "MyStringValue": "x"
+        }
+      ]
+    },
+    {
+      "Id": "826f3fe2-1339-4457-a9b9-68324ad366b2",
+      "Name": "NetworkSession",
+      "Position": "-50.18213,53.29623,44.50891",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "NetworkSession",
+          "__enabled": true
         }
       ]
     }
