@@ -5,7 +5,6 @@ public sealed class Shooter : Component
 {
 	[Property] GameObject gameObject {get; set;}
 	[Property] SoundEvent soundEvent {get; set;}
-	[Property] public NetworkManager networkManager {get; set;}
 
 
 	protected override void OnUpdate()
@@ -27,7 +26,7 @@ public sealed class Shooter : Component
 			Sound.Play(soundEvent);
 			//pc.Network.TakeOwnership();
 			//o.Network.Spawn();
-			o.Network.Spawn(Connection.Local);
+			o.Network.Spawn();
 			
 			
 
