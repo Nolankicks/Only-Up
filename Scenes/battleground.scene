@@ -30,7 +30,7 @@
           "MapName": "maps/battleground.vpk",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
-          "UseMapFromLaunch": false
+          "UseMapFromLaunch": true
         }
       ],
       "Children": []
@@ -153,6 +153,28 @@
               "__type": "fpsdeathtrigger",
               "__enabled": true,
               "healthManager": "471628cc-cb8e-4b8d-8956-378f1ff05757"
+            }
+          ]
+        },
+        {
+          "Id": "be49e3a2-a9a5-419b-b670-4a0fbdda8d30",
+          "Name": "voice",
+          "Position": "7.924683,35.59068,53.59146",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "Voice",
+              "__enabled": true,
+              "Loopback": false,
+              "Mode": "AlwaysOn",
+              "MorphFadeSpeed": 50,
+              "MorphScale": 2,
+              "PushToTalkInput": "voice",
+              "Renderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
+              "Volume": 1,
+              "WorldspacePlayback": true
             }
           ]
         }
@@ -367,6 +389,11 @@
               "Radius": 10,
               "Static": false,
               "Surface": null
+            },
+            {
+              "__version": 0,
+              "__type": "Despawner",
+              "__enabled": true
             }
           ]
         },

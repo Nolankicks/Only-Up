@@ -30,6 +30,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener
         if ( sphere.IsValid() )
         {
 			Log.Info("Hit");
+			soundFile.UI = true;
 			Sound.Play(soundFile);
 			GameObject.Destroy();
 			other.GameObject.Destroy();

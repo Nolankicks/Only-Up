@@ -33,6 +33,7 @@ public class PlayerController2 : Component
 			var ee = cam.Transform.Rotation.Angles();
 			ee.roll = 0;
 			EyeAngles = ee;
+			
 		}
 	}
 
@@ -45,7 +46,7 @@ public class PlayerController2 : Component
 			ee += Input.AnalogLook * 0.5f;
 			ee.roll = 0;
 			EyeAngles = ee;
-
+			
 			var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 			var BodyRender = Body.Components.Get<ModelRenderer>();
 			var lookDir = EyeAngles.ToRotation();
