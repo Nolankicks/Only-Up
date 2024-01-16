@@ -2,58 +2,122 @@
   "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
   "GameObjects": [
     {
-      "Id": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
-      "Name": "spawn",
-      "Position": "0,0,0.003815893",
+      "Id": "48bcf0ae-4051-4c43-944b-b2003ca0dbcb",
+      "Name": "Spawns",
+      "Position": "157.4286,696.9971,134.6875",
       "Enabled": true,
-      "Components": [
+      "Children": [
         {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "Id": "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
-      "Name": "spawn (1)",
-      "Position": "0,148.5755,0.003815893",
-      "Enabled": true,
-      "Components": [
+          "Id": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
+          "Name": "spawn",
+          "Position": "-157.4286,-696.9971,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
         {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "Id": "6ea304d9-3789-48c3-9bf8-7ee24def9405",
-      "Name": "spawn (2)",
-      "Position": "0,363.4221,0.003815893",
-      "Enabled": true,
-      "Components": [
+          "Id": "3f4bca40-ab66-4d4e-b63e-59e98369a574",
+          "Name": "spawn (4)",
+          "Position": "124.6985,-696.9971,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
         {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "Id": "f59caca6-d1ea-48b9-adb5-303c2d2576ae",
-      "Name": "spawn (3)",
-      "Position": "0,572.5636,0.003815893",
-      "Enabled": true,
-      "Components": [
+          "Id": "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
+          "Name": "spawn (1)",
+          "Position": "-157.4286,-548.4216,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
         {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
+          "Id": "039c8bb5-9fb7-470d-9ec1-02b3f5539a5e",
+          "Name": "spawn (5)",
+          "Position": "124.6985,-548.4216,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
+        {
+          "Id": "6ea304d9-3789-48c3-9bf8-7ee24def9405",
+          "Name": "spawn (2)",
+          "Position": "-157.4286,-333.575,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
+        {
+          "Id": "c684cf6a-a029-4102-ac21-0dbed30059c0",
+          "Name": "spawn (6)",
+          "Position": "124.6985,-333.575,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
+        {
+          "Id": "f59caca6-d1ea-48b9-adb5-303c2d2576ae",
+          "Name": "spawn (3)",
+          "Position": "-157.4286,-124.4335,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
+        },
+        {
+          "Id": "6fc64722-0fbc-49c8-9352-3003f71677b4",
+          "Name": "spawn (7)",
+          "Position": "124.6985,-124.4335,-134.6837",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SpawnPoint",
+              "__enabled": true,
+              "Color": "0.8902,0.31765,0.05098,1"
+            }
+          ]
         }
       ]
     },
@@ -1725,7 +1789,11 @@
             "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
             "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
             "6ea304d9-3789-48c3-9bf8-7ee24def9405",
-            "f59caca6-d1ea-48b9-adb5-303c2d2576ae"
+            "f59caca6-d1ea-48b9-adb5-303c2d2576ae",
+            "3f4bca40-ab66-4d4e-b63e-59e98369a574",
+            "039c8bb5-9fb7-470d-9ec1-02b3f5539a5e",
+            "c684cf6a-a029-4102-ac21-0dbed30059c0",
+            "6fc64722-0fbc-49c8-9352-3003f71677b4"
           ]
         }
       ]
