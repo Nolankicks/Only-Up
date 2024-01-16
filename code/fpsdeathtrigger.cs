@@ -22,7 +22,6 @@ public sealed class fpsdeathtrigger : Component, Component.ITriggerListener //Ch
       if (_iTouching)
 	  {
 		Log.Info("playerhit");
-		health.BulletHit();
    		health.OnDeath();
 	  }
     }

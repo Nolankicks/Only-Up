@@ -29,6 +29,7 @@ public sealed class HealthManager : Component
 				if (healthNumber == 0)
 			{
 				playerController2.Transform.Position = vector3;
+				
 				healthNumber = 100;
 
 			}
@@ -37,11 +38,7 @@ public sealed class HealthManager : Component
 	{
 
 	}
-	public void BulletHit()
-	{
-		healthNumber = 0;
-		Sound.Play(hitsound);
-	}
+
 
 		
 	
@@ -53,10 +50,12 @@ public sealed class HealthManager : Component
 
 	public void OnDeath()
 	{
+				healthNumber = 0;
+		Sound.Play(hitsound);
 		if (0 >= healthNumber)
 		{
-		var emittervar = emitter.Clone(Transform.World);
-		var ragdolvar = ragdol.Clone (Transform.World);
+		var finalpos = vector3 + Vector3.Up * 64f;
+		var emittervar = emitter.Clone(finalpos);
 		emittervar.Network.Spawn();
 		Log.Info(healthNumber);
 		}

@@ -2,6 +2,19 @@
   "Id": "b41cb067-540b-4728-874a-9107f7cd8622",
   "GameObjects": [
     {
+      "Id": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
+      "Name": "spawn",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
       "Id": "ec536b04-af5a-4361-8a3e-08f243ee3c00",
       "Name": "2D Skybox",
       "Position": "-2.880169,-23.57191,-76.75574",
@@ -466,7 +479,7 @@
                                     {
                                       "Id": "6885fad6-7eb7-4012-9321-145423f47037",
                                       "Name": "arm_upper_L_twist0",
-                                      "Position": "-0.00002740523,0.000001801055,-0.00009619983",
+                                      "Position": "0,0,0",
                                       "Rotation": "-0.06270501,0,0.0000001043081,0.9980323",
                                       "Tags": "player",
                                       "Enabled": true
@@ -729,7 +742,7 @@
                                     {
                                       "Id": "f75eaac7-e79b-4263-8e07-5fc1130401a7",
                                       "Name": "arm_upper_R_twist0",
-                                      "Position": "-0.00005800833,0.00003326689,-0.00003503374",
+                                      "Position": "0,0,0",
                                       "Rotation": "0.06270508,0.00000002980232,-0.00000004470348,0.9980322",
                                       "Tags": "player",
                                       "Enabled": true
@@ -812,7 +825,7 @@
                         {
                           "Id": "5d8e2fdb-ae35-4ff4-bc14-b5b16d1baf9f",
                           "Name": "leg_knee_helper_R",
-                          "Position": "-0.00002182811,0.000002240085,-0.00001126799",
+                          "Position": "0,0,0",
                           "Rotation": "-0.00001066923,0.00001090765,-0.7641343,-0.6450571",
                           "Tags": "player",
                           "Enabled": true
@@ -830,7 +843,7 @@
                     {
                       "Id": "091053b2-cb2d-4243-a762-8418db40c101",
                       "Name": "leg_upper_R_twist0",
-                      "Position": "0.00000009216201,0.0000006230701,-0.00001062307",
+                      "Position": "0,0,0",
                       "Rotation": "-0.03530413,0,0.00000008940697,0.9993767",
                       "Tags": "player",
                       "Enabled": true
@@ -838,7 +851,7 @@
                     {
                       "Id": "e466f9b3-581d-48a6-a0f5-f782c76a3b26",
                       "Name": "leg_glute_helper_R",
-                      "Position": "0.000001955237,0.0000001775349,-0.00001060294",
+                      "Position": "0,0,0",
                       "Rotation": "0.0000000372529,0,0.7070963,-0.7071174",
                       "Tags": "player",
                       "Enabled": true
@@ -897,7 +910,7 @@
                         {
                           "Id": "ff56b9ca-7e55-4af7-9054-d56e1e801b45",
                           "Name": "leg_knee_helper_L",
-                          "Position": "-0.00001423997,-0.000006555062,-0.0000124202",
+                          "Position": "0,0,0",
                           "Rotation": "-0.00005409122,0.00005504489,0.7639734,0.6452476",
                           "Tags": "player",
                           "Enabled": true
@@ -915,7 +928,7 @@
                     {
                       "Id": "1b116cfb-fa87-47ff-af85-ee914b381720",
                       "Name": "leg_upper_L_twist0",
-                      "Position": "-0.00001602879,0.000008979878,-0.00001992449",
+                      "Position": "0,0,0",
                       "Rotation": "0.03531085,-0.00000001490116,-0.00000001490116,0.9993765",
                       "Tags": "player",
                       "Enabled": true
@@ -923,7 +936,7 @@
                     {
                       "Id": "f00c9d6f-52d3-45a2-b3ab-c42501295646",
                       "Name": "leg_glute_helper_L",
-                      "Position": "-0.0000179588,0.00000895555,-0.00001996012",
+                      "Position": "0,0,0",
                       "Rotation": "0.00000001490116,0.00000005960464,-0.7070962,0.7071174",
                       "Tags": "player",
                       "Enabled": true
@@ -1021,7 +1034,7 @@
               "__type": "fpsdeathtrigger",
               "__enabled": true,
               "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
-              "health": null,
+              "health": "471628cc-cb8e-4b8d-8956-378f1ff05757",
               "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
             }
           ]
@@ -1617,7 +1630,7 @@
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 80,
+          "FieldOfView": 75,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
@@ -1665,17 +1678,9 @@
           "__type": "NetworkManager",
           "__enabled": true,
           "PlayerPrefab": "471628cc-cb8e-4b8d-8956-378f1ff05757",
-          "SpawnPoint": "1fd08f87-f0d0-41aa-b8dc-9c07de6e62de"
+          "SpawnPoint": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8"
         }
       ]
-    },
-    {
-      "Id": "30dfe258-a04e-440b-a833-75741d8ceef3",
-      "Name": "dummy",
-      "Position": "181.5794,-0.00001333335,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "__Prefab": "code/dummy.prefab"
     },
     {
       "Id": "89a94f8f-17db-427a-b88f-35a9851599c9",
@@ -1715,19 +1720,6 @@
         {
           "__version": 0,
           "__type": "NetworkSession",
-          "__enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "0b4ddf53-f37b-4389-9018-a27dc3238475",
-      "Name": "PlayerSpawner",
-      "Position": "-157.293,170.7029,61.93549",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "MapPlayerSpawner",
           "__enabled": true
         }
       ]

@@ -28,7 +28,7 @@
     "CsProjName": "",
     "StartupScene": "scenes/menu.scene",
     "ProjectTemplate": null,
-    "LaunchMode": "Launcher",
+    "LaunchMode": "Normal",
     "ControlModes": {},
     "InputSettings": {
       "Actions": [
@@ -205,6 +205,6 @@
         }
       ]
     },
-    "MapStartupScene": "scenes/menu.scene"
+    "MapStartupScene": null
   }
 }
