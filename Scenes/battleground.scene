@@ -4,6 +4,49 @@
     {
       "Id": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
       "Name": "spawn",
+      "Position": "0,0,0.003815893",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
+      "Name": "spawn (1)",
+      "Position": "0,148.5755,0.003815893",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "6ea304d9-3789-48c3-9bf8-7ee24def9405",
+      "Name": "spawn (2)",
+      "Position": "0,363.4221,0.003815893",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "f59caca6-d1ea-48b9-adb5-303c2d2576ae",
+      "Name": "spawn (3)",
+      "Position": "0,572.5636,0.003815893",
       "Enabled": true,
       "Components": [
         {
@@ -1678,7 +1721,12 @@
           "__type": "NetworkManager",
           "__enabled": true,
           "PlayerPrefab": "471628cc-cb8e-4b8d-8956-378f1ff05757",
-          "SpawnPoint": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8"
+          "SpawnPoints": [
+            "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
+            "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
+            "6ea304d9-3789-48c3-9bf8-7ee24def9405",
+            "f59caca6-d1ea-48b9-adb5-303c2d2576ae"
+          ]
         }
       ]
     },
