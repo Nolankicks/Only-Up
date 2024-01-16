@@ -81,6 +81,8 @@ var camPos = Eye.Transform.Position;
 			IsRunning = Input.Down( "Run" );
 		}
 
+
+
 		var cc = GameObject.Components.Get<CharacterController>();
 		if ( cc is null ) return;
 

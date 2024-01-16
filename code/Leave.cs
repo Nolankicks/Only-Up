@@ -9,6 +9,7 @@ public sealed class Leave : Component
 		{
 			Game.Close();
 			Log.Info("Quit");
+			
 		}
 	}
 
