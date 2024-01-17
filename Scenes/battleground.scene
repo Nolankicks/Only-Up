@@ -1015,6 +1015,54 @@
               "WorldspacePlayback": true
             }
           ]
+        },
+        {
+          "Id": "7ed68ec5-9964-4e14-8d32-85e0d7c39fc5",
+          "Name": "Screen",
+          "Position": "-256.1948,-94.09936,26.18026",
+          "Rotation": "0.000003516675,0.000001787693,-1,-0.000005363072",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ScreenPanel",
+              "__enabled": true,
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__version": 0,
+              "__type": "Respawn",
+              "__enabled": true,
+              "vector3": "0,0,0"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "66e7bec5-46e1-4307-8f52-d19c6158072b",
+              "Name": "health",
+              "Position": "0.4067383,-22.05371,32.47359",
+              "Tags": "player",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__version": 0,
+                  "__type": "HealthUi",
+                  "__enabled": true,
+                  "health": "091eb93a-df16-469b-8cd2-7ddb30fad7cf"
+                },
+                {
+                  "__version": 0,
+                  "__type": "Crosshair",
+                  "__enabled": true,
+                  "MyStringValue": "X"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1761,51 +1809,6 @@
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "7ed68ec5-9964-4e14-8d32-85e0d7c39fc5",
-      "Name": "Screen",
-      "Position": "151.7913,21.83241,26.17463",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ScreenPanel",
-          "__enabled": true,
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        },
-        {
-          "__version": 0,
-          "__type": "Respawn",
-          "__enabled": true,
-          "vector3": "0,0,0"
-        }
-      ],
-      "Children": [
-        {
-          "Id": "66e7bec5-46e1-4307-8f52-d19c6158072b",
-          "Name": "health",
-          "Position": "0.4067383,-22.05371,32.47359",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "HealthUi",
-              "__enabled": true,
-              "health": "091eb93a-df16-469b-8cd2-7ddb30fad7cf"
-            },
-            {
-              "__version": 0,
-              "__type": "Crosshair",
-              "__enabled": true,
-              "MyStringValue": "X"
-            }
-          ]
         }
       ]
     }

@@ -11,7 +11,7 @@ public sealed class HealthManager : Component
 	[Property] public Vector3 vector3 {get; set;}
 	[Property] public SoundEvent hitsound {get; set;}
 	 [Property] public GameObject emitter {get; set;}
- 	[Property] public GameObject ragdol {get; set;}
+ 	[Property] public GameObject ragdoll {get; set;}
 	
 	
 	
@@ -47,7 +47,10 @@ public sealed class HealthManager : Component
 
 	public void OnDeath()
 	{
-				healthNumber = 0;
+		var playerController2 = Components.GetInParentOrSelf<PlayerController2>();
+		var playercontrollerPos = playerController2.Transform.Position;
+		healthNumber = 0;
+		hitsound.UI = true;
 		Sound.Play(hitsound);
 		if (0 >= healthNumber)
 		{
