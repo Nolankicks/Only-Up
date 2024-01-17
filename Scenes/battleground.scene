@@ -185,6 +185,12 @@
           "skinnedModelRenderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound",
           "vector3": "0,0,0"
+        },
+        {
+          "__version": 0,
+          "__type": "PlayerFootsteps",
+          "__enabled": true,
+          "Source": "0ea39d9a-7da3-445b-a3dc-487d1645531b"
         }
       ],
       "Children": [
@@ -1798,12 +1804,6 @@
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
-        },
-        {
-          "__version": 0,
-          "__type": "Chat",
-          "__enabled": true,
-          "MyStringValue": ""
         },
         {
           "__version": 0,
