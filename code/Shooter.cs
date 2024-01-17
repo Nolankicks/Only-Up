@@ -1,6 +1,5 @@
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
-using Gunfight;
 using Sandbox;
 using Sandbox.Citizen;
 

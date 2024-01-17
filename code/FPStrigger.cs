@@ -4,6 +4,7 @@ using Sandbox;
 public sealed class FPStrigger : Component, Component.ITriggerListener //Change "Trigger to the name of your file
 {
 [Property] public GameObject respawngameObject {get; set;}
+
  bool _iTouching; 
  
 
