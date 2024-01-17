@@ -20,6 +20,7 @@ public class PlayerController2 : Component
 
 	[Sync]
 	public bool IsRunning { get; set; }
+	[Sync] public long SteamId { get; set; }
 
 	protected override void OnEnabled()
 	{

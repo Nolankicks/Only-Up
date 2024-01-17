@@ -5,7 +5,6 @@
       "Id": "48bcf0ae-4051-4c43-944b-b2003ca0dbcb",
       "Name": "Spawns",
       "Position": "157.4286,696.9971,134.6875",
-      "Enabled": true,
       "Children": [
         {
           "Id": "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
@@ -122,22 +121,6 @@
       ]
     },
     {
-      "Id": "ec536b04-af5a-4361-8a3e-08f243ee3c00",
-      "Name": "2D Skybox",
-      "Position": "-2.880169,-23.57191,-76.75574",
-      "Rotation": "0.000000002549219,0.0000000000000001025118,0.04276883,0.999085",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SkyBox2D",
-          "__enabled": true,
-          "SkyMaterial": "materials/battlegroundskybox.vmat",
-          "Tint": "1,1,1,1"
-        }
-      ]
-    },
-    {
       "Id": "86375cb3-42ef-4740-afdc-c3a156e0f53c",
       "Name": "Map",
       "Position": "872.0355,1400.415,425.4068",
@@ -147,7 +130,7 @@
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "maps/battleground.vmap",
+          "MapName": "facepunch.construct23",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
@@ -247,6 +230,12 @@
               "LookAt": null,
               "LookAtEnabled": false,
               "Target": "0ea39d9a-7da3-445b-a3dc-487d1645531b"
+            },
+            {
+              "__version": 0,
+              "__type": "PlayerDresser",
+              "__enabled": true,
+              "BodyRenderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b"
             }
           ],
           "Children": [
@@ -1777,24 +1766,16 @@
     {
       "Id": "217406ea-54c6-473f-ba63-868a861dad49",
       "Name": "Network",
-      "Position": "111.5285,-54.8481,31.56",
+      "Position": "111.5285,-54.8481,245.5857",
       "Enabled": true,
       "Components": [
         {
           "__version": 0,
           "__type": "NetworkManager",
           "__enabled": true,
+          "FreezePrefab": null,
           "PlayerPrefab": "471628cc-cb8e-4b8d-8956-378f1ff05757",
-          "SpawnPoints": [
-            "72400f09-b0c5-4d61-b2ae-52a0aefea7f8",
-            "d432fc67-fc69-4602-9a3a-a1b2595e50b1",
-            "6ea304d9-3789-48c3-9bf8-7ee24def9405",
-            "f59caca6-d1ea-48b9-adb5-303c2d2576ae",
-            "3f4bca40-ab66-4d4e-b63e-59e98369a574",
-            "039c8bb5-9fb7-470d-9ec1-02b3f5539a5e",
-            "c684cf6a-a029-4102-ac21-0dbed30059c0",
-            "6fc64722-0fbc-49c8-9352-3003f71677b4"
-          ]
+          "StartServer": true
         }
       ]
     },
@@ -1831,12 +1812,71 @@
       "Id": "826f3fe2-1339-4457-a9b9-68324ad366b2",
       "Name": "NetworkSession",
       "Position": "-50.18213,53.29623,44.50891",
-      "Enabled": true,
       "Components": [
         {
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "763cda29-24e7-408a-836f-4cb7dd4b32f7",
+      "Name": "Spawn",
+      "Position": "640.7559,97.60445,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "94e52c19-aee9-450d-8f71-df457049dd68",
+      "Name": "Spawn (1)",
+      "Position": "640.7556,381.5637,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "7464700a-c0a3-4452-85c4-6f7d537dc3cc",
+      "Name": "Spawn (2)",
+      "Position": "640.7554,576.1852,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "Id": "8b2332f0-c824-4236-9e39-f95b05bd719b",
+      "Name": "Spawn (3)",
+      "Position": "640.755,855.3606,0",
+      "Rotation": "0,0,1,-0.0000006397578",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SpawnPoint",
+          "__enabled": true,
+          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     }
