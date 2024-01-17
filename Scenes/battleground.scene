@@ -1798,6 +1798,12 @@
               "__type": "HealthUi",
               "__enabled": true,
               "health": "091eb93a-df16-469b-8cd2-7ddb30fad7cf"
+            },
+            {
+              "__version": 0,
+              "__type": "Crosshair",
+              "__enabled": true,
+              "MyStringValue": "X"
             }
           ]
         }
