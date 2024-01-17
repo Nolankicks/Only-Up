@@ -14,7 +14,8 @@ public sealed class Shooter : Component
 	[Property] Vector3 vector3 {get; set;}
 	[Property] public CitizenAnimationHelper citizenAnimationHelper {get; set;}
 	public TimeSince destroy = 3f;
-	[Property] public bool loop {get; set;}
+
+
 	
 
 
@@ -58,5 +59,9 @@ public sealed class Shooter : Component
 		{
 			citizenAnimationHelper.HoldType = CitizenAnimationHelper.HoldTypes.None;
 		}
+
+		
+
+			
 	}
 }

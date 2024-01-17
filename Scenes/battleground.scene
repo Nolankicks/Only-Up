@@ -181,7 +181,6 @@
           "__enabled": true,
           "citizenAnimationHelper": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "gameObject": "272d0705-9275-4ba0-80ca-194eacad60dc",
-          "loop": false,
           "skinnedModelRenderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound",
           "vector3": "0,0,0"
@@ -1258,15 +1257,16 @@
               "__type": "SphereCollider",
               "__enabled": true,
               "Center": "0,0,0",
-              "IsTrigger": false,
+              "IsTrigger": true,
               "Radius": 10,
               "Static": false,
               "Surface": null
             },
             {
               "__version": 0,
-              "__type": "Despawner",
-              "__enabled": true
+              "__type": "DestroyTrigger",
+              "__enabled": true,
+              "sphereCollider": "272d0705-9275-4ba0-80ca-194eacad60dc"
             }
           ]
         },
@@ -1773,7 +1773,6 @@
           "__version": 0,
           "__type": "NetworkManager",
           "__enabled": true,
-          "FreezePrefab": null,
           "PlayerPrefab": "471628cc-cb8e-4b8d-8956-378f1ff05757",
           "StartServer": true
         }
@@ -1817,51 +1816,6 @@
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "763cda29-24e7-408a-836f-4cb7dd4b32f7",
-      "Name": "Spawn",
-      "Position": "640.7559,97.60445,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "Id": "94e52c19-aee9-450d-8f71-df457049dd68",
-      "Name": "Spawn (1)",
-      "Position": "640.7556,381.5637,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
-        }
-      ]
-    },
-    {
-      "Id": "7464700a-c0a3-4452-85c4-6f7d537dc3cc",
-      "Name": "Spawn (2)",
-      "Position": "640.7554,576.1852,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     },
