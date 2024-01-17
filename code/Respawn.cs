@@ -10,8 +10,8 @@ public sealed class Respawn : Component
 		var cc = Components.GetInParentOrSelf<PlayerController2>();
 		if (Input.Pressed("reload"))
 		{
-			
 			cc.Transform.Position = vector3;
+			Log.Info("Respawned");
 		}
 	}
 }

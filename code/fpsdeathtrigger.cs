@@ -8,7 +8,7 @@ public sealed class fpsdeathtrigger : Component, Component.ITriggerListener //Ch
  bool _iTouching; 
  [Property] public GameObject emitter {get; set;}
  [Property] public GameObject ragdol {get; set;}
- [Property] public HealthManager health {get; set;}
+
 
 
 

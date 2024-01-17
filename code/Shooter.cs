@@ -13,8 +13,9 @@ public sealed class Shooter : Component
 	
 	[Property] Vector3 vector3 {get; set;}
 	[Property] public CitizenAnimationHelper citizenAnimationHelper {get; set;}
+	[Property] public CitizenAnimationHelper.HoldTypes holdTypes {get; set;}
 	public TimeSince destroy = 3f;
-
+	
 
 
 	
@@ -41,10 +42,10 @@ public sealed class Shooter : Component
 			var pos = Transform.Position + Vector3.Up * 64.0f + lookDir.Forward.WithZ( 0.0f ) * 50.0f;
 			var o = gameObject.Clone(pos);
 			o.Enabled = true;
-			citizenAnimationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
+			citizenAnimationHelper.HoldType = holdTypes;
 			citizenAnimationHelper.Target.Set("b_attack", true);
 			var p = o.Components.Get<Rigidbody>();
-			p.Velocity = lookDir.Forward * 5000f;
+			p.Velocity = lookDir.Forward * 10000f;
 			soundEvent.UI = true;
 			Sound.Play(soundEvent);
 			//pc.Network.TakeOwnership();

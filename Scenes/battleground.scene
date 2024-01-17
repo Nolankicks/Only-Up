@@ -131,7 +131,7 @@
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "facepunch.construct",
+          "MapName": "facepunch.square",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
@@ -172,7 +172,6 @@
           "__enabled": true,
           "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
           "hitsound": "sounds/impacts/impact-bullet-flesh.sound",
-          "playerController2": "471628cc-cb8e-4b8d-8956-378f1ff05757",
           "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
           "vector3": "0,0,0"
         },
@@ -182,6 +181,7 @@
           "__enabled": true,
           "citizenAnimationHelper": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "gameObject": "272d0705-9275-4ba0-80ca-194eacad60dc",
+          "holdTypes": "Pistol",
           "skinnedModelRenderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound",
           "vector3": "0,0,0"
@@ -1130,8 +1130,29 @@
               "__type": "fpsdeathtrigger",
               "__enabled": true,
               "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
-              "health": "471628cc-cb8e-4b8d-8956-378f1ff05757",
               "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
+            }
+          ]
+        },
+        {
+          "Id": "be49e3a2-a9a5-419b-b670-4a0fbdda8d30",
+          "Name": "voice",
+          "Position": "7.924683,35.59068,53.59146",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "Voice",
+              "__enabled": true,
+              "Loopback": false,
+              "Mode": "AlwaysOn",
+              "MorphScale": 2,
+              "MorphSmoothTime": 0.1,
+              "PushToTalkInput": "voice",
+              "Renderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
+              "Volume": 1,
+              "WorldspacePlayback": true
             }
           ]
         },
@@ -1162,28 +1183,6 @@
               "__type": "Respawn",
               "__enabled": true,
               "vector3": "0,0,0"
-            }
-          ]
-        },
-        {
-          "Id": "be49e3a2-a9a5-419b-b670-4a0fbdda8d30",
-          "Name": "voice",
-          "Position": "7.924683,35.59068,53.59146",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "Voice",
-              "__enabled": true,
-              "Loopback": false,
-              "Mode": "AlwaysOn",
-              "MorphFadeSpeed": 50,
-              "MorphScale": 2,
-              "PushToTalkInput": "voice",
-              "Renderer": "0ea39d9a-7da3-445b-a3dc-487d1645531b",
-              "Volume": 1,
-              "WorldspacePlayback": true
             }
           ]
         }
@@ -1220,7 +1219,8 @@
               "__enabled": true,
               "Locking": {},
               "Model": "models/citizen/citizen.vmdl",
-              "Renderer": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
+              "Renderer": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
+              "RigidbodyFlags": 0
             }
           ]
         },
@@ -1732,7 +1732,7 @@
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 70,
+          "FieldOfView": 85,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
@@ -1822,21 +1822,6 @@
           "__version": 0,
           "__type": "NetworkSession",
           "__enabled": true
-        }
-      ]
-    },
-    {
-      "Id": "8b2332f0-c824-4236-9e39-f95b05bd719b",
-      "Name": "Spawn (3)",
-      "Position": "640.755,855.3606,0",
-      "Rotation": "0,0,1,-0.0000006397578",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
-          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     }

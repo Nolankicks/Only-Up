@@ -7,7 +7,7 @@ public sealed class HealthManager : Component
 	
 	//[Property] public SceneFile sceneFile {get; set;}
 	public long healthNumber {get; set;} = 100;
-	[Property] public PlayerController2 playerController2 {get; set;}
+
 	[Property] public Vector3 vector3 {get; set;}
 	[Property] public SoundEvent hitsound {get; set;}
 	 [Property] public GameObject emitter {get; set;}
@@ -18,14 +18,11 @@ public sealed class HealthManager : Component
 
 
 	
-	
-	protected override void OnStart()
-	{
-		healthNumber = 100;
-	}
+
 	
 	protected override void OnUpdate()
 	{
+			var playerController2 = Components.GetInParentOrSelf<PlayerController2>();
 				if (healthNumber == 0)
 			{
 				playerController2.Transform.Position = vector3;
