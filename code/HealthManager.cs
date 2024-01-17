@@ -29,7 +29,7 @@ public sealed class HealthManager : Component
 				if (healthNumber == 0)
 			{
 				playerController2.Transform.Position = vector3;
-				
+
 				healthNumber = 100;
 
 			}

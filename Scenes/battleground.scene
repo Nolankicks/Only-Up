@@ -131,7 +131,7 @@
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "eagleone.killhouse_chimona",
+          "MapName": "facepunch.construct",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
@@ -306,32 +306,32 @@
                                     {
                                       "Id": "4deb2d8b-280f-45ce-a531-fd761ea345a2",
                                       "Name": "face_lid_lower_R",
-                                      "Position": "6.908828,5.140505,-3.234452",
-                                      "Rotation": "0.12923,-0.9818051,0.137949,0.0181281",
+                                      "Position": "6.909081,5.140513,-3.234712",
+                                      "Rotation": "0.12923,-0.9818051,0.137949,0.01812819",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
                                     {
                                       "Id": "a06816e3-9229-44ad-8786-97d8b0229e81",
                                       "Name": "face_lid_lower_L",
-                                      "Position": "6.908797,5.14044,3.234819",
-                                      "Rotation": "-0.12923,0.9818051,0.137949,0.01812796",
+                                      "Position": "6.909101,5.140442,3.234555",
+                                      "Rotation": "-0.1292299,0.9818051,0.137949,0.01812787",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
                                     {
                                       "Id": "ec19183f-e7ec-45ab-934b-80ce16f810f9",
                                       "Name": "face_lid_upper_L",
-                                      "Position": "6.908797,5.14044,3.234819",
-                                      "Rotation": "0.9865026,0.08628273,0.01212877,-0.1386395",
+                                      "Position": "6.909101,5.140442,3.234555",
+                                      "Rotation": "0.9865026,0.08628272,0.01212871,-0.1386395",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
                                     {
                                       "Id": "49b94527-6f62-409e-9171-b30d3a4b6118",
                                       "Name": "face_lid_upper_R",
-                                      "Position": "6.908828,5.140505,-3.234452",
-                                      "Rotation": "0.9865093,0.08628279,-0.01208574,0.1385964",
+                                      "Position": "6.909081,5.140513,-3.234712",
+                                      "Rotation": "0.9865092,0.0862828,-0.01208586,0.1385964",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -575,8 +575,8 @@
                                     {
                                       "Id": "6885fad6-7eb7-4012-9321-145423f47037",
                                       "Name": "arm_upper_L_twist0",
-                                      "Position": "0,0,0",
-                                      "Rotation": "-0.06270501,0,0.0000001043081,0.9980323",
+                                      "Position": "-0.00003412395,0.000002639749,-0.0001015816",
+                                      "Rotation": "-0.06270504,0.0000001788139,0.00000002980232,0.9980322",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -1732,7 +1732,7 @@
           "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 75,
+          "FieldOfView": 70,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
