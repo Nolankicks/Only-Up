@@ -124,13 +124,14 @@
       "Id": "86375cb3-42ef-4740-afdc-c3a156e0f53c",
       "Name": "Map",
       "Position": "872.0355,1400.415,425.4068",
+      "Tags": "map",
       "Enabled": true,
       "Components": [
         {
           "__version": 0,
           "__type": "MapInstance",
           "__enabled": true,
-          "MapName": "facepunch.construct23",
+          "MapName": "eagleone.killhouse_chimona",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": true
@@ -1267,6 +1268,11 @@
               "__type": "DestroyTrigger",
               "__enabled": true,
               "sphereCollider": "272d0705-9275-4ba0-80ca-194eacad60dc"
+            },
+            {
+              "__version": 0,
+              "__type": "Despawner",
+              "__enabled": true
             }
           ]
         },
