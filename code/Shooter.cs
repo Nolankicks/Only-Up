@@ -16,6 +16,7 @@ public sealed class Shooter : Component
 	public TimeSince destroy = 3f;
 
 
+
 	
 
 
