@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "deathmatchmap",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "deathmatchmap",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.pendant_light#42627"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/deathmatchmap.vmap"
+      }
+    }
+  }
+}

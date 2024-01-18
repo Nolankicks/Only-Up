@@ -36,7 +36,7 @@
           "__enabled": true,
           "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
           "hitsound": "sounds/impacts/impact-bullet-flesh.sound",
-          "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200",
+          "ragdoll": null,
           "vector3": "0,0,0"
         },
         {
@@ -49,12 +49,6 @@
           "skinnedModelRenderer": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0",
           "soundEvent": "sounds/kenney/ui/ui.button.press.sound",
           "vector3": "0,0,0"
-        },
-        {
-          "__version": 0,
-          "__type": "PlayerFootsteps",
-          "__enabled": true,
-          "Source": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0"
         }
       ],
       "Children": [
@@ -101,6 +95,12 @@
               "LookAt": null,
               "LookAtEnabled": false,
               "Target": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0"
+            },
+            {
+              "__version": 0,
+              "__type": "PlayerFootsteps",
+              "__enabled": true,
+              "Source": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0"
             },
             {
               "__version": 0,
@@ -435,7 +435,7 @@
                                         {
                                           "Id": "d1852786-e0e3-4263-8c50-fc1866ab5dfc",
                                           "Name": "arm_elbow_helper_L",
-                                          "Position": "-0.000003467513,0.000004048929,-0.00006280331",
+                                          "Position": "0,0,0",
                                           "Rotation": "-0.000000320375,-0.00000001490116,0.7577644,-0.6525283",
                                           "Tags": "player",
                                           "Enabled": true
@@ -445,7 +445,7 @@
                                     {
                                       "Id": "a7c9dc1a-0453-440e-bab0-6985882712a8",
                                       "Name": "arm_upper_L_twist0",
-                                      "Position": "0.00001495075,0.00001265742,-0.00002714335",
+                                      "Position": "0,0,0",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -693,7 +693,7 @@
                                             {
                                               "Id": "57d3ebce-983f-474f-b40d-b04d8d587ff4",
                                               "Name": "arm_elbow_helper_R",
-                                              "Position": "-0.00002178972,0.00006097913,-0.00009990155",
+                                              "Position": "0,0,0",
                                               "Rotation": "0.0000007748604,-0.0000002384186,-0.7577679,0.6525242",
                                               "Tags": "player",
                                               "Enabled": true
@@ -705,7 +705,7 @@
                                     {
                                       "Id": "c45797f8-f5b5-40e4-b6f5-f96702cb134d",
                                       "Name": "arm_upper_R_twist0",
-                                      "Position": "-0.00001180732,0.00002045218,-0.00006039701",
+                                      "Position": "0,0,0",
                                       "Tags": "player",
                                       "Enabled": true
                                     },
@@ -785,7 +785,7 @@
                         {
                           "Id": "0e28bc6a-3663-42d0-98ce-4da1559da37a",
                           "Name": "leg_knee_helper_R",
-                          "Position": "0.000003533174,0.000007763898,-0.000007629283",
+                          "Position": "0,0,0",
                           "Rotation": "0.0000009268988,-0.000001251698,0.713527,0.7006279",
                           "Tags": "player",
                           "Enabled": true
@@ -802,7 +802,7 @@
                     {
                       "Id": "c5e09f64-d41a-4fcc-a2d3-684ad0fc0ac8",
                       "Name": "leg_upper_R_twist0",
-                      "Position": "0.000007629319,0.000007629648,-0.0000152587",
+                      "Position": "0,0,0",
                       "Rotation": "-0.0000001043081,0.00000002980232,0.000003114343,0.9999999",
                       "Tags": "player",
                       "Enabled": true
@@ -810,7 +810,7 @@
                     {
                       "Id": "fe3dc5ae-e2d4-42ab-bfc7-1e96a50c9cb6",
                       "Name": "leg_glute_helper_R",
-                      "Position": "0.00002098076,0.000007629791,-0.00001525869",
+                      "Position": "0,0,0",
                       "Rotation": "0.000001187184,0.0000006556511,0.707105,-0.7071084",
                       "Tags": "player",
                       "Enabled": true
@@ -868,7 +868,7 @@
                         {
                           "Id": "1fdf0370-9b03-4ff0-91da-bb984bde08f1",
                           "Name": "leg_knee_helper_L",
-                          "Position": "-0.00001143644,-0.0000004183669,-0.000007629405",
+                          "Position": "0,0,0",
                           "Rotation": "-0.000003001885,-0.000001698732,0.7135277,0.7006271",
                           "Tags": "player",
                           "Enabled": true
@@ -885,14 +885,14 @@
                     {
                       "Id": "b98ef68c-edc2-4dd4-8e32-9976cfde7149",
                       "Name": "leg_upper_L_twist0",
-                      "Position": "0.000007629319,0.000007629562,-0.000007629299",
+                      "Position": "0,0,0",
                       "Tags": "player",
                       "Enabled": true
                     },
                     {
                       "Id": "345d4e6e-008b-4165-bedf-c84e483be503",
                       "Name": "leg_glute_helper_L",
-                      "Position": "0.00001907341,0.000007629684,-0.000007629289",
+                      "Position": "0,0,0",
                       "Rotation": "0.000001053076,0.0000007152557,0.7071054,-0.707108",
                       "Tags": "player",
                       "Enabled": true
@@ -989,8 +989,7 @@
               "__version": 0,
               "__type": "fpsdeathtrigger",
               "__enabled": true,
-              "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
-              "ragdol": "aea7ecd4-8848-49cc-9ae5-37764ddbd200"
+              "emitter": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a"
             }
           ]
         },
@@ -1008,6 +1007,19 @@
               "Loopback": false,
               "Mode": "AlwaysOn",
               "MorphScale": 2,
+              "MorphSmoothTime": 0.1,
+              "PushToTalkInput": "voice",
+              "Renderer": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0",
+              "Volume": 1,
+              "WorldspacePlayback": true
+            },
+            {
+              "__version": 0,
+              "__type": "Voice",
+              "__enabled": true,
+              "Loopback": false,
+              "Mode": "AlwaysOn",
+              "MorphScale": 3,
               "MorphSmoothTime": 0.1,
               "PushToTalkInput": "voice",
               "Renderer": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0",
@@ -1053,12 +1065,6 @@
                   "__type": "HealthUi",
                   "__enabled": true,
                   "health": "091eb93a-df16-469b-8cd2-7ddb30fad7cf"
-                },
-                {
-                  "__version": 0,
-                  "__type": "Crosshair",
-                  "__enabled": true,
-                  "MyStringValue": "X"
                 }
               ]
             }
@@ -1546,13 +1552,6 @@
             },
             {
               "__version": 0,
-              "__type": "ShooterTrigger",
-              "__enabled": true,
-              "dummymodel": "a037c278-dbe0-407a-b9ef-16337d205c41",
-              "soundFile": "sounds/impacts/impact-bullet-flesh.sound"
-            },
-            {
-              "__version": 0,
               "__type": "CapsuleCollider",
               "__enabled": true,
               "End": "0,0,69.79979",
@@ -1561,16 +1560,6 @@
               "Start": "0,0,0",
               "Static": false,
               "Surface": null
-            },
-            {
-              "__version": 0,
-              "__type": "DummyManager",
-              "__enabled": true,
-              "emitterObj": "fe9d0f5c-7646-478e-8f25-125f76fbcb9a",
-              "ragdollObj": "prefabs/ragdoll.prefab",
-              "rotation": "0,0,0,1",
-              "shooterTrigger": "a037c278-dbe0-407a-b9ef-16337d205c41",
-              "vector3": "0,0,70"
             }
           ],
           "Children": [
@@ -1782,6 +1771,12 @@
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Crosshair",
+          "__enabled": true,
+          "MyStringValue": "X"
         }
       ]
     },
@@ -1803,14 +1798,7 @@
     {
       "Id": "826f3fe2-1339-4457-a9b9-68324ad366b2",
       "Name": "NetworkSession",
-      "Position": "-50.18213,53.29623,44.50891",
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "NetworkSession",
-          "__enabled": true
-        }
-      ]
+      "Position": "-50.18213,53.29623,44.50891"
     }
   ],
   "SceneProperties": {
