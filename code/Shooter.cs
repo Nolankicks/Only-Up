@@ -38,7 +38,7 @@ public sealed class Shooter : Component
 		
 		if ( Input.Down( "Attack1" ) )
 		{
-			if (timeSince > 1.0)
+			if (timeSince > 0.2)
 			{
 			timeSince = 0;
 			var pos = Transform.Position + Vector3.Up * 64.0f + lookDir.Forward.WithZ( 0.0f ) * 50.0f;
@@ -47,7 +47,7 @@ public sealed class Shooter : Component
 			citizenAnimationHelper.HoldType = holdTypes;
 			citizenAnimationHelper.Target.Set("b_attack", true);
 			var p = o.Components.Get<Rigidbody>();
-			p.Velocity = lookDir.Forward * 10000f;
+			p.Velocity = lookDir.Forward * 1000000f;
 			soundEvent.UI = true;
 			Sound.Play(soundEvent);
 			//pc.Network.TakeOwnership();
