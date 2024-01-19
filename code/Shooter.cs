@@ -13,9 +13,9 @@ public sealed class Shooter : Component
 	[Property] Vector3 vector3 {get; set;}
 	[Property] public CitizenAnimationHelper citizenAnimationHelper {get; set;}
 	[Property] public CitizenAnimationHelper.HoldTypes holdTypes {get; set;}
-	public TimeSince destroy = 3f;
-	public TimeSince timeSince;
-	
+	private TimeSince timesinceFire;
+	private TimeSince test;
+
 
 
 	
@@ -38,21 +38,22 @@ public sealed class Shooter : Component
 		
 		if ( Input.Down( "Attack1" ) )
 		{
-			if (timeSince > 0.2)
+			if (timesinceFire > 0.2)
 			{
-			timeSince = 0;
+			timesinceFire = 0;
 			var pos = Transform.Position + Vector3.Up * 64.0f + lookDir.Forward.WithZ( 0.0f ) * 50.0f;
-			var o = gameObject.Clone(pos);
-			o.Enabled = true;
+			var cloner = gameObject.Clone(pos);
+			cloner.Enabled = true;
 			citizenAnimationHelper.HoldType = holdTypes;
 			citizenAnimationHelper.Target.Set("b_attack", true);
-			var p = o.Components.Get<Rigidbody>();
+			var p = cloner.Components.Get<Rigidbody>();
 			p.Velocity = lookDir.Forward * 1000000f;
 			soundEvent.UI = true;
 			Sound.Play(soundEvent);
 			//pc.Network.TakeOwnership();
 			//o.Network.Spawn();
-			o.Network.Spawn();
+			cloner.Network.Spawn();
+			
 			}
 			
 
@@ -61,13 +62,11 @@ public sealed class Shooter : Component
 
 
 		}
-		if (Input.Released("attack1"))
+		if (timesinceFire > 0.5)
 		{
 			citizenAnimationHelper.HoldType = CitizenAnimationHelper.HoldTypes.None;
 		}
-
-		
-
-			
+		}			
 	}
-}
+
+
