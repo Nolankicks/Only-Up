@@ -25,7 +25,7 @@
           "__enabled": true,
           "AnimationHelper": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0",
           "Body": "e6f14b85-f7b5-4444-a81b-4ebd93c63fa0",
-          "Distance": 350,
+          "Distance": 300,
           "Eye": "bef6a89e-afc2-4fca-9344-414144202bad",
           "FirstPerson": false,
           "Gravity": "0,0,800"
@@ -1210,7 +1210,8 @@
         {
           "__version": 0,
           "__type": "DestroyTrigger",
-          "__enabled": false
+          "__enabled": false,
+          "sphereCollider": null
         }
       ],
       "Children": []
@@ -1293,7 +1294,8 @@
             {
               "__version": 0,
               "__type": "DestroyTrigger",
-              "__enabled": true
+              "__enabled": true,
+              "sphereCollider": null
             },
             {
               "__version": 0,

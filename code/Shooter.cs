@@ -14,6 +14,7 @@ public sealed class Shooter : Component
 	[Property] public CitizenAnimationHelper citizenAnimationHelper {get; set;}
 	[Property] public CitizenAnimationHelper.HoldTypes holdTypes {get; set;}
 	public TimeSince destroy = 3f;
+	public TimeSince timeSince;
 	
 
 
@@ -35,9 +36,11 @@ public sealed class Shooter : Component
 		var pc = Components.Get<PlayerController2>();
 		var lookDir = pc.EyeAngles.ToRotation();
 		
-		if ( Input.Pressed( "Attack1" ) )
+		if ( Input.Down( "Attack1" ) )
 		{
-
+			if (timeSince > 1.0)
+			{
+			timeSince = 0;
 			var pos = Transform.Position + Vector3.Up * 64.0f + lookDir.Forward.WithZ( 0.0f ) * 50.0f;
 			var o = gameObject.Clone(pos);
 			o.Enabled = true;
@@ -50,7 +53,9 @@ public sealed class Shooter : Component
 			//pc.Network.TakeOwnership();
 			//o.Network.Spawn();
 			o.Network.Spawn();
+			}
 			
+
 			
 			
 
