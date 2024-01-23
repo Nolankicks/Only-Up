@@ -8,9 +8,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": "materials/generic/floor_pavement_tile_a.vmat",
@@ -19,9 +17,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "100,100,0.1",
@@ -38,9 +34,9 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "DirectionalLight",
-          "__enabled": true,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
           "Shadows": true,
           "SkyColor": "0.05882,0.07451,0.08235,1"
@@ -54,9 +50,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "CharacterController",
-          "__enabled": true,
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
@@ -65,10 +59,12 @@
           "StepHeight": 18
         },
         {
-          "__version": 0,
           "__type": "PlayerController",
-          "__enabled": true,
-          "AnimationHelper": "2bdf14e0-13ba-4a0b-8ea0-bcca523fa735",
+          "AnimationHelper": {
+            "_type": "component",
+            "go": "2bdf14e0-13ba-4a0b-8ea0-bcca523fa735",
+            "component_type": "CitizenAnimationHelper"
+          },
           "Body": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
           "Distance": 350,
           "Eye": "63e816fb-878d-41e5-94ed-9bff27740ca4",
@@ -77,9 +73,7 @@
           "jumpSound": "sounds/kenney/ui/ui.downvote.sound"
         },
         {
-          "__version": 0,
           "__type": "CitizenAnimationHelper",
-          "__enabled": true,
           "BodyWeight": 1,
           "EyeSource": "63e816fb-878d-41e5-94ed-9bff27740ca4",
           "EyesWeight": 1,
@@ -91,34 +85,34 @@
           "IkRightHand": null,
           "LookAt": null,
           "LookAtEnabled": false,
-          "Target": "54671bdb-66f9-42bc-b269-919ba4eb3a7f"
+          "Target": {
+            "_type": "component",
+            "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "FootStepSound",
-          "__enabled": true,
-          "Source": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+          "Source": {
+            "_type": "component",
+            "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+            "component_type": "SkinnedModelRenderer"
+          },
           "Volume": 2
         },
         {
-          "__version": 0,
           "__type": "HealthManager",
-          "__enabled": true,
-          "sceneFile": "scenes/level2.scene",
-          "soundEvent": "sounds/half-life-2-death-sound.sound"
+          "sceneFile": "scenes/level2.scene"
         }
       ],
       "Children": [
         {
           "Id": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
           "Name": "body",
-          "Tags": "player",
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551339,
               "BoneMergeTarget": null,
               "CreateBoneObjects": false,
@@ -134,20 +128,16 @@
           "Id": "63e816fb-878d-41e5-94ed-9bff27740ca4",
           "Name": "eye",
           "Position": "0,0,64",
-          "Tags": "player",
           "Enabled": true
         },
         {
           "Id": "41e62120-4766-45d8-8730-41b535de4070",
           "Name": "collider",
           "Position": "0,0,26",
-          "Tags": "player",
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "SphereCollider",
-              "__enabled": true,
               "Center": "0,0,0",
               "IsTrigger": false,
               "Radius": 25,
@@ -160,22 +150,22 @@
           "Id": "ff691cea-8cf3-4e69-b772-a41ce5a307ef",
           "Name": "Cloths",
           "Position": "-148.1834,-83.66138,14.13299",
-          "Tags": "player",
           "Enabled": true,
           "Children": [
             {
               "Id": "b4bf2360-934d-4194-83e5-2b4b9bbdbd0f",
               "Name": "Pirate",
               "Position": "-148.1834,-83.66138,14.13299",
-              "Tags": "player",
               "Enabled": true,
               "Components": [
                 {
-                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
                   "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                    "component_type": "SkinnedModelRenderer"
+                  },
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
@@ -189,15 +179,16 @@
               "Id": "24bdac22-2e1c-47f3-b278-9b95a5146b01",
               "Name": "hat",
               "Position": "-157.7416,-69.62477,58.03681",
-              "Tags": "player",
               "Enabled": true,
               "Components": [
                 {
-                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
                   "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                    "component_type": "SkinnedModelRenderer"
+                  },
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
@@ -211,15 +202,16 @@
               "Id": "3a748884-9ff8-419a-bdbf-1ae0114e3a34",
               "Name": "beard",
               "Position": "-248.8404,-59.65827,58.1819",
-              "Tags": "player",
               "Enabled": true,
               "Components": [
                 {
-                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
                   "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                    "component_type": "SkinnedModelRenderer"
+                  },
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
@@ -233,15 +225,16 @@
               "Id": "1fb02e62-f3f7-417a-bb71-b4b80d00cf1d",
               "Name": "hair",
               "Position": "-210.4059,45.9725,51.98426",
-              "Tags": "player",
               "Enabled": true,
               "Components": [
                 {
-                  "__version": 0,
                   "__type": "SkinnedModelRenderer",
-                  "__enabled": true,
                   "BodyGroups": 18446744073709551615,
-                  "BoneMergeTarget": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                  "BoneMergeTarget": {
+                    "_type": "component",
+                    "go": "54671bdb-66f9-42bc-b269-919ba4eb3a7f",
+                    "component_type": "SkinnedModelRenderer"
+                  },
                   "CreateBoneObjects": false,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
@@ -263,9 +256,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "CameraComponent",
-          "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -281,15 +272,11 @@
           "ZNear": 10
         },
         {
-          "__version": 0,
           "__type": "Pixelate",
-          "__enabled": true,
           "Scale": 0.01
         },
         {
-          "__version": 0,
           "__type": "Sharpen",
-          "__enabled": true,
           "Scale": 2.31
         }
       ]
@@ -301,9 +288,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ScreenPanel",
-          "__enabled": true,
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
@@ -318,10 +303,8 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "ReturnToMenu",
-              "__enabled": true,
-              "menuScene": null,
+              "menuScene": "scenes/menu.scene",
               "soundEvent": "sounds/kenney/ui/ui.button.press.sound"
             }
           ]
@@ -333,10 +316,12 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "HealthUi",
-              "__enabled": true,
-              "health": "2bdf14e0-13ba-4a0b-8ea0-bcca523fa735"
+              "health": {
+                "_type": "component",
+                "go": "2bdf14e0-13ba-4a0b-8ea0-bcca523fa735",
+                "component_type": "HealthManager"
+              }
             }
           ]
         }
@@ -350,9 +335,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": true,
           "Scale": "2000,2000,1",
@@ -360,9 +343,7 @@
           "Surface": null
         },
         {
-          "__version": 0,
-          "__type": "HealthTrigger",
-          "__enabled": true
+          "__type": "HealthTrigger"
         }
       ]
     },
@@ -374,16 +355,12 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "Trigger",
-          "__enabled": true,
           "sceneFile": "scenes/level2.scene",
           "soundEvent": "sounds/player_use_fail.sound"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": true,
           "Scale": "2000,2616.799,1",
@@ -400,9 +377,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -411,9 +386,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
           "Static": false,
@@ -430,9 +403,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -441,9 +412,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_props/pallet/pallet.vmdl",
           "Static": false,
@@ -460,9 +429,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -471,9 +438,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/props/beer_keg/beer_keg_a1.vmdl",
           "Static": false,
@@ -488,9 +453,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -499,9 +462,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/christmas_tree.vmdl",
           "Static": false,
@@ -518,9 +479,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -529,9 +488,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/items/electronics/keyboard.vmdl",
           "Static": false,
@@ -547,9 +504,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -558,9 +513,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_props/toilet_a/toilet_a.vmdl",
           "Static": false,
@@ -576,9 +529,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -587,9 +538,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/sbox_props/pallet/pallet.vmdl",
           "Static": false,
@@ -605,9 +554,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -616,9 +563,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/items/minimal_set/minimal_doublebed.vmdl",
           "Static": false,
@@ -634,9 +579,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -645,9 +588,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/items/metal_set/metal_bigcabinet.vmdl",
           "Static": false,
@@ -664,9 +605,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -675,9 +614,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,20.20002",
           "IsTrigger": false,
           "Scale": "19.60009,3.000002,38.00015",
@@ -694,9 +631,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -705,9 +640,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/tardis.vmdl",
           "Static": false,
@@ -724,9 +657,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -735,9 +666,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -754,9 +683,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -765,9 +692,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -784,9 +709,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -795,9 +718,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -814,9 +735,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -825,9 +744,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -844,9 +761,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -855,9 +770,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -874,9 +787,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -885,9 +796,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -904,9 +813,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -915,9 +822,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "ModelCollider",
-          "__enabled": true,
           "IsTrigger": false,
           "Model": "models/watertank/watertank.vmdl",
           "Static": false,
@@ -933,9 +838,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": "materials/garrywtf.vmat",
@@ -944,9 +847,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -964,9 +865,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ModelRenderer",
-          "__enabled": true,
           "BodyGroups": 18446744073709551615,
           "MaterialGroup": null,
           "MaterialOverride": "materials/garrywtf.vmat",
@@ -975,9 +874,7 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "BoxCollider",
-          "__enabled": true,
           "Center": "0,0,24.90005",
           "IsTrigger": true,
           "Scale": "50,50,5.00001",
@@ -985,9 +882,7 @@
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "Trigger",
-          "__enabled": true,
           "sceneFile": "scenes/tolevel3.scene",
           "soundEvent": "sounds/kenney/ui/ui.upvote.sound"
         }
@@ -1000,9 +895,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "SkyBox2D",
-          "__enabled": true,
           "SkyMaterial": "materials/sky/sky_005.vmat",
           "Tint": "1,1,1,1"
         }
@@ -1015,9 +908,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "EnvmapProbe",
-          "__enabled": true,
           "Bounds": {
             "Mins": "5000,5000,-512",
             "Maxs": "512,512,512"
@@ -1036,9 +927,8 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "SpawnPoint",
-          "__enabled": true
+          "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     }
