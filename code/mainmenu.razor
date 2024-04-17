@@ -8,8 +8,10 @@
 	<div class="bytext">@byText</div>
     <button @onclick=@changeScene>Start New Game</button>
     <button @onclick=@changeScene2>Level Selector</button>
-	<exitbutton @onclick=@Close>Exit</exitbutton>
-	<creditbutton @onclick=@creditsChange>Credits</creditbutton>
+	<div class="buttonholder">
+		<button @onclick=@Close>Exit</button>
+		<button @onclick=@creditsChange>Credits</button>
+	</div>
 
 </root>
 

@@ -9,7 +9,7 @@ mainmenu
 	  .credits {
 		position: absolute; 
 		right: 20;
-		bottom: 20;z
+		bottom: 20;
 		pointer-events: all;
 		flex-direction: row;
 		padding: 25px;
@@ -72,7 +72,6 @@ mainmenu
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	  
 		.title {
 		  font-size: 15px;
 		  font-family: 'Poppins', sans-serif;
@@ -165,7 +164,13 @@ mainmenu
 		  color: #e41d1d;
 		}
 	  }
-	  
+	  .buttonholder
+	  {
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
+		gap: 16px;
+	  }
 	
 	
 	
